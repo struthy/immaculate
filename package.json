@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "concurrently \"npm:nuxt:dev\" \"npm:slicemachine\" --names \"nuxt,slicemachine\" --prefix-colors green,magenta",
     "nuxt:dev": "nuxt dev",
-    "build": "nuxt build",
-    "build:gh-pages": "npx nuxt build --preset github_pages",
+    "build": "NITRO_PRESET=github_pages nuxt build",
+    "build:gh-pages": "NITRO_PRESET=github_pages nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
