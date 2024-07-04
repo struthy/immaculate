@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master  # Change to 'main' if needed ....
+      - master  # Change to 'main' if needed
 
 jobs:
   build:
@@ -16,13 +16,13 @@ jobs:
         with:
           node-version: '18'
       - run: npm install
-      - run: npm run generate
+      - run: npm run generate  # Ensure the static site is generated
         env:
           NITRO_PRESET: github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./.output/public
+          path: ./.output/public  # Ensure this path matches your local build output
 
   deploy:
     needs: build
