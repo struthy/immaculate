@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: "18"
       - run: npm install
-      - run: npm run build
+      - run: npm run generate  # Ensure the static site is generated
         env:
           NITRO_PRESET: github_pages
       - name: Upload artifact
