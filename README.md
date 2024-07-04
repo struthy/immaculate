@@ -1,18 +1,3 @@
-# Prismic + Nuxt Blog Starter
-
-This sample blog is an excellent starting point to explore [Nuxt][nuxt] and [Prismic][prismic]. Get it up and running in minutes. Modify and adapt it to your liking; it's all yours!
-
-- **Demo**: [Open live demo][live-demo]
-- **Learn more about Prismic and Nuxt**: [Prismic Nuxt Documentation][prismic-docs]
-
-&nbsp;
-
-<img src="https://user-images.githubusercontent.com/8601064/163122284-5b80a81e-a4fd-482e-9bd5-99b22f61175f.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
-
-&nbsp;
-
-## 🚀 Quick Start
-
 To start a new project using this starter, run the following commands in your terminal:
 
 ```sh
