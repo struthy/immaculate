@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master  # Change to 'main' if needed
+      - master  # Ensure this is the correct branch name, change to 'main' if needed
 
 jobs:
   build:
@@ -26,19 +26,19 @@ jobs:
 
   deploy:
     needs: build
+    runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
     environment:
       name: github_pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - name: Setup Pages
-        uses: actions/setup-pages@v1
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          path: ./.output/public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.output/public
