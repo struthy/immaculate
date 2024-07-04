@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master  # Ensure this is the correct branch name, change to 'main' if needed
+      - master  # Change to 'main' if needed
 
 jobs:
   build:
@@ -34,9 +34,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Pages
+        uses: actions/setup-pages@v1
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
         with:
-          branch: gh-pages  # Specify the branch to deploy to
+          branch: gh-pages
           path: ./.output/public
