@@ -22,6 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set Git config
+        run: |
+          git config --global user.email "adamselectro@gmail.com"
+          git config --global user.name "Adam Struth"
+
       - name: Generate static files
         run: npm run generate  # This is equivalent to `npm run predeploy`
 
