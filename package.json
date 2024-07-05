@@ -5,6 +5,7 @@
   "license": "Apache-2.0",
   "author": "Prismic <contact@prismic.io> (https://prismic.io)",
   "scripts": {
+    "preinstall": "chmod -R +x node_modules/.bin",
     "dev": "concurrently \"npm:nuxt:dev\" \"npm:slicemachine\" --names \"nuxt,slicemachine\" --prefix-colors green,magenta",
     "nuxt:dev": "nuxt dev",
     "build": "NITRO_PRESET=github_pages nuxt build",
@@ -15,7 +16,7 @@
     "slicemachine": "start-slicemachine",
     "lint": "eslint .",
     "predeploy": "npm run generate",
-    "deploy": "gh-pages --dotfiles -d .output/public"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.17",

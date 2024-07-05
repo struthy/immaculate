@@ -28,4 +28,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}  # Use your personal access token
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}  # Use your personal access token
