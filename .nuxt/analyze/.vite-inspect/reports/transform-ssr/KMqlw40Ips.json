@@ -1,0 +1,264 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/app/prismic/richTextSerializer.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { type HTMLRichTextMapSerializer } from '@prismicio/client';\n\nconst serializer: HTMLRichTextMapSerializer = {\n  heading1: ({ children }) =>\n    /* html */ `<h2 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-3xl mb-7 mt-12 first:mt-0 last:mb-0\">${children}</h2>`,\n  heading2: ({ children }) =>\n    /* html */ `<h3 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-2xl mb-7 last:mb-0\">${children}</h3>`,\n  heading3: ({ children }) =>\n    /* html */ `<h4 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-xl mb-7 last:mb-0\">${children}</h4>`,\n  paragraph: ({ children }) =>\n    /* html */ `<p class=\"mb-7 last:mb-0\">${children}</p>`,\n  oList: ({ children }) =>\n    /* html */ `<ol class=\"mb-7 pl-4 last:mb-0 md:pl-6\">${children}</ol>`,\n  oListItem: ({ children }) =>\n    /* html */ `<li class=\"mb-1 list-decimal pl-1 last:mb-0 md:pl-2\">${children}</li>`,\n  list: ({ children }) =>\n    /* html */ `<ul class=\"mb-7 pl-4 last:mb-0 md:pl-6\">${children}</ul>`,\n  listItem: ({ children }) =>\n    /* html */ `<li class=\"mb-1 list-disc pl-1 last:mb-0 md:pl-2\">${children}</li>`,\n  preformatted: ({ children }) =>\n    /* html */ `<pre class=\"mb-7 rounded bg-slate-100 p-4 text-sm last:mb-0 md:p-8 md:text-lg\"><code>${children}</code></pre>`,\n  strong: ({ children }) =>\n    /* html */ `<strong class=\"font-semibold\">${children}</strong>`,\n  hyperlink: ({ children, node }) =>\n    /* html */`<a href=\"${node.data.url}\" class=\"underline decoration-1 underline-offset-2\">${children}</a>`\n}\n\nexport default serializer;",
+      "start": 1720103997380,
+      "end": 1720103997475,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103997475,
+      "end": 1720103997475,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103997475,
+      "end": 1720103997475,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103997475,
+      "end": 1720103997475,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103997475,
+      "end": 1720103997475,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103997475,
+      "end": 1720103997475,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1720103997475,
+      "end": 1720103997475,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103997475,
+      "end": 1720103997475,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "const serializer = {\n  heading1: ({ children }) => (\n    /* html */\n    `<h2 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-3xl mb-7 mt-12 first:mt-0 last:mb-0\">${children}</h2>`\n  ),\n  heading2: ({ children }) => (\n    /* html */\n    `<h3 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-2xl mb-7 last:mb-0\">${children}</h3>`\n  ),\n  heading3: ({ children }) => (\n    /* html */\n    `<h4 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-xl mb-7 last:mb-0\">${children}</h4>`\n  ),\n  paragraph: ({ children }) => (\n    /* html */\n    `<p class=\"mb-7 last:mb-0\">${children}</p>`\n  ),\n  oList: ({ children }) => (\n    /* html */\n    `<ol class=\"mb-7 pl-4 last:mb-0 md:pl-6\">${children}</ol>`\n  ),\n  oListItem: ({ children }) => (\n    /* html */\n    `<li class=\"mb-1 list-decimal pl-1 last:mb-0 md:pl-2\">${children}</li>`\n  ),\n  list: ({ children }) => (\n    /* html */\n    `<ul class=\"mb-7 pl-4 last:mb-0 md:pl-6\">${children}</ul>`\n  ),\n  listItem: ({ children }) => (\n    /* html */\n    `<li class=\"mb-1 list-disc pl-1 last:mb-0 md:pl-2\">${children}</li>`\n  ),\n  preformatted: ({ children }) => (\n    /* html */\n    `<pre class=\"mb-7 rounded bg-slate-100 p-4 text-sm last:mb-0 md:p-8 md:text-lg\"><code>${children}</code></pre>`\n  ),\n  strong: ({ children }) => (\n    /* html */\n    `<strong class=\"font-semibold\">${children}</strong>`\n  ),\n  hyperlink: ({ children, node }) => (\n    /* html */\n    `<a href=\"${node.data.url}\" class=\"underline decoration-1 underline-offset-2\">${children}</a>`\n  )\n};\nexport default serializer;\n",
+      "start": 1720103997475,
+      "end": 1720103997573,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/webdev/Tutorials/nuxt-blog/app/prismic/richTextSerializer.ts"
+        ],
+        "sourcesContent": [
+          "import { type HTMLRichTextMapSerializer } from '@prismicio/client';\n\nconst serializer: HTMLRichTextMapSerializer = {\n  heading1: ({ children }) =>\n    /* html */ `<h2 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-3xl mb-7 mt-12 first:mt-0 last:mb-0\">${children}</h2>`,\n  heading2: ({ children }) =>\n    /* html */ `<h3 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-2xl mb-7 last:mb-0\">${children}</h3>`,\n  heading3: ({ children }) =>\n    /* html */ `<h4 class=\"font-sans font-semibold tracking-tighter text-slate-800 text-xl mb-7 last:mb-0\">${children}</h4>`,\n  paragraph: ({ children }) =>\n    /* html */ `<p class=\"mb-7 last:mb-0\">${children}</p>`,\n  oList: ({ children }) =>\n    /* html */ `<ol class=\"mb-7 pl-4 last:mb-0 md:pl-6\">${children}</ol>`,\n  oListItem: ({ children }) =>\n    /* html */ `<li class=\"mb-1 list-decimal pl-1 last:mb-0 md:pl-2\">${children}</li>`,\n  list: ({ children }) =>\n    /* html */ `<ul class=\"mb-7 pl-4 last:mb-0 md:pl-6\">${children}</ul>`,\n  listItem: ({ children }) =>\n    /* html */ `<li class=\"mb-1 list-disc pl-1 last:mb-0 md:pl-2\">${children}</li>`,\n  preformatted: ({ children }) =>\n    /* html */ `<pre class=\"mb-7 rounded bg-slate-100 p-4 text-sm last:mb-0 md:p-8 md:text-lg\"><code>${children}</code></pre>`,\n  strong: ({ children }) =>\n    /* html */ `<strong class=\"font-semibold\">${children}</strong>`,\n  hyperlink: ({ children, node }) =>\n    /* html */`<a href=\"${node.data.url}\" class=\"underline decoration-1 underline-offset-2\">${children}</a>`\n}\n\nexport default serializer;"
+        ],
+        "mappings": "AAEA,MAAM,aAAwC;AAAA,EAC5C,UAAU,CAAC,EAAE,SAAS;AAAA;AAAA,IACT,gHAAgH,QAAQ;AAAA;AAAA,EACrI,UAAU,CAAC,EAAE,SAAS;AAAA;AAAA,IACT,+FAA+F,QAAQ;AAAA;AAAA,EACpH,UAAU,CAAC,EAAE,SAAS;AAAA;AAAA,IACT,8FAA8F,QAAQ;AAAA;AAAA,EACnH,WAAW,CAAC,EAAE,SAAS;AAAA;AAAA,IACV,6BAA6B,QAAQ;AAAA;AAAA,EAClD,OAAO,CAAC,EAAE,SAAS;AAAA;AAAA,IACN,2CAA2C,QAAQ;AAAA;AAAA,EAChE,WAAW,CAAC,EAAE,SAAS;AAAA;AAAA,IACV,wDAAwD,QAAQ;AAAA;AAAA,EAC7E,MAAM,CAAC,EAAE,SAAS;AAAA;AAAA,IACL,2CAA2C,QAAQ;AAAA;AAAA,EAChE,UAAU,CAAC,EAAE,SAAS;AAAA;AAAA,IACT,qDAAqD,QAAQ;AAAA;AAAA,EAC1E,cAAc,CAAC,EAAE,SAAS;AAAA;AAAA,IACb,wFAAwF,QAAQ;AAAA;AAAA,EAC7G,QAAQ,CAAC,EAAE,SAAS;AAAA;AAAA,IACP,iCAAiC,QAAQ;AAAA;AAAA,EACtD,WAAW,CAAC,EAAE,UAAU,KAAK;AAAA;AAAA,IACjB,YAAY,KAAK,KAAK,GAAG,uDAAuD,QAAQ;AAAA;AACtG;AAEA,eAAe;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103997573,
+      "end": 1720103997573,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103997573,
+      "end": 1720103997573,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103997573,
+      "end": 1720103997573,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103997573,
+      "end": 1720103997573,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997574,
+      "end": 1720103997574,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997574,
+      "end": 1720103997574,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103997575,
+      "end": 1720103997575,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103997575,
+      "end": 1720103997575,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103997575,
+      "end": 1720103997575,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997575,
+      "end": 1720103997575,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103997575,
+      "end": 1720103997576,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103997576,
+      "end": 1720103997577,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103997577,
+      "end": 1720103997577,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103997577,
+      "end": 1720103997577,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103997577,
+      "end": 1720103997577,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103997577,
+      "end": 1720103997577,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103997577,
+      "end": 1720103997577,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103997578,
+      "end": 1720103997579,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103997581,
+      "end": 1720103997581,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103997582,
+      "end": 1720103997582,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103997582,
+      "end": 1720103997582,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103997582,
+      "end": 1720103997583,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103997582,
+      "end": 1720103997583,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103997583,
+      "end": 1720103997583,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103997583,
+      "end": 1720103997584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103997584,
+      "end": 1720103997584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103997584,
+      "end": 1720103997584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1720103997584,
+      "end": 1720103997584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103997584,
+      "end": 1720103997584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103997584,
+      "end": 1720103997585,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103997585,
+      "end": 1720103997585,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103997585,
+      "end": 1720103997585,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/node_modules/@prismicio/simulator/dist/SimulatorAPI.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "var __defProp = Object.defineProperty;\nvar __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;\nvar __publicField = (obj, key, value) => {\n  __defNormalProp(obj, typeof key !== \"symbol\" ? key + \"\" : key, value);\n  return value;\n};\nvar _a, _b;\nimport { ClientRequestType, APIRequestType } from \"./types.js\";\nimport \"statuses\";\nimport \"./channel/types.js\";\nimport { ChannelReceiver } from \"./channel/ChannelReceiver.js\";\nconst simulatorAPIDefaultOptions = {\n  requestIDPrefix: \"api-\",\n  activeSliceAPI: false,\n  sliceZoneSizeAPI: false\n};\nclass SimulatorAPI extends ChannelReceiver {\n  constructor(requestHandlers, options) {\n    var _a2, _b2;\n    const debug = (options == null ? void 0 : options.debug) || /[?&]debug=true/i.test(decodeURIComponent(window.location.search));\n    super({\n      [ClientRequestType.Ping]: (_req, res) => {\n        return res.success(\"pong\");\n      },\n      ...requestHandlers\n    }, {\n      ...simulatorAPIDefaultOptions,\n      ...options,\n      debug\n    });\n    __publicField(this, _a, async (data) => {\n      return await this.postFormattedRequest(APIRequestType.SetActiveSlice, data);\n    });\n    __publicField(this, _b, async (data) => {\n      return await this.postFormattedRequest(APIRequestType.SetSliceZoneSize, data);\n    });\n    if (debug) {\n      window.prismic || (window.prismic = {});\n      (_a2 = window.prismic).sliceSimulator || (_a2.sliceSimulator = {});\n      (_b2 = window.prismic.sliceSimulator).api || (_b2.api = []);\n      window.prismic.sliceSimulator.api.push(this);\n    }\n  }\n}\n_a = APIRequestType.SetActiveSlice, _b = APIRequestType.SetSliceZoneSize;\nexport {\n  SimulatorAPI,\n  simulatorAPIDefaultOptions\n};\n//# sourceMappingURL=SimulatorAPI.js.map\n",
+      "start": 1720103995594,
+      "end": 1720103995616,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995616,
+      "end": 1720103995616,
+      "order": "normal"
+    }
+  ]
+}

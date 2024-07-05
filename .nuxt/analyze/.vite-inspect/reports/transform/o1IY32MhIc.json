@@ -1,0 +1,222 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/components/HeaderProfile.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"px-4\" }\nconst _hoisted_2 = { class: \"grid max-w-lg grid-cols-1 justify-items-center gap-8\" }\nconst _hoisted_3 = { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" }\nconst _hoisted_4 = {\n  key: 0,\n  class: \"grid grid-cols-1 gap-2 text-center\"\n}\n\nimport { type RichTextField, type ImageField } from '@prismicio/client'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'HeaderProfile',\n  props: {\n  name: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  description: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  profilePicture: {\n    type: Object as PropType<ImageField>,\n    default: undefined\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_Heading = _resolveComponent(\"Heading\")!\n  const _component_PrismicText = _resolveComponent(\"PrismicText\")!\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createVNode(_component_NuxtLink, {\n        to: \"/\",\n        \"tab-index\": \"-1\"\n      }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"div\", _hoisted_3, [\n            (__props.profilePicture?.url)\n              ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"]))\n              : _createCommentVNode(\"\", true)\n          ])\n        ]),\n        _: 1\n      }),\n      (_ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description))\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_4, [\n            (_ctx.$prismic.asText(__props.name))\n              ? (_openBlock(), _createBlock(_component_Heading, { key: 0 }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                }))\n              : _createCommentVNode(\"\", true),\n            (_ctx.$prismic.asText(__props.description))\n              ? (_openBlock(), _createBlock(_component_PrismicText, {\n                  key: 1,\n                  field: __props.description,\n                  wrapper: \"p\",\n                  class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n                }, null, 8, [\"field\"]))\n              : _createCommentVNode(\"\", true)\n          ]))\n        : _createCommentVNode(\"\", true)\n    ])\n  ]))\n}\n}\n\n})",
+      "start": 1720103995577,
+      "end": 1720103995577
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995577,
+      "end": 1720103995577,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995577,
+      "end": 1720103995577,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995577,
+      "end": 1720103995577,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995577,
+      "end": 1720103995577,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = { class: \"px-4\" };\nconst _hoisted_2 = { class: \"grid max-w-lg grid-cols-1 justify-items-center gap-8\" };\nconst _hoisted_3 = { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" };\nconst _hoisted_4 = {\n  key: 0,\n  class: \"grid grid-cols-1 gap-2 text-center\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"HeaderProfile\",\n  props: {\n    name: {\n      type: Object,\n      default: void 0\n    },\n    description: {\n      type: Object,\n      default: void 0\n    },\n    profilePicture: {\n      type: Object,\n      default: void 0\n    }\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_PrismicImage = _resolveComponent(\"PrismicImage\");\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      const _component_Heading = _resolveComponent(\"Heading\");\n      const _component_PrismicText = _resolveComponent(\"PrismicText\");\n      return _openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createVNode(_component_NuxtLink, {\n            to: \"/\",\n            \"tab-index\": \"-1\"\n          }, {\n            default: _withCtx(() => [\n              _createElementVNode(\"div\", _hoisted_3, [\n                __props.profilePicture?.url ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n              ])\n            ]),\n            _: 1\n          }),\n          _ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_4, [\n            _ctx.$prismic.asText(__props.name) ? (_openBlock(), _createBlock(_component_Heading, { key: 0 }, {\n              default: _withCtx(() => [\n                _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                  default: _withCtx(() => [\n                    _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            })) : _createCommentVNode(\"\", true),\n            _ctx.$prismic.asText(__props.description) ? (_openBlock(), _createBlock(_component_PrismicText, {\n              key: 1,\n              field: __props.description,\n              wrapper: \"p\",\n              class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n          ])) : _createCommentVNode(\"\", true)\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1720103995577,
+      "end": 1720103995597,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/webdev/Tutorials/nuxt-blog/components/HeaderProfile.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"px-4\" }\nconst _hoisted_2 = { class: \"grid max-w-lg grid-cols-1 justify-items-center gap-8\" }\nconst _hoisted_3 = { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" }\nconst _hoisted_4 = {\n  key: 0,\n  class: \"grid grid-cols-1 gap-2 text-center\"\n}\n\nimport { type RichTextField, type ImageField } from '@prismicio/client'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'HeaderProfile',\n  props: {\n  name: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  description: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  profilePicture: {\n    type: Object as PropType<ImageField>,\n    default: undefined\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_Heading = _resolveComponent(\"Heading\")!\n  const _component_PrismicText = _resolveComponent(\"PrismicText\")!\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createVNode(_component_NuxtLink, {\n        to: \"/\",\n        \"tab-index\": \"-1\"\n      }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"div\", _hoisted_3, [\n            (__props.profilePicture?.url)\n              ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"]))\n              : _createCommentVNode(\"\", true)\n          ])\n        ]),\n        _: 1\n      }),\n      (_ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description))\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_4, [\n            (_ctx.$prismic.asText(__props.name))\n              ? (_openBlock(), _createBlock(_component_Heading, { key: 0 }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                }))\n              : _createCommentVNode(\"\", true),\n            (_ctx.$prismic.asText(__props.description))\n              ? (_openBlock(), _createBlock(_component_PrismicText, {\n                  key: 1,\n                  field: __props.description,\n                  wrapper: \"p\",\n                  class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n                }, null, 8, [\"field\"]))\n              : _createCommentVNode(\"\", true)\n          ]))\n        : _createCommentVNode(\"\", true)\n    ])\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAAmB,aAAa,YAAY,eAAe,cAAc,sBAAsB,qBAAqB,sBAAsB,qBAAqB,WAAW,UAAU,eAAe,cAAc,mBAAmB,kBAAkB,mBAAmB,kBAAkB,sBAAsB,2BAA2B;AAEzW,MAAM,aAAa,EAAE,OAAO,OAAO;AACnC,MAAM,aAAa,EAAE,OAAO,uDAAuD;AACnF,MAAM,aAAa,EAAE,OAAO,+DAA+D;AAC3F,MAAM,aAAa;AAAA,EACjB,KAAK;AAAA,EACL,OAAO;AACT;AAKA,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACP,MAAM;AAAA,MACJ,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,IACA,aAAa;AAAA,MACX,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,IACA,gBAAgB;AAAA,MACd,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,EACF;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,0BAA0B,kBAAkB,cAAc;AAChE,YAAM,sBAAsB,kBAAkB,UAAU;AACxD,YAAM,qBAAqB,kBAAkB,SAAS;AACtD,YAAM,yBAAyB,kBAAkB,aAAa;AAE9D,aAAQ,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,QAC3D,oBAAoB,OAAO,YAAY;AAAA,UACrC,aAAa,qBAAqB;AAAA,YAChC,IAAI;AAAA,YACJ,aAAa;AAAA,UACf,GAAG;AAAA,YACD,SAAS,SAAS,MAAM;AAAA,cACtB,oBAAoB,OAAO,YAAY;AAAA,gBACpC,QAAQ,gBAAgB,OACpB,WAAW,GAAG,aAAa,yBAAyB;AAAA,kBACnD,KAAK;AAAA,kBACL,OAAO,QAAQ;AAAA,kBACf,OAAO;AAAA,gBACT,GAAG,MAAM,GAAG,CAAC,OAAO,CAAC,KACrB,oBAAoB,IAAI,IAAI;AAAA,cAClC,CAAC;AAAA,YACH,CAAC;AAAA,YACD,GAAG;AAAA,UACL,CAAC;AAAA,UACA,KAAK,SAAS,OAAO,QAAQ,IAAI,KAAK,KAAK,SAAS,OAAO,QAAQ,WAAW,KAC1E,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,YACnD,KAAK,SAAS,OAAO,QAAQ,IAAI,KAC7B,WAAW,GAAG,aAAa,oBAAoB,EAAE,KAAK,EAAE,GAAG;AAAA,cAC1D,SAAS,SAAS,MAAM;AAAA,gBACtB,aAAa,qBAAqB,EAAE,IAAI,IAAI,GAAG;AAAA,kBAC7C,SAAS,SAAS,MAAM;AAAA,oBACtB,iBAAiB,iBAAiB,KAAK,SAAS,OAAO,QAAQ,IAAI,CAAC,GAAG,CAAC;AAAA,kBAC1E,CAAC;AAAA,kBACD,GAAG;AAAA,gBACL,CAAC;AAAA,cACH,CAAC;AAAA,cACD,GAAG;AAAA,YACL,CAAC,KACD,oBAAoB,IAAI,IAAI;AAAA,YAC/B,KAAK,SAAS,OAAO,QAAQ,WAAW,KACpC,WAAW,GAAG,aAAa,wBAAwB;AAAA,cAClD,KAAK;AAAA,cACL,OAAO,QAAQ;AAAA,cACf,SAAS;AAAA,cACT,OAAO;AAAA,YACT,GAAG,MAAM,GAAG,CAAC,OAAO,CAAC,KACrB,oBAAoB,IAAI,IAAI;AAAA,UAClC,CAAC,KACD,oBAAoB,IAAI,IAAI;AAAA,QAClC,CAAC;AAAA,MACH,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995598,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995600,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995600,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995600,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995600,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { PrismicImage as __nuxt_component_0 } from \"@prismicio/vue\";\nimport { default as __nuxt_component_1 } from \"C:/webdev/Tutorials/nuxt-blog/node_modules/nuxt/dist/app/components/nuxt-link\";\nimport { default as __nuxt_component_2 } from \"C:/webdev/Tutorials/nuxt-blog/components/Heading.vue\";\nimport { PrismicText as __nuxt_component_3 } from \"@prismicio/vue\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = { class: \"px-4\" };\nconst _hoisted_2 = { class: \"grid max-w-lg grid-cols-1 justify-items-center gap-8\" };\nconst _hoisted_3 = { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" };\nconst _hoisted_4 = {\n  key: 0,\n  class: \"grid grid-cols-1 gap-2 text-center\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"HeaderProfile\",\n  props: {\n    name: {\n      type: Object,\n      default: void 0\n    },\n    description: {\n      type: Object,\n      default: void 0\n    },\n    profilePicture: {\n      type: Object,\n      default: void 0\n    }\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_PrismicImage = __nuxt_component_0;\n      const _component_NuxtLink = __nuxt_component_1;\n      const _component_Heading = __nuxt_component_2;\n      const _component_PrismicText = __nuxt_component_3;\n      return _openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createVNode(_component_NuxtLink, {\n            to: \"/\",\n            \"tab-index\": \"-1\"\n          }, {\n            default: _withCtx(() => [\n              _createElementVNode(\"div\", _hoisted_3, [\n                __props.profilePicture?.url ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n              ])\n            ]),\n            _: 1\n          }),\n          _ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_4, [\n            _ctx.$prismic.asText(__props.name) ? (_openBlock(), _createBlock(_component_Heading, { key: 0 }, {\n              default: _withCtx(() => [\n                _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                  default: _withCtx(() => [\n                    _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            })) : _createCommentVNode(\"\", true),\n            _ctx.$prismic.asText(__props.description) ? (_openBlock(), _createBlock(_component_PrismicText, {\n              key: 1,\n              field: __props.description,\n              wrapper: \"p\",\n              class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n          ])) : _createCommentVNode(\"\", true)\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1720103995600,
+      "end": 1720103995601,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995601,
+      "end": 1720103995601,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995601,
+      "end": 1720103995601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995601,
+      "end": 1720103995601,
+      "order": "normal"
+    }
+  ]
+}

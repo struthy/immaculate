@@ -1,0 +1,231 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/slices/Quote/index.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  key: 0,\n  class: \"font-serif text-3xl italic leading-relaxed\"\n}\n\nimport { type Content } from '@prismicio/client'\n\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\n// Consider it as a visual hint for you when templating your slice.\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.QuoteSlice>(\n  ['slice', 'index', 'slices', 'context']\n),\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, {\n    as: \"section\",\n    size: \"wide\"\n  }, {\n    default: _withCtx(() => [\n      (_ctx.$prismic.asText(_ctx.slice.primary.quote))\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n            _createTextVNode(\" “ \" + _toDisplayString(_ctx.$prismic.asText(_ctx.slice.primary.quote)) + \" ” \", 1),\n            (_ctx.slice.primary.source)\n              ? (_openBlock(), _createElementBlock(_Fragment, { key: 0 }, [\n                  _createTextVNode(\" — \" + _toDisplayString(_ctx.slice.primary.source), 1)\n                ], 64))\n              : _createCommentVNode(\"\", true)\n          ]))\n        : _createCommentVNode(\"\", true)\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720103995576,
+      "end": 1720103995576
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995576,
+      "end": 1720103995576,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995576,
+      "end": 1720103995576,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995576,
+      "end": 1720103995576,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995576,
+      "end": 1720103995576,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = {\n  key: 0,\n  class: \"font-serif text-3xl italic leading-relaxed\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, {\n        as: \"section\",\n        size: \"wide\"\n      }, {\n        default: _withCtx(() => [\n          _ctx.$prismic.asText(_ctx.slice.primary.quote) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n            _createTextVNode(\" “ \" + _toDisplayString(_ctx.$prismic.asText(_ctx.slice.primary.quote)) + \" ” \", 1),\n            _ctx.slice.primary.source ? (_openBlock(), _createElementBlock(_Fragment, { key: 0 }, [\n              _createTextVNode(\" — \" + _toDisplayString(_ctx.slice.primary.source), 1)\n            ], 64)) : _createCommentVNode(\"\", true)\n          ])) : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720103995576,
+      "end": 1720103995597,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/webdev/Tutorials/nuxt-blog/slices/Quote/index.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  key: 0,\n  class: \"font-serif text-3xl italic leading-relaxed\"\n}\n\nimport { type Content } from '@prismicio/client'\n\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\n// Consider it as a visual hint for you when templating your slice.\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.QuoteSlice>(\n  ['slice', 'index', 'slices', 'context']\n),\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, {\n    as: \"section\",\n    size: \"wide\"\n  }, {\n    default: _withCtx(() => [\n      (_ctx.$prismic.asText(_ctx.slice.primary.quote))\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n            _createTextVNode(\" “ \" + _toDisplayString(_ctx.$prismic.asText(_ctx.slice.primary.quote)) + \" ” \", 1),\n            (_ctx.slice.primary.source)\n              ? (_openBlock(), _createElementBlock(_Fragment, { key: 0 }, [\n                  _createTextVNode(\" — \" + _toDisplayString(_ctx.slice.primary.source), 1)\n                ], 64))\n              : _createCommentVNode(\"\", true)\n          ]))\n        : _createCommentVNode(\"\", true)\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,mBAAmB,kBAAkB,mBAAmB,kBAAkB,YAAY,WAAW,aAAa,YAAY,sBAAsB,qBAAqB,sBAAsB,qBAAqB,oBAAoB,mBAAmB,WAAW,UAAU,eAAe,oBAAoB;AAExT,MAAM,aAAa;AAAA,EACjB,KAAK;AAAA,EACL,OAAO;AACT;AAOA,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACP,CAAC,SAAS,SAAS,UAAU,SAAS;AAAA,EACxC;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,aAAQ,WAAW,GAAG,aAAa,oBAAoB;AAAA,QACrD,IAAI;AAAA,QACJ,MAAM;AAAA,MACR,GAAG;AAAA,QACD,SAAS,SAAS,MAAM;AAAA,UACrB,KAAK,SAAS,OAAO,KAAK,MAAM,QAAQ,KAAK,KACzC,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,YACpD,iBAAiB,QAAQ,iBAAiB,KAAK,SAAS,OAAO,KAAK,MAAM,QAAQ,KAAK,CAAC,IAAI,OAAO,CAAC;AAAA,YACnG,KAAK,MAAM,QAAQ,UACf,WAAW,GAAG,oBAAoB,WAAW,EAAE,KAAK,EAAE,GAAG;AAAA,cACxD,iBAAiB,QAAQ,iBAAiB,KAAK,MAAM,QAAQ,MAAM,GAAG,CAAC;AAAA,YACzE,GAAG,EAAE,KACL,oBAAoB,IAAI,IAAI;AAAA,UAClC,CAAC,KACD,oBAAoB,IAAI,IAAI;AAAA,QAClC,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995597,
+      "end": 1720103995597,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995598,
+      "end": 1720103995598,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { getSliceComponentProps } from '@prismicio/vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = {\n  key: 0,\n  class: \"font-serif text-3xl italic leading-relaxed\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, {\n        as: \"section\",\n        size: \"wide\"\n      }, {\n        default: _withCtx(() => [\n          _ctx.$prismic.asText(_ctx.slice.primary.quote) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n            _createTextVNode(\" “ \" + _toDisplayString(_ctx.$prismic.asText(_ctx.slice.primary.quote)) + \" ” \", 1),\n            _ctx.slice.primary.source ? (_openBlock(), _createElementBlock(_Fragment, { key: 0 }, [\n              _createTextVNode(\" — \" + _toDisplayString(_ctx.slice.primary.source), 1)\n            ], 64)) : _createCommentVNode(\"\", true)\n          ])) : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720103995598,
+      "end": 1720103995600,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9T,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995600,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995600,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995600,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995600,
+      "end": 1720103995600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/webdev/Tutorials/nuxt-blog/components/Bounded.vue\";\nimport { getSliceComponentProps } from '@prismicio/vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = {\n  key: 0,\n  class: \"font-serif text-3xl italic leading-relaxed\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_Bounded = __nuxt_component_0;\n      return _openBlock(), _createBlock(_component_Bounded, {\n        as: \"section\",\n        size: \"wide\"\n      }, {\n        default: _withCtx(() => [\n          _ctx.$prismic.asText(_ctx.slice.primary.quote) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n            _createTextVNode(\" “ \" + _toDisplayString(_ctx.$prismic.asText(_ctx.slice.primary.quote)) + \" ” \", 1),\n            _ctx.slice.primary.source ? (_openBlock(), _createElementBlock(_Fragment, { key: 0 }, [\n              _createTextVNode(\" — \" + _toDisplayString(_ctx.slice.primary.source), 1)\n            ], 64)) : _createCommentVNode(\"\", true)\n          ])) : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720103995601,
+      "end": 1720103995601,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995601,
+      "end": 1720103995601,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995601,
+      "end": 1720103995601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995601,
+      "end": 1720103995601,
+      "order": "normal"
+    }
+  ]
+}

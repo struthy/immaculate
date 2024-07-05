@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/node_modules/@prismicio/client/dist/filter.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "const formatValue = (value) => {\n  if (Array.isArray(value)) {\n    return `[${value.map(formatValue).join(\", \")}]`;\n  }\n  if (typeof value === \"string\") {\n    return `\"${value}\"`;\n  }\n  if (value instanceof Date) {\n    return `${value.getTime()}`;\n  }\n  return `${value}`;\n};\nconst pathWithArgsFilter = (name) => {\n  const fn = (path, ...args) => {\n    const formattedArgs = args.map(formatValue).join(\", \");\n    const joiner = path && args.length ? \", \" : \"\";\n    return `[${name}(${path}${joiner}${formattedArgs})]`;\n  };\n  return fn;\n};\nconst pathFilter = (name) => {\n  const filterFn = pathWithArgsFilter(name);\n  const fn = (path) => {\n    return filterFn(path);\n  };\n  return fn;\n};\nconst argsFilter = (name) => {\n  const filterFn = pathWithArgsFilter(name);\n  const fn = (...args) => {\n    return filterFn(\"\", ...args);\n  };\n  return fn;\n};\nconst filter = {\n  /**\n   * The `at` filter checks that the path matches the described value exactly.\n   * It takes a single value for a field or an array (only for tags).\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#at}\n   */\n  at: pathWithArgsFilter(\"at\"),\n  /**\n   * The `not` filter checks that the path doesn't match the provided value\n   * exactly. It takes a single value for a field or an array (only for tags).\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#not}\n   */\n  not: pathWithArgsFilter(\"not\"),\n  /**\n   * The `any` filter takes an array of values. It works exactly the same way as\n   * the `at` operator, but checks whether the fragment matches any of the\n   * values in the array.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#any}\n   */\n  any: pathWithArgsFilter(\"any\"),\n  /**\n   * The `in` filter is used specifically to retrieve an array of documents by\n   * their IDs or UIDs. This filter is much more efficient at this than the any\n   * filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#in}\n   */\n  in: pathWithArgsFilter(\"in\"),\n  /**\n   * The `fulltext` filter provides two capabilities:\n   *\n   * 1. Checking if a certain string is anywhere inside a document (this is what\n   *    you should use to make your project's search engine feature)\n   * 2. Checking if the string is contained inside a specific custom type’s Rich\n   *    Text or Key Text fragment.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#fulltext}\n   */\n  fulltext: pathWithArgsFilter(\"fulltext\"),\n  /**\n   * The `has` filter checks whether a fragment has a value. It will return all\n   * the documents of the specified type that contain a value for the specified\n   * field.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#has}\n   */\n  has: pathFilter(\"has\"),\n  /**\n   * The `missing` filter checks if a fragment doesn't have a value. It will\n   * return all the documents of the specified type that do not contain a value\n   * for the specified field.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#missing}\n   */\n  missing: pathFilter(\"missing\"),\n  /**\n   * The `similar` filter takes the ID of a document, and returns a list of\n   * documents with similar content. This allows you to build an automated\n   * content discovery feature (for example, a \"Related posts\" section).\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#similar}\n   */\n  similar: argsFilter(\"similar\"),\n  /**\n   * The `geopoint.near` filter checks that the value in the path is within the\n   * radius of the given coordinates.\n   *\n   * This filter will only work for a geopoint field.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#geopointnear}\n   */\n  geopointNear: pathWithArgsFilter(\"geopoint.near\"),\n  /**\n   * The `number.lt` filter checks that the value in the number field is less\n   * than the value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#numberlessthan}\n   */\n  numberLessThan: pathWithArgsFilter(\"number.lt\"),\n  /**\n   * The `number.gt` filter checks that the value in the number field is greater\n   * than the value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#numbergreaterthan}\n   */\n  numberGreaterThan: pathWithArgsFilter(\"number.gt\"),\n  /**\n   * The `number.inRange` filter checks that the value in the path is within the\n   * two values passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#numberinrange}\n   */\n  numberInRange: pathWithArgsFilter(\"number.inRange\"),\n  /**\n   * The `date.after` filter checks that the value in the path is after the date\n   * value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateAfter: pathWithArgsFilter(\"date.after\"),\n  /**\n   * The `date.before` filter checks that the value in the path is before the\n   * date value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateBefore: pathWithArgsFilter(\"date.before\"),\n  /**\n   * The `date.between` filter checks that the value in the path is within the\n   * date values passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateBetween: pathWithArgsFilter(\"date.between\"),\n  /**\n   * The `date.day-of-month` filter checks that the value in the path is equal\n   * to the day of the month passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateDayOfMonth: pathWithArgsFilter(\"date.day-of-month\"),\n  /**\n   * The `date.day-of-month-after` filter checks that the value in the path is\n   * after the day of the month passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateDayOfMonthAfter: pathWithArgsFilter(\"date.day-of-month-after\"),\n  /**\n   * The `date.day-of-month-before` filter checks that the value in the path is\n   * before the day of the month passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateDayOfMonthBefore: pathWithArgsFilter(\"date.day-of-month-before\"),\n  /**\n   * The `date.day-of-week` filter checks that the value in the path is equal to\n   * the day of the week passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateDayOfWeek: pathWithArgsFilter(\"date.day-of-week\"),\n  /**\n   * The `date.day-of-week-after` filter checks that the value in the path is\n   * after the day of the week passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateDayOfWeekAfter: pathWithArgsFilter(\"date.day-of-week-after\"),\n  /**\n   * The date.day-of-week-before filter checks that the value in the path is\n   * before the day of the week passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateDayOfWeekBefore: pathWithArgsFilter(\"date.day-of-week-before\"),\n  /**\n   * The `date.month` filter checks that the value in the path occurs in the\n   * month value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateMonth: pathWithArgsFilter(\"date.month\"),\n  /**\n   * The `date.month-after` filter checks that the value in the path occurs in\n   * any month after the value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateMonthAfter: pathWithArgsFilter(\"date.month-after\"),\n  /**\n   * The `date.month-before` filter checks that the value in the path occurs in\n   * any month before the value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateMonthBefore: pathWithArgsFilter(\"date.month-before\"),\n  /**\n   * The `date.year` filter checks that the value in the path occurs in the year\n   * value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateYear: pathWithArgsFilter(\"date.year\"),\n  /**\n   * The `date.hour` filter checks that the value in the path occurs within the\n   * hour value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateHour: pathWithArgsFilter(\"date.hour\"),\n  /**\n   * The `date.hour-after` filter checks that the value in the path occurs after\n   * the hour value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateHourAfter: pathWithArgsFilter(\"date.hour-after\"),\n  /**\n   * The `date.hour-before` filter checks that the value in the path occurs\n   * before the hour value passed into the filter.\n   *\n   * {@link https://prismic.io/docs/rest-api-technical-reference#date-filters}\n   */\n  dateHourBefore: pathWithArgsFilter(\"date.hour-before\")\n};\nexport {\n  filter\n};\n//# sourceMappingURL=filter.js.map\n",
+      "start": 1720103994613,
+      "end": 1720103994870,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103994870,
+      "end": 1720103994870,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103994870,
+      "end": 1720103994871,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103994871,
+      "end": 1720103994871,
+      "order": "normal"
+    }
+  ]
+}

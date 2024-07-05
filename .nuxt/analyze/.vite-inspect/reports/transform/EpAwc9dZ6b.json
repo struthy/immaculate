@@ -1,0 +1,212 @@
+{
+  "resolvedId": "virtual:nuxt:C:/webdev/Tutorials/nuxt-blog/.nuxt/routes.mjs",
+  "transforms": [
+    {
+      "name": "virtual",
+      "result": "import { default as PrismicPreviewEU1ysBgXv5Meta } from \"C:/webdev/Tutorials/nuxt-blog/node_modules/@nuxtjs/prismic/dist/runtime/PrismicPreview.vue?macro=true\";\nimport { default as _91uid_93hR8atv8VAhMeta } from \"C:/webdev/Tutorials/nuxt-blog/pages/[uid].vue?macro=true\";\nimport { default as _91uid_93pTN19MANCHMeta } from \"C:/webdev/Tutorials/nuxt-blog/pages/articles/[uid].vue?macro=true\";\nimport { default as indexoo7yBIMdbYMeta } from \"C:/webdev/Tutorials/nuxt-blog/pages/index.vue?macro=true\";\nimport { default as slice_45simulatoro9Zh5D2LFiMeta } from \"C:/webdev/Tutorials/nuxt-blog/pages/slice-simulator.vue?macro=true\";\nexport default [\n  {\n    name: PrismicPreviewEU1ysBgXv5Meta?.name ?? \"prismic-preview\",\n    path: PrismicPreviewEU1ysBgXv5Meta?.path ?? \"/api/preview\",\n    meta: PrismicPreviewEU1ysBgXv5Meta || {},\n    alias: PrismicPreviewEU1ysBgXv5Meta?.alias || [],\n    redirect: PrismicPreviewEU1ysBgXv5Meta?.redirect,\n    component: () => import(\"C:/webdev/Tutorials/nuxt-blog/node_modules/@nuxtjs/prismic/dist/runtime/PrismicPreview.vue\").then(m => m.default || m)\n  },\n  {\n    name: _91uid_93hR8atv8VAhMeta?.name ?? \"uid\",\n    path: _91uid_93hR8atv8VAhMeta?.path ?? \"/:uid()\",\n    meta: _91uid_93hR8atv8VAhMeta || {},\n    alias: _91uid_93hR8atv8VAhMeta?.alias || [],\n    redirect: _91uid_93hR8atv8VAhMeta?.redirect,\n    component: () => import(\"C:/webdev/Tutorials/nuxt-blog/pages/[uid].vue\").then(m => m.default || m)\n  },\n  {\n    name: _91uid_93pTN19MANCHMeta?.name ?? \"articles-uid\",\n    path: _91uid_93pTN19MANCHMeta?.path ?? \"/articles/:uid()\",\n    meta: _91uid_93pTN19MANCHMeta || {},\n    alias: _91uid_93pTN19MANCHMeta?.alias || [],\n    redirect: _91uid_93pTN19MANCHMeta?.redirect,\n    component: () => import(\"C:/webdev/Tutorials/nuxt-blog/pages/articles/[uid].vue\").then(m => m.default || m)\n  },\n  {\n    name: indexoo7yBIMdbYMeta?.name ?? \"index\",\n    path: indexoo7yBIMdbYMeta?.path ?? \"/\",\n    meta: indexoo7yBIMdbYMeta || {},\n    alias: indexoo7yBIMdbYMeta?.alias || [],\n    redirect: indexoo7yBIMdbYMeta?.redirect,\n    component: () => import(\"C:/webdev/Tutorials/nuxt-blog/pages/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: slice_45simulatoro9Zh5D2LFiMeta?.name ?? \"slice-simulator\",\n    path: slice_45simulatoro9Zh5D2LFiMeta?.path ?? \"/slice-simulator\",\n    meta: slice_45simulatoro9Zh5D2LFiMeta || {},\n    alias: slice_45simulatoro9Zh5D2LFiMeta?.alias || [],\n    redirect: slice_45simulatoro9Zh5D2LFiMeta?.redirect,\n    component: () => import(\"C:/webdev/Tutorials/nuxt-blog/pages/slice-simulator.vue\").then(m => m.default || m)\n  }\n]",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103993979,
+      "end": 1720103993979,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103993979,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103993980,
+      "end": 1720103993980,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103993980,
+      "end": 1720103993981,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103993981,
+      "end": 1720103993981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103993981,
+      "end": 1720103993981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103993981,
+      "end": 1720103993981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103993981,
+      "end": 1720103993981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103993981,
+      "end": 1720103993981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103993981,
+      "end": 1720103993981,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "result": "import { __vitePreload } from \"\u0000vite/preload-helper.js\";import { default as PrismicPreviewEU1ysBgXv5Meta } from \"C:/webdev/Tutorials/nuxt-blog/node_modules/@nuxtjs/prismic/dist/runtime/PrismicPreview.vue?macro=true\";\nimport { default as _91uid_93hR8atv8VAhMeta } from \"C:/webdev/Tutorials/nuxt-blog/pages/[uid].vue?macro=true\";\nimport { default as _91uid_93pTN19MANCHMeta } from \"C:/webdev/Tutorials/nuxt-blog/pages/articles/[uid].vue?macro=true\";\nimport { default as indexoo7yBIMdbYMeta } from \"C:/webdev/Tutorials/nuxt-blog/pages/index.vue?macro=true\";\nimport { default as slice_45simulatoro9Zh5D2LFiMeta } from \"C:/webdev/Tutorials/nuxt-blog/pages/slice-simulator.vue?macro=true\";\nexport default [\n  {\n    name: PrismicPreviewEU1ysBgXv5Meta?.name ?? \"prismic-preview\",\n    path: PrismicPreviewEU1ysBgXv5Meta?.path ?? \"/api/preview\",\n    meta: PrismicPreviewEU1ysBgXv5Meta || {},\n    alias: PrismicPreviewEU1ysBgXv5Meta?.alias || [],\n    redirect: PrismicPreviewEU1ysBgXv5Meta?.redirect,\n    component: () => __vitePreload(() => import(\"C:/webdev/Tutorials/nuxt-blog/node_modules/@nuxtjs/prismic/dist/runtime/PrismicPreview.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: _91uid_93hR8atv8VAhMeta?.name ?? \"uid\",\n    path: _91uid_93hR8atv8VAhMeta?.path ?? \"/:uid()\",\n    meta: _91uid_93hR8atv8VAhMeta || {},\n    alias: _91uid_93hR8atv8VAhMeta?.alias || [],\n    redirect: _91uid_93hR8atv8VAhMeta?.redirect,\n    component: () => __vitePreload(() => import(\"C:/webdev/Tutorials/nuxt-blog/pages/[uid].vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: _91uid_93pTN19MANCHMeta?.name ?? \"articles-uid\",\n    path: _91uid_93pTN19MANCHMeta?.path ?? \"/articles/:uid()\",\n    meta: _91uid_93pTN19MANCHMeta || {},\n    alias: _91uid_93pTN19MANCHMeta?.alias || [],\n    redirect: _91uid_93pTN19MANCHMeta?.redirect,\n    component: () => __vitePreload(() => import(\"C:/webdev/Tutorials/nuxt-blog/pages/articles/[uid].vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexoo7yBIMdbYMeta?.name ?? \"index\",\n    path: indexoo7yBIMdbYMeta?.path ?? \"/\",\n    meta: indexoo7yBIMdbYMeta || {},\n    alias: indexoo7yBIMdbYMeta?.alias || [],\n    redirect: indexoo7yBIMdbYMeta?.redirect,\n    component: () => __vitePreload(() => import(\"C:/webdev/Tutorials/nuxt-blog/pages/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: slice_45simulatoro9Zh5D2LFiMeta?.name ?? \"slice-simulator\",\n    path: slice_45simulatoro9Zh5D2LFiMeta?.path ?? \"/slice-simulator\",\n    meta: slice_45simulatoro9Zh5D2LFiMeta || {},\n    alias: slice_45simulatoro9Zh5D2LFiMeta?.alias || [],\n    redirect: slice_45simulatoro9Zh5D2LFiMeta?.redirect,\n    component: () => __vitePreload(() => import(\"C:/webdev/Tutorials/nuxt-blog/pages/slice-simulator.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  }\n]",
+      "start": 1720103993981,
+      "end": 1720103993981,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103993981,
+      "end": 1720103993981,
+      "order": "normal"
+    }
+  ]
+}

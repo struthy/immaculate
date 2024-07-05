@@ -1,0 +1,230 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/pages/slice-simulator.vue?macro=true&vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nimport { SliceSimulator } from \"@slicemachine/adapter-nuxt/simulator\";\nimport { components } from \"~/slices\";\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'slice-simulator',\n  setup(__props) {\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_SliceZone = _resolveComponent(\"SliceZone\")!\n\n  return (_openBlock(), _createBlock(_unref(SliceSimulator), null, {\n    default: _withCtx(({ slices }) => [\n      _createVNode(_component_SliceZone, {\n        slices: slices,\n        components: _unref(components)\n      }, null, 8, [\"slices\", \"components\"])\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720103995123,
+      "end": 1720103995123
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995123,
+      "end": 1720103995123,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995123,
+      "end": 1720103995123,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995123,
+      "end": 1720103995123,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995123,
+      "end": 1720103995123,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nimport { SliceSimulator } from \"@slicemachine/adapter-nuxt/simulator\";\nimport { components } from \"~/slices\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"slice-simulator\",\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_SliceZone = _resolveComponent(\"SliceZone\");\n      return _openBlock(), _createBlock(_unref(SliceSimulator), null, {\n        default: _withCtx(({ slices }) => [\n          _createVNode(_component_SliceZone, {\n            slices,\n            components: _unref(components)\n          }, null, 8, [\"slices\", \"components\"])\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720103995123,
+      "end": 1720103995237,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/webdev/Tutorials/nuxt-blog/pages/slice-simulator.vue?macro=true&vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nimport { SliceSimulator } from \"@slicemachine/adapter-nuxt/simulator\";\nimport { components } from \"~/slices\";\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'slice-simulator',\n  setup(__props) {\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_SliceZone = _resolveComponent(\"SliceZone\")!\n\n  return (_openBlock(), _createBlock(_unref(SliceSimulator), null, {\n    default: _withCtx(({ slices }) => [\n      _createVNode(_component_SliceZone, {\n        slices: slices,\n        components: _unref(components)\n      }, null, 8, [\"slices\", \"components\"])\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,SAAS,QAAQ,oBAAoB,mBAAmB,eAAe,cAAc,WAAW,UAAU,aAAa,YAAY,eAAe,oBAAoB;AAE/K,SAAS,sBAAsB;AAC/B,SAAS,kBAAkB;AAE3B,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAGjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,uBAAuB,kBAAkB,WAAW;AAE1D,aAAQ,WAAW,GAAG,aAAa,OAAO,cAAc,GAAG,MAAM;AAAA,QAC/D,SAAS,SAAS,CAAC,EAAE,OAAO,MAAM;AAAA,UAChC,aAAa,sBAAsB;AAAA,YACjC;AAAA,YACA,YAAY,OAAO,UAAU;AAAA,UAC/B,GAAG,MAAM,GAAG,CAAC,UAAU,YAAY,CAAC;AAAA,QACtC,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995237,
+      "end": 1720103995237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995237,
+      "end": 1720103995237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995237,
+      "end": 1720103995237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995237,
+      "end": 1720103995237,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995237,
+      "end": 1720103995237,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995237,
+      "end": 1720103995237,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995237,
+      "end": 1720103995237,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995237,
+      "end": 1720103995237,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995237,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995238,
+      "end": 1720103995238,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995238,
+      "end": 1720103995242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995243,
+      "end": 1720103995251,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995253,
+      "end": 1720103995253,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1720103995258,
+      "end": 1720103995260,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995265,
+      "end": 1720103995265,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995265,
+      "end": 1720103995265,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103995265,
+      "end": 1720103995265,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995265,
+      "end": 1720103995265,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995266,
+      "end": 1720103995266,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995267,
+      "end": 1720103995267,
+      "order": "normal"
+    }
+  ]
+}

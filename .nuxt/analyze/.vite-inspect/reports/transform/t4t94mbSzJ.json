@@ -1,0 +1,223 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/pages/articles/[uid].vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script setup lang=\"ts\">\nimport { type Content } from '@prismicio/client'\n\nimport { components } from '~/slices'\n\nconst dateFormatter = new Intl.DateTimeFormat('en-US', {\n  month: 'short',\n  day: 'numeric',\n  year: 'numeric'\n})\n\nconst prismic = usePrismic()\nconst route = useRoute()\n\nconst { data: article } = useAsyncData(`articles/${route.params.uid}`, () =>\n  prismic.client.getByUID('article', route.params.uid as string)\n)\nconst { data: latestArticles } = useAsyncData('$latestArticles', () =>\n  prismic.client.getAllByType(\"article\", {\n    limit: 3,\n    orderings: [\n      { field: \"my.article.publishDate\", direction: \"desc\" },\n      { field: \"document.first_publication_date\", direction: \"desc\" },\n    ],\n  })\n)\n\nconst settings = useSettings()\n\ndefinePageMeta({\n  withHeaderProfile: false,\n  withHeaderDivider: false,\n  withFooterSignUpForm: true\n})\n\nuseHead({\n  title: computed(() => `${prismic.asText(article.value?.data.title)} | ${prismic.asText(settings.value?.data.name)}`)\n})\n\nconst formatDate = (article: Content.ArticleDocument | null) => {\n  const date = prismic.asDate(article?.data.publishDate || article?.first_publication_date)\n\n  return dateFormatter.format(date || undefined)\n}\n</script>\n\n<template>\n  <div>\n    <Bounded>\n      <NuxtLink\n        to=\"/\"\n        class=\"font-semibold tracking-tight text-slate-400\"\n      >\n        &larr; Back to articles\n      </NuxtLink>\n    </Bounded>\n    <article>\n      <Bounded class=\"pb-0\">\n        <PrismicText\n          :field=\"article?.data.title\"\n          wrapper=\"h1\"\n          class=\"mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl\"\n        />\n        <p class=\"font-serif italic tracking-tighter text-slate-500\">\n          {{ formatDate(article) }}\n        </p>\n\n        <PrismicImage \n          :field=\"article?.data.featuredImage\"\n          class=\"mb-4\"\n        />\n\n        <PrismicRichText :field=\"article?.data.text\"/>\n\n        \n      </Bounded>\n      <SliceZone\n        :slices=\"article?.data.slices ?? []\"\n        :components=\"components\"\n      />\n    </article>\n    <Bounded v-if=\"latestArticles?.length\">\n      <div class=\"grid grid-cols-1 justify-items-center gap-16 md:gap-24\">\n        <HorizontalDivider />\n        <div class=\"w-full\">\n          <Heading\n            size=\"2xl\"\n            class=\"mb-10\"\n          >\n            Latest articles\n          </Heading>\n          <ul class=\"grid grid-cols-1 gap-12\">\n            <li\n              v-for=\"latestArticle in latestArticles\"\n              :key=\"latestArticle.id\"\n            >\n              <h1 class=\"mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl\">\n                <PrismicLink :field=\"latestArticle\">\n                  {{ $prismic.asText(latestArticle.data.title) }}\n                </PrismicLink>\n              </h1>\n              <p class=\"font-serif italic tracking-tighter text-slate-500\">\n                {{ formatDate(latestArticle) }}\n              </p>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </Bounded>\n  </div>\n</template>\n",
+      "start": 1720103994099,
+      "end": 1720103994585,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103994585,
+      "end": 1720103994585,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103994585,
+      "end": 1720103994585,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103994585,
+      "end": 1720103994585,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103994585,
+      "end": 1720103994585,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103994585,
+      "end": 1720103994585,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103994585,
+      "end": 1720103994585,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103994585,
+      "end": 1720103994585,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"C:/webdev/Tutorials/nuxt-blog/pages/articles/[uid].vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"C:/webdev/Tutorials/nuxt-blog/pages/articles/[uid].vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
+      "start": 1720103994585,
+      "end": 1720103995043,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995043,
+      "end": 1720103995043,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995043,
+      "end": 1720103995043,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995044,
+      "end": 1720103995044,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995044,
+      "end": 1720103995044,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995044,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995045,
+      "end": 1720103995045,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995045,
+      "end": 1720103995046,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995046,
+      "end": 1720103995046,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "export { default } from \"C:/webdev/Tutorials/nuxt-blog/pages/articles/[uid].vue?macro=true&vue&type=script&setup=true&lang.ts\"",
+      "start": 1720103995047,
+      "end": 1720103995047,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995047,
+      "end": 1720103995047,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995047,
+      "end": 1720103995047,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103995047,
+      "end": 1720103995047,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995047,
+      "end": 1720103995047,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995047,
+      "end": 1720103995047,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995047,
+      "end": 1720103995047,
+      "order": "normal"
+    }
+  ]
+}

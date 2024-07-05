@@ -1,0 +1,252 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/node_modules/@prismicio/vue/dist/components/SliceZone.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { defineComponent, computed, watchEffect, h, markRaw } from \"vue\";\nimport { __PRODUCTION__ } from \"../lib/__PRODUCTION__.js\";\nimport { simplyResolveComponent } from \"../lib/simplyResolveComponent.js\";\nimport { usePrismic } from \"../usePrismic.js\";\nconst getSliceComponentProps = (propsHint) => ({\n  slice: {\n    type: Object,\n    required: true\n  },\n  index: {\n    type: Number,\n    required: true\n  },\n  slices: {\n    type: Array,\n    required: true\n  },\n  context: {\n    type: null,\n    required: true\n  }\n});\nconst TODOSliceComponent = __PRODUCTION__ ? () => null : /* @__PURE__ */ defineComponent({\n  name: \"TODOSliceComponent\",\n  props: {\n    slice: {\n      type: Object,\n      required: true\n    }\n  },\n  setup(props) {\n    const type = computed(() => {\n      return \"slice_type\" in props.slice ? props.slice.slice_type : props.slice.type;\n    });\n    watchEffect(() => {\n      console.warn(`[SliceZone] Could not find a component for Slice type \"${type.value}\"`, props.slice);\n    });\n    return () => {\n      return h(\"section\", {\n        \"data-slice-zone-todo-component\": \"\",\n        \"data-slice-type\": type.value\n      }, [`Could not find a component for Slice type \"${type.value}\"`]);\n    };\n  }\n});\nconst defineSliceZoneComponents = (components) => {\n  const result = {};\n  let type;\n  for (type in components) {\n    const component = components[type];\n    result[type] = typeof component === \"string\" ? component : markRaw(component);\n  }\n  return result;\n};\nconst SliceZoneImpl = /* @__PURE__ */ defineComponent({\n  name: \"SliceZone\",\n  props: {\n    slices: {\n      type: Array,\n      required: true\n    },\n    components: {\n      type: Object,\n      default: void 0,\n      required: false\n    },\n    resolver: {\n      type: Function,\n      default: void 0,\n      required: false\n    },\n    context: {\n      type: null,\n      default: void 0,\n      required: false\n    },\n    defaultComponent: {\n      type: Object,\n      default: void 0,\n      required: false\n    },\n    wrapper: {\n      type: [String, Object, Function],\n      default: void 0,\n      required: false\n    }\n  },\n  setup(props) {\n    if (!props.slices) {\n      return () => null;\n    }\n    if (!__PRODUCTION__) {\n      if (props.resolver) {\n        console.warn(\"The `resolver` prop is deprecated. Please replace it with a components map using the `components` prop.\");\n      }\n    }\n    const { options } = usePrismic();\n    const renderedSlices = computed(() => {\n      return props.slices.map((slice, index) => {\n        var _a;\n        const type = \"slice_type\" in slice ? slice.slice_type : slice.type;\n        let component = props.components && type in props.components ? props.components[type] : props.defaultComponent || ((_a = options.components) == null ? void 0 : _a.sliceZoneDefaultComponent);\n        if (props.resolver) {\n          const resolvedComponent = props.resolver({\n            slice,\n            sliceName: type,\n            i: index\n          });\n          if (resolvedComponent) {\n            component = resolvedComponent;\n          }\n        }\n        const key = \"id\" in slice && typeof slice.id === \"string\" ? slice.id : `${index}-${JSON.stringify(slice)}`;\n        if (component) {\n          if (slice.__mapped) {\n            const { __mapped, ...mappedProps } = slice;\n            return h(simplyResolveComponent(component), {\n              key,\n              ...mappedProps\n            });\n          }\n          return h(simplyResolveComponent(component), {\n            key,\n            slice,\n            index,\n            context: props.context,\n            slices: props.slices\n          });\n        } else {\n          return h(simplyResolveComponent(TODOSliceComponent), { key, slice });\n        }\n      });\n    });\n    return () => {\n      if (props.wrapper) {\n        const parent = simplyResolveComponent(props.wrapper);\n        if (typeof parent === \"string\") {\n          return h(parent, null, renderedSlices.value);\n        } else {\n          return h(parent, null, { default: () => renderedSlices.value });\n        }\n      } else {\n        return renderedSlices.value;\n      }\n    };\n  }\n});\nconst SliceZone = SliceZoneImpl;\nexport {\n  SliceZone,\n  SliceZoneImpl,\n  TODOSliceComponent,\n  defineSliceZoneComponents,\n  getSliceComponentProps\n};\n//# sourceMappingURL=SliceZone.js.map\n",
+      "start": 1720103997485,
+      "end": 1720103997625,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103997625,
+      "end": 1720103997625,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103997626,
+      "end": 1720103997626,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/node_modules/@prismicio/simulator/dist/kit/SimulatorManager.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "var __defProp = Object.defineProperty;\nvar __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;\nvar __publicField = (obj, key, value) => {\n  __defNormalProp(obj, typeof key !== \"symbol\" ? key + \"\" : key, value);\n  return value;\n};\nimport { throttle } from \"../lib/throttle.js\";\nimport { ClientRequestType } from \"../types.js\";\nimport { StateEventType } from \"./types.js\";\nimport { SimulatorAPI } from \"../SimulatorAPI.js\";\nimport { ResponseError } from \"../channel/errors.js\";\nimport \"statuses\";\nimport \"../channel/types.js\";\nimport { State } from \"./State.js\";\nimport { getSliceZoneDOM, getSimulatorDOM, getSimulatorRootDOM } from \"./domHelpers.js\";\nimport { sliceSimulatorAccessedDirectly } from \"./messages.js\";\nclass SimulatorManager {\n  constructor(args) {\n    __publicField(this, \"state\");\n    __publicField(this, \"_api\");\n    __publicField(this, \"_initialized\");\n    this.state = new State(args);\n    this._api = null;\n    this._initialized = false;\n  }\n  async init() {\n    if (this._initialized) {\n      return;\n    } else {\n      this._initialized = true;\n    }\n    await this.state.init();\n    try {\n      await this._initAPI();\n    } catch (error) {\n      if (error instanceof Error && error.message === \"Receiver is currently not embedded as an iframe\" && !this.state.slices.length) {\n        this.state.message = sliceSimulatorAccessedDirectly;\n      }\n      console.error(error);\n      return;\n    }\n    this._initListeners();\n  }\n  async _initAPI() {\n    this._api = new SimulatorAPI({\n      [ClientRequestType.SetSliceZone]: (req, res) => {\n        this.state.setSliceZone(req.data);\n        return res.success();\n      },\n      [ClientRequestType.ScrollToSlice]: (req, res) => {\n        var _a;\n        if (req.data.sliceIndex < 0) {\n          return res.error(\"`sliceIndex` must be > 0\", 400);\n        } else if (req.data.sliceIndex >= this.state.slices.length) {\n          return res.error(`\\`sliceIndex\\` must be < ${this.state.slices.length} (\\`<SliceZone />\\` current length)`, 400);\n        }\n        const $sliceZone = getSliceZoneDOM(this.state.slices.length);\n        if (!$sliceZone) {\n          return res.error(\"Failed to find `<SliceZone />`\", 500);\n        }\n        this.state.activeSlice = null;\n        const $slice = $sliceZone.children[req.data.sliceIndex];\n        if (!$slice) {\n          return res.error(`Failed fo find slice at index $\\`{req.data.sliceIndex}\\` in \\`<SliceZone />\\``, 500);\n        }\n        $slice.scrollIntoView({\n          behavior: req.data.behavior,\n          block: req.data.block,\n          inline: req.data.inline\n        });\n        ((_a = this._api) == null ? void 0 : _a.options.activeSliceAPI) && setTimeout(this.state.setActiveSlice, 750);\n        return res.success();\n      }\n    });\n    await this._api.ready();\n  }\n  _initListeners() {\n    var _a, _b;\n    if ((_a = this._api) == null ? void 0 : _a.options.activeSliceAPI) {\n      window.addEventListener(\"mousemove\", () => {\n        this.state.setActiveSlice();\n      });\n      window.addEventListener(\"resize\", () => {\n        this.state.setActiveSlice();\n      });\n      window.addEventListener(\"mousewheel\", () => {\n        setTimeout(this.state.setActiveSlice, 200);\n      });\n      this.state.on(StateEventType.Slices, () => {\n        this.state.setActiveSlice();\n      });\n      this.state.on(StateEventType.ActiveSlice, async (activeSlice) => {\n        if (this._api) {\n          try {\n            await this._api.setActiveSlice(activeSlice);\n          } catch (error) {\n            if (error instanceof ResponseError && error.response.status === 400) {\n              console.error(error.response);\n            } else {\n              throw error;\n            }\n          }\n        }\n      });\n    }\n    if ((_b = this._api) == null ? void 0 : _b.options.sliceZoneSizeAPI) {\n      const resizeObserver = new ResizeObserver(throttle(async (entries) => {\n        const [entry] = entries;\n        if (this._api && entry) {\n          try {\n            await this._api.setSliceZoneSize({ rect: entry.contentRect });\n          } catch (error) {\n            if (error instanceof ResponseError && error.response.status === 400) {\n              console.error(error.response);\n            } else {\n              throw error;\n            }\n          }\n        }\n      }, 16));\n      const observeSimulatorRoot = () => {\n        const simulatorRootDOM = getSimulatorRootDOM();\n        resizeObserver.disconnect();\n        if (simulatorRootDOM) {\n          resizeObserver.observe(simulatorRootDOM);\n        }\n      };\n      const mutationObserver = new MutationObserver(observeSimulatorRoot);\n      mutationObserver.observe(getSimulatorDOM(), {\n        subtree: false,\n        childList: true\n      });\n    }\n  }\n}\nexport {\n  SimulatorManager\n};\n//# sourceMappingURL=SimulatorManager.js.map\n",
+      "start": 1720103995567,
+      "end": 1720103995584,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995584,
+      "end": 1720103995584,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995584,
+      "end": 1720103995585,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995585,
+      "end": 1720103995585,
+      "order": "normal"
+    }
+  ]
+}

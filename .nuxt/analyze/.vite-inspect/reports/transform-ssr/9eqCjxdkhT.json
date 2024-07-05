@@ -1,0 +1,277 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/components/Heading.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveDynamicComponent as _resolveDynamicComponent, withCtx as _withCtx, renderSlot as _renderSlot, mergeProps as _mergeProps, createVNode as _createVNode } from \"vue\"\nimport { ssrRenderSlot as _ssrRenderSlot, ssrRenderVNode as _ssrRenderVNode } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Heading',\n  __ssrInlineRender: true,\n  props: {\n  as: {\n    type: [String, Object],\n    default: 'h1'\n  },\n  size: {\n    type: String,\n    default: '4xl'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _ssrRenderVNode(_push, _createVNode(_resolveDynamicComponent(__props.as), _mergeProps({\n    class: [\"font-sans font-semibold tracking-tighter text-slate-800\", {\n      'text-3xl md:text-4xl': __props.size === '4xl',\n      'text-3xl': __props.size === '3xl',\n      'text-2xl': __props.size === '2xl',\n      'text-xl': __props.size === 'xl'\n    }]\n  }, _attrs), {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _ssrRenderSlot(_ctx.$slots, \"default\", {}, null, _push, _parent, _scopeId)\n      } else {\n        return [\n          _renderSlot(_ctx.$slots, \"default\")\n        ]\n      }\n    }),\n    _: 3\n  }), _parent)\n}\n}\n\n})",
+      "start": 1720103997920,
+      "end": 1720103997920,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/webdev/Tutorials/nuxt-blog/components/Heading.vue"
+        ],
+        "sourcesContent": [
+          "<script setup lang=\"ts\">\ndefineProps({\n  as: {\n    type: [String, Object],\n    default: 'h1'\n  },\n  size: {\n    type: String,\n    default: '4xl'\n  }\n})\n</script>\n\n<template>\n  <Component\n    :is=\"as\"\n    class=\"font-sans font-semibold tracking-tighter text-slate-800\"\n    :class=\"{\n      'text-3xl md:text-4xl': size === '4xl',\n      'text-3xl': size === '3xl',\n      'text-2xl': size === '2xl',\n      'text-xl': size === 'xl'\n    }\"\n  >\n    <slot />\n  </Component>\n</template>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;;;;;;;;;;;;;;;;AAAwB;AAUtB;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103997920,
+      "end": 1720103997920,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103997920,
+      "end": 1720103997920,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103997920,
+      "end": 1720103997920,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103997920,
+      "end": 1720103997920,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103997920,
+      "end": 1720103997920,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1720103997920,
+      "end": 1720103997920,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103997920,
+      "end": 1720103997920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveDynamicComponent as _resolveDynamicComponent, withCtx as _withCtx, renderSlot as _renderSlot, mergeProps as _mergeProps, createVNode as _createVNode } from \"vue\";\nimport { ssrRenderSlot as _ssrRenderSlot, ssrRenderVNode as _ssrRenderVNode } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Heading\",\n  __ssrInlineRender: true,\n  props: {\n    as: {\n      type: [String, Object],\n      default: \"h1\"\n    },\n    size: {\n      type: String,\n      default: \"4xl\"\n    }\n  },\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      _ssrRenderVNode(_push, _createVNode(_resolveDynamicComponent(__props.as), _mergeProps({\n        class: [\"font-sans font-semibold tracking-tighter text-slate-800\", {\n          \"text-3xl md:text-4xl\": __props.size === \"4xl\",\n          \"text-3xl\": __props.size === \"3xl\",\n          \"text-2xl\": __props.size === \"2xl\",\n          \"text-xl\": __props.size === \"xl\"\n        }]\n      }, _attrs), {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _ssrRenderSlot(_ctx.$slots, \"default\", {}, null, _push2, _parent2, _scopeId);\n          } else {\n            return [\n              _renderSlot(_ctx.$slots, \"default\")\n            ];\n          }\n        }),\n        _: 3\n      }), _parent);\n    };\n  }\n});\n",
+      "start": 1720103997920,
+      "end": 1720103997927,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/webdev/Tutorials/nuxt-blog/components/Heading.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveDynamicComponent as _resolveDynamicComponent, withCtx as _withCtx, renderSlot as _renderSlot, mergeProps as _mergeProps, createVNode as _createVNode } from \"vue\"\nimport { ssrRenderSlot as _ssrRenderSlot, ssrRenderVNode as _ssrRenderVNode } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Heading',\n  __ssrInlineRender: true,\n  props: {\n  as: {\n    type: [String, Object],\n    default: 'h1'\n  },\n  size: {\n    type: String,\n    default: '4xl'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _ssrRenderVNode(_push, _createVNode(_resolveDynamicComponent(__props.as), _mergeProps({\n    class: [\"font-sans font-semibold tracking-tighter text-slate-800\", {\n      'text-3xl md:text-4xl': __props.size === '4xl',\n      'text-3xl': __props.size === '3xl',\n      'text-2xl': __props.size === '2xl',\n      'text-xl': __props.size === 'xl'\n    }]\n  }, _attrs), {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _ssrRenderSlot(_ctx.$slots, \"default\", {}, null, _push, _parent, _scopeId)\n      } else {\n        return [\n          _renderSlot(_ctx.$slots, \"default\")\n        ]\n      }\n    }),\n    _: 3\n  }), _parent)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,2BAA2B,0BAA0B,WAAW,UAAU,cAAc,aAAa,cAAc,aAAa,eAAe,oBAAoB;AAC5K,SAAS,iBAAiB,gBAAgB,kBAAkB,uBAAuB;AAGnF,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACP,IAAI;AAAA,MACF,MAAM,CAAC,QAAQ,MAAM;AAAA,MACrB,SAAS;AAAA,IACX;AAAA,IACA,MAAM;AAAA,MACJ,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,EACF;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,sBAAgB,OAAO,aAAa,yBAAyB,QAAQ,EAAE,GAAG,YAAY;AAAA,QACpF,OAAO,CAAC,2DAA2D;AAAA,UACjE,wBAAwB,QAAQ,SAAS;AAAA,UACzC,YAAY,QAAQ,SAAS;AAAA,UAC7B,YAAY,QAAQ,SAAS;AAAA,UAC7B,WAAW,QAAQ,SAAS;AAAA,QAC9B,CAAC;AAAA,MACH,GAAG,MAAM,GAAG;AAAA,QACV,SAAS,SAAS,CAAC,GAAGA,QAAOC,UAAS,aAAa;AACjD,cAAID,QAAO;AACT,2BAAe,KAAK,QAAQ,WAAW,CAAC,GAAG,MAAMA,QAAOC,UAAS,QAAQ;AAAA,UAC3E,OAAO;AACL,mBAAO;AAAA,cACL,YAAY,KAAK,QAAQ,SAAS;AAAA,YACpC;AAAA,UACF;AAAA,QACF,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC,GAAG,OAAO;AAAA,IACb;AAAA,EACA;AAEA,CAAC;",
+        "names": [
+          "_push",
+          "_parent"
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103997927,
+      "end": 1720103997927,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103997928,
+      "end": 1720103997928,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103997928,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103997928,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103997929,
+      "end": 1720103997929,
+      "order": "normal"
+    }
+  ]
+}

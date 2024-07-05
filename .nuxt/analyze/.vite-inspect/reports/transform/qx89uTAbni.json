@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/node_modules/@prismicio/vue/dist/components/PrismicLink.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { asLink } from \"@prismicio/client\";\nimport { computed, unref, defineComponent, reactive, h } from \"vue\";\nimport { getSlots } from \"../lib/getSlots.js\";\nimport { isInternalURL } from \"../lib/isInternalURL.js\";\nimport { simplyResolveComponent } from \"../lib/simplyResolveComponent.js\";\nimport { usePrismic } from \"../usePrismic.js\";\nconst defaultInternalComponent = \"router-link\";\nconst defaultExternalComponent = \"a\";\nconst defaultBlankTargetRelAttribute = \"noopener noreferrer\";\nconst usePrismicLink = (props) => {\n  const { options } = usePrismic();\n  const type = computed(() => {\n    var _a, _b;\n    const internalComponent = unref(props.internalComponent) || ((_a = options.components) == null ? void 0 : _a.linkInternalComponent) || defaultInternalComponent;\n    const externalComponent = unref(props.externalComponent) || ((_b = options.components) == null ? void 0 : _b.linkExternalComponent) || defaultExternalComponent;\n    return href.value && isInternalURL(href.value) && !target.value ? internalComponent : externalComponent;\n  });\n  const href = computed(() => {\n    const field = unref(props.field);\n    const linkResolver = unref(props.linkResolver) ?? options.linkResolver;\n    return asLink(field, linkResolver) ?? \"\";\n  });\n  const target = computed(() => {\n    const field = unref(props.field);\n    const target2 = unref(props.target);\n    if (typeof target2 !== \"undefined\") {\n      return target2;\n    } else {\n      return field && \"target\" in field && field.target ? field.target : null;\n    }\n  });\n  const rel = computed(() => {\n    var _a;\n    const rel2 = unref(props.rel);\n    if (typeof rel2 !== \"undefined\") {\n      return rel2;\n    } else if (target.value === \"_blank\") {\n      const blankTargetRelAttribute = unref(props.blankTargetRelAttribute);\n      if (typeof blankTargetRelAttribute !== \"undefined\") {\n        return blankTargetRelAttribute;\n      } else {\n        return typeof ((_a = options.components) == null ? void 0 : _a.linkBlankTargetRelAttribute) !== \"undefined\" ? options.components.linkBlankTargetRelAttribute : defaultBlankTargetRelAttribute;\n      }\n    } else {\n      return null;\n    }\n  });\n  return {\n    type,\n    href,\n    target,\n    rel\n  };\n};\nconst PrismicLinkImpl = /* @__PURE__ */ defineComponent({\n  name: \"PrismicLink\",\n  props: {\n    field: {\n      type: Object,\n      required: true\n    },\n    linkResolver: {\n      type: Function,\n      default: void 0,\n      required: false\n    },\n    target: {\n      type: String,\n      default: void 0,\n      required: false\n    },\n    rel: {\n      type: String,\n      default: void 0,\n      required: false\n    },\n    blankTargetRelAttribute: {\n      type: String,\n      default: void 0,\n      required: false\n    },\n    internalComponent: {\n      type: [String, Object, Function],\n      default: void 0,\n      required: false\n    },\n    externalComponent: {\n      type: [String, Object, Function],\n      default: void 0,\n      required: false\n    }\n  },\n  setup(props, { slots }) {\n    if (!props.field) {\n      return () => null;\n    }\n    const { type, href, target, rel } = usePrismicLink(props);\n    return () => {\n      const parent = type.value === \"a\" ? \"a\" : simplyResolveComponent(type.value);\n      const computedSlots = getSlots(parent, slots, reactive({ href: href.value }));\n      if (typeof parent === \"string\") {\n        return h(parent, { href: href.value, target: target.value, rel: rel.value }, computedSlots);\n      } else {\n        return h(parent, { to: href.value, target: target.value, rel: rel.value }, computedSlots);\n      }\n    };\n  }\n});\nconst PrismicLink = PrismicLinkImpl;\nexport {\n  PrismicLink,\n  PrismicLinkImpl,\n  usePrismicLink\n};\n//# sourceMappingURL=PrismicLink.js.map\n",
+      "start": 1720103994948,
+      "end": 1720103995031,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995031,
+      "end": 1720103995031,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995031,
+      "end": 1720103995032,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995032,
+      "end": 1720103995032,
+      "order": "normal"
+    }
+  ]
+}

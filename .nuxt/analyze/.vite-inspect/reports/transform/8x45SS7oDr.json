@@ -1,0 +1,222 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/components/Footer.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 justify-items-center gap-24\" }\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500\" }, [\n  /*#__PURE__*/_createTextVNode(\" Proudly published using \"),\n  /*#__PURE__*/_createElementVNode(\"a\", {\n    href: \"https://prismic.io\",\n    class: \"text-slate-700\"\n  }, \"Prismic\")\n], -1)\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Footer',\n  props: {\n  withSignUpForm: {\n    type: Boolean,\n    default: true\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_HorizontalDivider = _resolveComponent(\"HorizontalDivider\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { as: \"footer\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"div\", _hoisted_1, [\n        _createVNode(_component_HorizontalDivider),\n        _hoisted_2\n      ])\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720103995523,
+      "end": 1720103995523
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995523,
+      "end": 1720103995523,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995523,
+      "end": 1720103995523,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995523,
+      "end": 1720103995523,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995523,
+      "end": 1720103995523,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 justify-items-center gap-24\" };\nconst _hoisted_2 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500\" }, [\n  /* @__PURE__ */ _createTextVNode(\" Proudly published using \"),\n  /* @__PURE__ */ _createElementVNode(\"a\", {\n    href: \"https://prismic.io\",\n    class: \"text-slate-700\"\n  }, \"Prismic\")\n], -1);\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Footer\",\n  props: {\n    withSignUpForm: {\n      type: Boolean,\n      default: true\n    }\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_HorizontalDivider = _resolveComponent(\"HorizontalDivider\");\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, { as: \"footer\" }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"div\", _hoisted_1, [\n            _createVNode(_component_HorizontalDivider),\n            _hoisted_2\n          ])\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720103995523,
+      "end": 1720103995534,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/webdev/Tutorials/nuxt-blog/components/Footer.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 justify-items-center gap-24\" }\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500\" }, [\n  /*#__PURE__*/_createTextVNode(\" Proudly published using \"),\n  /*#__PURE__*/_createElementVNode(\"a\", {\n    href: \"https://prismic.io\",\n    class: \"text-slate-700\"\n  }, \"Prismic\")\n], -1)\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Footer',\n  props: {\n  withSignUpForm: {\n    type: Boolean,\n    default: true\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_HorizontalDivider = _resolveComponent(\"HorizontalDivider\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { as: \"footer\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"div\", _hoisted_1, [\n        _createVNode(_component_HorizontalDivider),\n        _hoisted_2\n      ])\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAAmB,eAAe,cAAc,sBAAsB,qBAAqB,mBAAmB,kBAAkB,WAAW,UAAU,aAAa,YAAY,eAAe,oBAAoB;AAE9O,MAAM,aAAa,EAAE,OAAO,+CAA+C;AAC3E,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,2FAA2F,GAAG;AAAA,EACnJ,iCAAiB,2BAA2B;AAAA,EAC5C,oCAAoB,KAAK;AAAA,IACpC,MAAM;AAAA,IACN,OAAO;AAAA,EACT,GAAG,SAAS;AACd,GAAG,EAAE;AAGL,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACP,gBAAgB;AAAA,MACd,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,EACF;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,+BAA+B,kBAAkB,mBAAmB;AAC1E,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,aAAQ,WAAW,GAAG,aAAa,oBAAoB,EAAE,IAAI,SAAS,GAAG;AAAA,QACvE,SAAS,SAAS,MAAM;AAAA,UACtB,oBAAoB,OAAO,YAAY;AAAA,YACrC,aAAa,4BAA4B;AAAA,YACzC;AAAA,UACF,CAAC;AAAA,QACH,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995534,
+      "end": 1720103995534,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995534,
+      "end": 1720103995535,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995535,
+      "end": 1720103995535,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995535,
+      "end": 1720103995535,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995535,
+      "end": 1720103995535,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995535,
+      "end": 1720103995535,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995535,
+      "end": 1720103995535,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995535,
+      "end": 1720103995535,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995535,
+      "end": 1720103995535,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995535,
+      "end": 1720103995535,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995535,
+      "end": 1720103995536,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995537,
+      "end": 1720103995537,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995537,
+      "end": 1720103995537,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995537,
+      "end": 1720103995537,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995537,
+      "end": 1720103995537,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/webdev/Tutorials/nuxt-blog/components/HorizontalDivider.vue\";\nimport { default as __nuxt_component_1 } from \"C:/webdev/Tutorials/nuxt-blog/components/Bounded.vue\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 justify-items-center gap-24\" };\nconst _hoisted_2 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500\" }, [\n  /* @__PURE__ */ _createTextVNode(\" Proudly published using \"),\n  /* @__PURE__ */ _createElementVNode(\"a\", {\n    href: \"https://prismic.io\",\n    class: \"text-slate-700\"\n  }, \"Prismic\")\n], -1);\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Footer\",\n  props: {\n    withSignUpForm: {\n      type: Boolean,\n      default: true\n    }\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_HorizontalDivider = __nuxt_component_0;\n      const _component_Bounded = __nuxt_component_1;\n      return _openBlock(), _createBlock(_component_Bounded, { as: \"footer\" }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"div\", _hoisted_1, [\n            _createVNode(_component_HorizontalDivider),\n            _hoisted_2\n          ])\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720103995538,
+      "end": 1720103995538,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995538,
+      "end": 1720103995538,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995538,
+      "end": 1720103995538,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995538,
+      "end": 1720103995538,
+      "order": "normal"
+    }
+  ]
+}

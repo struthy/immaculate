@@ -1,0 +1,1 @@
+{"version":3,"file":"HorizontalDivider-B6YJmzjp.js","sources":["../../../../components/HorizontalDivider.vue"],"sourcesContent":["<template>\n  <hr class=\"h-px w-1/2 border-0 bg-slate-200 md:max-w-sm\">\n</template>\n"],"names":[],"mappings":";;;;AAAA,SAAA,eAAA,MAAA,OAAA,SACW;;;;;;;;;;"}

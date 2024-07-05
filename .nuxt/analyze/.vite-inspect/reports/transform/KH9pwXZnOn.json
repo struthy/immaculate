@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/node_modules/@prismicio/simulator/dist/channel/errors.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "var __defProp = Object.defineProperty;\nvar __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;\nvar __publicField = (obj, key, value) => {\n  __defNormalProp(obj, typeof key !== \"symbol\" ? key + \"\" : key, value);\n  return value;\n};\nclass ResponseError extends Error {\n  constructor(errorResponse) {\n    super(errorResponse.msg);\n    __publicField(this, \"response\");\n    this.response = errorResponse;\n  }\n}\nclass ConnectionTimeoutError extends Error {\n  constructor() {\n    super(\"Connection timed out\");\n  }\n}\nclass TooManyConcurrentRequestsError extends Error {\n  constructor(request) {\n    super(`Too many concurrent requests`);\n    __publicField(this, \"request\");\n    this.request = request;\n  }\n}\nclass RequestTimeoutError extends Error {\n  constructor(request) {\n    super(`Request \\`${request.requestID}\\` timed out`);\n    __publicField(this, \"request\");\n    this.request = request;\n  }\n}\nclass NotReadyError extends Error {\n}\nclass PortNotSetError extends Error {\n  constructor() {\n    super(\"Port is not set\");\n  }\n}\nclass ChannelNotSetError extends Error {\n  constructor() {\n    super(\"Channel is not set\");\n  }\n}\nexport {\n  ChannelNotSetError,\n  ConnectionTimeoutError,\n  NotReadyError,\n  PortNotSetError,\n  RequestTimeoutError,\n  ResponseError,\n  TooManyConcurrentRequestsError\n};\n//# sourceMappingURL=errors.js.map\n",
+      "start": 1720103995594,
+      "end": 1720103995617,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995617,
+      "end": 1720103995617,
+      "order": "normal"
+    }
+  ]
+}

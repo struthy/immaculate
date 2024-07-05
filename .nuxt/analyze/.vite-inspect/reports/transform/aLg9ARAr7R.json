@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/node_modules/statuses/codes.json",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "{\n  \"100\": \"Continue\",\n  \"101\": \"Switching Protocols\",\n  \"102\": \"Processing\",\n  \"103\": \"Early Hints\",\n  \"200\": \"OK\",\n  \"201\": \"Created\",\n  \"202\": \"Accepted\",\n  \"203\": \"Non-Authoritative Information\",\n  \"204\": \"No Content\",\n  \"205\": \"Reset Content\",\n  \"206\": \"Partial Content\",\n  \"207\": \"Multi-Status\",\n  \"208\": \"Already Reported\",\n  \"226\": \"IM Used\",\n  \"300\": \"Multiple Choices\",\n  \"301\": \"Moved Permanently\",\n  \"302\": \"Found\",\n  \"303\": \"See Other\",\n  \"304\": \"Not Modified\",\n  \"305\": \"Use Proxy\",\n  \"307\": \"Temporary Redirect\",\n  \"308\": \"Permanent Redirect\",\n  \"400\": \"Bad Request\",\n  \"401\": \"Unauthorized\",\n  \"402\": \"Payment Required\",\n  \"403\": \"Forbidden\",\n  \"404\": \"Not Found\",\n  \"405\": \"Method Not Allowed\",\n  \"406\": \"Not Acceptable\",\n  \"407\": \"Proxy Authentication Required\",\n  \"408\": \"Request Timeout\",\n  \"409\": \"Conflict\",\n  \"410\": \"Gone\",\n  \"411\": \"Length Required\",\n  \"412\": \"Precondition Failed\",\n  \"413\": \"Payload Too Large\",\n  \"414\": \"URI Too Long\",\n  \"415\": \"Unsupported Media Type\",\n  \"416\": \"Range Not Satisfiable\",\n  \"417\": \"Expectation Failed\",\n  \"418\": \"I'm a Teapot\",\n  \"421\": \"Misdirected Request\",\n  \"422\": \"Unprocessable Entity\",\n  \"423\": \"Locked\",\n  \"424\": \"Failed Dependency\",\n  \"425\": \"Too Early\",\n  \"426\": \"Upgrade Required\",\n  \"428\": \"Precondition Required\",\n  \"429\": \"Too Many Requests\",\n  \"431\": \"Request Header Fields Too Large\",\n  \"451\": \"Unavailable For Legal Reasons\",\n  \"500\": \"Internal Server Error\",\n  \"501\": \"Not Implemented\",\n  \"502\": \"Bad Gateway\",\n  \"503\": \"Service Unavailable\",\n  \"504\": \"Gateway Timeout\",\n  \"505\": \"HTTP Version Not Supported\",\n  \"506\": \"Variant Also Negotiates\",\n  \"507\": \"Insufficient Storage\",\n  \"508\": \"Loop Detected\",\n  \"509\": \"Bandwidth Limit Exceeded\",\n  \"510\": \"Not Extended\",\n  \"511\": \"Network Authentication Required\"\n}\n",
+      "start": 1720103995616,
+      "end": 1720103995624,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995624,
+      "end": 1720103995624,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995624,
+      "end": 1720103995624,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995624,
+      "end": 1720103995624,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995624,
+      "end": 1720103995624,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103995624,
+      "end": 1720103995624,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "result": "export default {\n\t\"100\": \"Continue\",\n\t\"101\": \"Switching Protocols\",\n\t\"102\": \"Processing\",\n\t\"103\": \"Early Hints\",\n\t\"200\": \"OK\",\n\t\"201\": \"Created\",\n\t\"202\": \"Accepted\",\n\t\"203\": \"Non-Authoritative Information\",\n\t\"204\": \"No Content\",\n\t\"205\": \"Reset Content\",\n\t\"206\": \"Partial Content\",\n\t\"207\": \"Multi-Status\",\n\t\"208\": \"Already Reported\",\n\t\"226\": \"IM Used\",\n\t\"300\": \"Multiple Choices\",\n\t\"301\": \"Moved Permanently\",\n\t\"302\": \"Found\",\n\t\"303\": \"See Other\",\n\t\"304\": \"Not Modified\",\n\t\"305\": \"Use Proxy\",\n\t\"307\": \"Temporary Redirect\",\n\t\"308\": \"Permanent Redirect\",\n\t\"400\": \"Bad Request\",\n\t\"401\": \"Unauthorized\",\n\t\"402\": \"Payment Required\",\n\t\"403\": \"Forbidden\",\n\t\"404\": \"Not Found\",\n\t\"405\": \"Method Not Allowed\",\n\t\"406\": \"Not Acceptable\",\n\t\"407\": \"Proxy Authentication Required\",\n\t\"408\": \"Request Timeout\",\n\t\"409\": \"Conflict\",\n\t\"410\": \"Gone\",\n\t\"411\": \"Length Required\",\n\t\"412\": \"Precondition Failed\",\n\t\"413\": \"Payload Too Large\",\n\t\"414\": \"URI Too Long\",\n\t\"415\": \"Unsupported Media Type\",\n\t\"416\": \"Range Not Satisfiable\",\n\t\"417\": \"Expectation Failed\",\n\t\"418\": \"I'm a Teapot\",\n\t\"421\": \"Misdirected Request\",\n\t\"422\": \"Unprocessable Entity\",\n\t\"423\": \"Locked\",\n\t\"424\": \"Failed Dependency\",\n\t\"425\": \"Too Early\",\n\t\"426\": \"Upgrade Required\",\n\t\"428\": \"Precondition Required\",\n\t\"429\": \"Too Many Requests\",\n\t\"431\": \"Request Header Fields Too Large\",\n\t\"451\": \"Unavailable For Legal Reasons\",\n\t\"500\": \"Internal Server Error\",\n\t\"501\": \"Not Implemented\",\n\t\"502\": \"Bad Gateway\",\n\t\"503\": \"Service Unavailable\",\n\t\"504\": \"Gateway Timeout\",\n\t\"505\": \"HTTP Version Not Supported\",\n\t\"506\": \"Variant Also Negotiates\",\n\t\"507\": \"Insufficient Storage\",\n\t\"508\": \"Loop Detected\",\n\t\"509\": \"Bandwidth Limit Exceeded\",\n\t\"510\": \"Not Extended\",\n\t\"511\": \"Network Authentication Required\"\n};\n",
+      "start": 1720103995624,
+      "end": 1720103995625,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995625,
+      "end": 1720103995625,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995625,
+      "end": 1720103995625,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995625,
+      "end": 1720103995625,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995625,
+      "end": 1720103995625,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995625,
+      "end": 1720103995625,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995625,
+      "end": 1720103995625,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995625,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995626,
+      "end": 1720103995626,
+      "order": "normal"
+    }
+  ]
+}

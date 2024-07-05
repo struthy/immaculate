@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/webdev/Tutorials/nuxt-blog/node_modules/imgix-url-builder/dist/index.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "const camelCaseToParamCase = (input) => {\n  return input.replace(/[A-Z]/g, (match) => {\n    return `-${match.toLowerCase()}`;\n  });\n};\nconst buildURL = (url, params) => {\n  const instance = new URL(url);\n  for (const camelCasedParamKey in params) {\n    const paramKey = camelCaseToParamCase(camelCasedParamKey);\n    const paramValue = params[camelCasedParamKey];\n    if (paramValue === void 0) {\n      instance.searchParams.delete(paramKey);\n    } else if (Array.isArray(paramValue)) {\n      instance.searchParams.set(paramKey, paramValue.join(\",\"));\n    } else {\n      instance.searchParams.set(paramKey, `${paramValue}`);\n    }\n  }\n  const s = instance.searchParams.get(\"s\");\n  if (s) {\n    instance.searchParams.delete(\"s\");\n    instance.searchParams.append(\"s\", s);\n  }\n  return instance.toString();\n};\n\nconst buildPixelDensitySrcSet = (url, { pixelDensities, ...params }) => {\n  return pixelDensities.map((dpr) => {\n    return `${buildURL(url, { ...params, dpr })} ${dpr}x`;\n  }).join(\", \");\n};\n\nconst buildWidthSrcSet = (url, { widths, ...params }) => {\n  return widths.map((width) => {\n    return `${buildURL(url, { ...params, w: void 0, width })} ${width}w`;\n  }).join(\", \");\n};\n\nclass Client {\n  /**\n   * Creates a new `Client` instance for an Imgix domain.\n   *\n   * @param options - Options to instantiate a new client.\n   *\n   * @returns A `Client` instance for the given Imgix domain.\n   */\n  constructor(options) {\n    this.baseURL = options.baseURL;\n  }\n  /**\n   * Builds a URL to an Imgix image with Imgix URL API parameters for the\n   * client's base URL.\n   *\n   * @example\n   *\n   * ```ts\n   * const client = new Client({ baseURL: \"https://example.imgix.net\" });\n   * const url = client.buildURLForPath(\"/image.png\", { width: 400 });\n   * // => https://example.imgix.net/image.png?width=400\n   * ```\n   *\n   * @example\n   *\n   * ```ts\n   * const client = new Client({\n   * \tbaseURL: \"https://example.imgix.net/folder\",\n   * });\n   * const url = client.buildURLForPath(\"./image.png\", { width: 400 });\n   * // => https://example.imgix.net/folder/image.png?width=400\n   * ```\n   *\n   * @param path - Path to the image relative to the client's base URL.\n   * @param params - An object of Imgix URL API parameters.\n   *\n   * @returns The full absolute URL to the image with the given Imgix URL API\n   *   parameters applied.\n   */\n  buildURLForPath(path, params = {}) {\n    return buildURL(`${new URL(path, this.baseURL)}`, params);\n  }\n  /**\n   * Builds an `<img>` `srcset` attribute value for a given set of widths for\n   * the client's base URL. It can also optinally apply Imgix URL API parameters\n   * to the URLs.\n   *\n   * The `width` URL parameter will be applied for each `srcset` entry. If a\n   * `width` or `w` parameter is provided to the `params` parameter, it will be\n   * ignored.\n   *\n   * @example\n   *\n   * ```ts\n   * const client = new Client({ baseURL: \"https://example.imgix.net\" });\n   * const srcset = client.buildWidthSrcSetForPath(\"/image.png\", {\n   * \twidths: [400, 800, 1600],\n   * });\n   * // => https://example.imgix.net/image.png?width=400 400w,\n   * //    https://example.imgix.net/image.png?width=800 800w,\n   * //    https://example.imgix.net/image.png?width=1600 1600w\n   * ```\n   *\n   * @example\n   *\n   * ```ts\n   * const client = new Client({\n   * \tbaseURL: \"https://example.imgix.net\",\n   * });\n   * const srcset = client.buildWidthSrcSetForPath(\"/image.png\", {\n   * \twidths: [400, 800, 1600],\n   * \tsat: -100,\n   * });\n   * // => https://example.imgix.net/image.png?width=400&sat=-100 400w,\n   * //    https://example.imgix.net/image.png?width=800&sat=-100 800w,\n   * //    https://example.imgix.net/image.png?width=1600&sat=-100 1600w\n   * ```\n   *\n   * @param path - Path to the image relative to the client's base URL.\n   * @param params - An object of Imgix URL API parameters. The `widths`\n   *   parameter defines the resulting `srcset` widths.\n   *\n   * @returns A `srcset` attribute value for `url` with the given Imgix URL API\n   *   parameters applied.\n   */\n  buildWidthSrcSetForPath(path, params) {\n    return buildWidthSrcSet(`${new URL(path, this.baseURL)}`, params);\n  }\n  /**\n   * Builds an `<img>` `srcset` attribute value for a given set of pixel\n   * densities for the client's base URL. It can also optinally apply Imgix URL\n   * API parameters to the URLs.\n   *\n   * The `dpr` URL parameter will be applied for each `srcset` entry. If a `dpr`\n   * parameter is provided to the `params` parameter, it will be ignored.\n   *\n   * @example\n   *\n   * ```ts\n   * const client = new Client({ baseURL: \"https://example.imgix.net\" });\n   * const srcset = client.buildPixelDensitySrcSetForPath(\"/image.png\", {\n   * \tpixelDensities: [1, 2, 3],\n   * });\n   * // => https://example.imgix.net/image.png?dpr=1 1x,\n   * //    https://example.imgix.net/image.png?dpr=2 2x,\n   * //    https://example.imgix.net/image.png?dpr=3 3x\n   * ```\n   *\n   * @example\n   *\n   * ```ts\n   * const client = new Client({ baseURL: \"https://example.imgix.net\" });\n   * const srcset = client.buildPixelDensitySrcSetForPath(\"/image.png\", {\n   * \tpixelDensities: [1, 2, 3],\n   * \tsat: -100,\n   * });\n   * // => https://example.imgix.net/image.png?dpr=1&sat=-100 1x,\n   * //    https://example.imgix.net/image.png?dpr=2&sat=-100 2x,\n   * //    https://example.imgix.net/image.png?dpr=3&sat=-100 3x\n   * ```\n   *\n   * @param path - Path to the image relative to the client's base URL.\n   * @param params - An object of Imgix URL API parameters. The `pixelDensities`\n   *   parameter defines the resulting `srcset` widths.\n   *\n   * @returns A `srcset` attribute value for `url` with the given Imgix URL API\n   *   parameters applied.\n   */\n  buildPixelDensitySrcSetForPath(path, params) {\n    return buildPixelDensitySrcSet(`${new URL(path, this.baseURL)}`, params);\n  }\n}\n\nexport { Client, buildPixelDensitySrcSet, buildURL, buildWidthSrcSet };\n//# sourceMappingURL=index.mjs.map\n",
+      "start": 1720103995080,
+      "end": 1720103995148,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720103995148,
+      "end": 1720103995148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720103995148,
+      "end": 1720103995149,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720103995149,
+      "end": 1720103995149,
+      "order": "normal"
+    }
+  ]
+}
