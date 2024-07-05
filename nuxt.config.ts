@@ -2,11 +2,9 @@ import tailwindAspectRatio from '@tailwindcss/aspect-ratio'
 import { repositoryName, apiEndpoint } from './slicemachine.config.json';
 
 export default defineNuxtConfig({
-  devtools: true,
+  // devtools: true,
 
   app: {
-    baseURL: '/immaculate/', // Set the base URL to match your repository name
-    buildAssetsDir: 'assets', // Set the build assets directory
     head: {
       title: 'Prismic + Nuxt blog example',
       htmlAttrs: {
@@ -24,10 +22,6 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     }
-  },
-
-  generate: {
-    dir: 'dist'
   },
 
   css: [

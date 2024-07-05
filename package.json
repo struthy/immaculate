@@ -5,9 +5,9 @@
   "license": "Apache-2.0",
   "author": "Prismic <contact@prismic.io> (https://prismic.io)",
   "scripts": {
-    "preinstall": "chmod -R +x node_modules/.bin",
+    "preinstall": "node -e \"const os = require('os'); if (os.platform() !== 'win32') { const { execSync } = require('child_process'); execSync('chmod -R +x node_modules/.bin'); }\"",
     "dev": "nuxt dev",
-    "build": "NITRO_PRESET=github_pages nuxt build",
+    "build": "cross-env NITRO_PRESET=github_pages nuxt build",
     "generate": "nuxt generate",
     "predeploy": "npm run generate",
     "lint": "eslint .",
@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.17",
-    "@fontsource/libre-baskerville": "^5.0.12"
+    "@fontsource/libre-baskerville": "^5.0.12",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.1.4",

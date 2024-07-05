@@ -6,6 +6,8 @@ node_modules
 .output
 .env
 dist
+.nuxt/
+dist/
 .DS_Store
 .fleet
 .idea

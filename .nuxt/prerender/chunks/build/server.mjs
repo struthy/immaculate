@@ -602,7 +602,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./PrismicPreview-Cuj3r_f9.mjs').then((m) => m.default || m)
+    component: () => import('./PrismicPreview-C36EzxLX.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$3 == null ? void 0 : __nuxt_page_meta$3.name) ?? "uid",
@@ -2414,8 +2414,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-DqBPahdq.mjs').then((r) => r.default || r));
-    const _Error = defineAsyncComponent(() => import('./error-500-DDgvRzHO.mjs').then((r) => r.default || r));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-CJ-CJprX.mjs').then((r) => r.default || r));
+    const _Error = defineAsyncComponent(() => import('./error-500-DZZ20FxO.mjs').then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
