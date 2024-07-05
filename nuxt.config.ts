@@ -39,6 +39,10 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss'
   ],
 
+  generate: {
+    dir: 'dist'
+  },
+
   prismic: {
     endpoint: apiEndpoint || repositoryName,
     preview: '/api/preview',

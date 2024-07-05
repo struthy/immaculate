@@ -13,7 +13,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "slicemachine": "start-slicemachine",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predeploy": "npm run generate",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.17",
@@ -28,6 +30,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
+    "gh-pages": "^6.1.1",
     "nuxt": "^3.11.1",
     "slice-machine-ui": "^2.2.1"
   }
