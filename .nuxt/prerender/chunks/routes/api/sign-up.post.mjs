@@ -1,4 +1,4 @@
-import { defineEventHandler, readBody, createError, sendRedirect } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, readBody, createError, sendRedirect } from 'file:///home/runner/work/immaculate/immaculate/node_modules/h3/dist/index.mjs';
 
 const signUp_post = defineEventHandler(async (event) => {
   const body = await readBody(event);

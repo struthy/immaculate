@@ -1,5 +1,5 @@
-import { mergeProps, useSSRContext } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/vue/index.mjs';
-import { ssrRenderAttrs } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/vue/server-renderer/index.mjs';
+import { mergeProps, useSSRContext } from 'file:///home/runner/work/immaculate/immaculate/node_modules/vue/index.mjs';
+import { ssrRenderAttrs } from 'file:///home/runner/work/immaculate/immaculate/node_modules/vue/server-renderer/index.mjs';
 import { _ as _export_sfc } from './server.mjs';
 
 const _sfc_main = {};

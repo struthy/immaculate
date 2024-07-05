@@ -1,4 +1,4 @@
-import { defineAsyncComponent } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/vue/index.mjs';
+import { defineAsyncComponent } from 'file:///home/runner/work/immaculate/immaculate/node_modules/vue/index.mjs';
 import { i as defineSliceZoneComponents } from './server.mjs';
 
 const components = defineSliceZoneComponents({

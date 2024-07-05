@@ -1,30 +1,30 @@
-import { hasInjectionContext, inject, version, ref, watchEffect, watch, getCurrentInstance, shallowRef, toRef, onServerPrefetch, markRaw, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Transition, reactive, resolveComponent, mergeProps, useSSRContext, createApp, effectScope, resolveDynamicComponent, onErrorCaptured, createVNode, isReadonly, isRef, isShallow, isReactive, toRaw, withCtx, defineAsyncComponent } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/vue/index.mjs';
-import { $fetch } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/ofetch/dist/node.mjs';
-import { createHooks } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/hookable/dist/index.mjs';
-import { getContext } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/unctx/dist/index.mjs';
-import { createError as createError$1, sanitizeStatusCode, getRequestHeader, setCookie, getCookie, deleteCookie } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/h3/dist/index.mjs';
-import { getActiveHead } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/unhead/dist/index.mjs';
-import { defineHeadPlugin, composableNames } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/@unhead/shared/dist/index.mjs';
-import { useRoute as useRoute$1, RouterView, routerKey, createMemoryHistory, createRouter, START_LOCATION } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/vue-router/dist/vue-router.node.mjs';
-import { toRouteMatcher, createRouter as createRouter$1 } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/radix3/dist/index.mjs';
-import { defu } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/defu/dist/defu.mjs';
-import { klona } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/klona/dist/index.mjs';
-import { hasProtocol, joinURL, parseURL, parseQuery, withQuery, isScriptProtocol, withTrailingSlash, withoutTrailingSlash } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/ufo/dist/index.mjs';
-import { parse } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/cookie-es/dist/index.mjs';
-import destr from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/destr/dist/index.mjs';
-import { isEqual } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/ohash/dist/index.mjs';
-import { asLink, isFilled, asImageWidthSrcSet, asImagePixelDensitySrcSet, asImageSrc, asText, asHTML, isRepositoryEndpoint, getRepositoryName, createClient, filter, cookie, asLinkAttrs, asDate, documentToLinkField } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/@prismicio/client/dist/index.js';
-import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/vue/server-renderer/index.mjs';
+import { hasInjectionContext, inject, version, ref, watchEffect, watch, getCurrentInstance, shallowRef, toRef, onServerPrefetch, markRaw, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Transition, reactive, resolveComponent, mergeProps, useSSRContext, createApp, effectScope, resolveDynamicComponent, onErrorCaptured, createVNode, isReadonly, isRef, isShallow, isReactive, toRaw, withCtx, defineAsyncComponent } from 'file:///home/runner/work/immaculate/immaculate/node_modules/vue/index.mjs';
+import { $fetch } from 'file:///home/runner/work/immaculate/immaculate/node_modules/ofetch/dist/node.mjs';
+import { createHooks } from 'file:///home/runner/work/immaculate/immaculate/node_modules/hookable/dist/index.mjs';
+import { getContext } from 'file:///home/runner/work/immaculate/immaculate/node_modules/unctx/dist/index.mjs';
+import { createError as createError$1, sanitizeStatusCode, getRequestHeader, setCookie, getCookie, deleteCookie } from 'file:///home/runner/work/immaculate/immaculate/node_modules/h3/dist/index.mjs';
+import { getActiveHead } from 'file:///home/runner/work/immaculate/immaculate/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin, composableNames } from 'file:///home/runner/work/immaculate/immaculate/node_modules/@unhead/shared/dist/index.mjs';
+import { useRoute as useRoute$1, RouterView, routerKey, createMemoryHistory, createRouter, START_LOCATION } from 'file:///home/runner/work/immaculate/immaculate/node_modules/vue-router/dist/vue-router.node.mjs';
+import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///home/runner/work/immaculate/immaculate/node_modules/radix3/dist/index.mjs';
+import { defu } from 'file:///home/runner/work/immaculate/immaculate/node_modules/defu/dist/defu.mjs';
+import { klona } from 'file:///home/runner/work/immaculate/immaculate/node_modules/klona/dist/index.mjs';
+import { hasProtocol, joinURL, parseURL, parseQuery, withQuery, isScriptProtocol, withTrailingSlash, withoutTrailingSlash } from 'file:///home/runner/work/immaculate/immaculate/node_modules/ufo/dist/index.mjs';
+import { parse } from 'file:///home/runner/work/immaculate/immaculate/node_modules/cookie-es/dist/index.mjs';
+import destr from 'file:///home/runner/work/immaculate/immaculate/node_modules/destr/dist/index.mjs';
+import { isEqual } from 'file:///home/runner/work/immaculate/immaculate/node_modules/ohash/dist/index.mjs';
+import { asLink, isFilled, asImageWidthSrcSet, asImagePixelDensitySrcSet, asImageSrc, asText, asHTML, isRepositoryEndpoint, getRepositoryName, createClient, filter, cookie, asLinkAttrs, asDate, documentToLinkField } from 'file:///home/runner/work/immaculate/immaculate/node_modules/@prismicio/client/dist/index.js';
+import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'file:///home/runner/work/immaculate/immaculate/node_modules/vue/server-renderer/index.mjs';
 import { a as useRuntimeConfig$1 } from '../runtime.mjs';
-import 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/unenv/runtime/fetch/index.mjs';
-import 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/scule/dist/index.mjs';
-import 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/unstorage/dist/index.mjs';
-import 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/unstorage/drivers/fs.mjs';
-import 'file:///C:/webdev/Tutorials/nuxt-blog/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
-import 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///home/runner/work/immaculate/immaculate/node_modules/unenv/runtime/fetch/index.mjs';
+import 'file:///home/runner/work/immaculate/immaculate/node_modules/scule/dist/index.mjs';
+import 'file:///home/runner/work/immaculate/immaculate/node_modules/unstorage/dist/index.mjs';
+import 'file:///home/runner/work/immaculate/immaculate/node_modules/unstorage/drivers/fs.mjs';
+import 'file:///home/runner/work/immaculate/immaculate/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
+import 'file:///home/runner/work/immaculate/immaculate/node_modules/unstorage/drivers/fs-lite.mjs';
 import 'node:fs';
 import 'node:url';
-import 'file://C:/webdev/Tutorials/nuxt-blog/node_modules/pathe/dist/index.mjs';
+import 'file:///home/runner/work/immaculate/immaculate/node_modules/pathe/dist/index.mjs';
 
 const appConfig = useRuntimeConfig$1().app;
 const baseURL = () => appConfig.baseURL;
@@ -1722,7 +1722,7 @@ const createPrismic = (options) => {
         if (typeof globalThis.fetch === "function") {
           fetchFunction = globalThis.fetch;
         } else {
-          fetchFunction = (await import('file://C:/webdev/Tutorials/nuxt-blog/node_modules/isomorphic-unfetch/index.js')).default;
+          fetchFunction = (await import('file:///home/runner/work/immaculate/immaculate/node_modules/isomorphic-unfetch/index.js')).default;
         }
         return await fetchFunction(endpoint, options2);
       },
