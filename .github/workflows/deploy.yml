@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '20'  # Update to the required Node.js version
       - run: npm install
-      - run: chmod +x node_modules/.bin/nuxt  # Ensure nuxt has execute permissions
+      - run: chmod +x ./node_modules/.bin/nuxt  # Ensure nuxt has execute permissions
       - run: npm run generate
         env:
           NITRO_PRESET: github_pages
