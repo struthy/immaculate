@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Change to 'main' if your default branch is 'main'
+      - master
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Use Node.js version 20
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -28,11 +28,11 @@ jobs:
           git config --global user.name "Your Name"
 
       - name: Generate static files
-        run: npm run generate  # This is equivalent to `npm run predeploy`
+        run: npm run generate
 
       - name: Deploy to GitHub Pages
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use your GitHub token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
