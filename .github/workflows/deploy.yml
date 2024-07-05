@@ -30,8 +30,11 @@ jobs:
       - name: Generate static files
         run: npm run generate  # Ensure this generates files in 'dist'
 
-      - name: List files for debugging
-        run: ls -la dist  # List the files in the 'dist' directory for debugging
+      - name: List project root files for debugging
+        run: ls -la
+
+      - name: List files in 'dist' directory for debugging
+        run: ls -la dist
 
       - name: Deploy to GitHub Pages
         run: |
