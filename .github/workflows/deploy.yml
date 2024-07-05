@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Adjust to 'main' if your default branch is 'main...'
+      - master  # Adjust to 'main' if your default branch is 'main'
   workflow_dispatch:
 
 jobs:
@@ -24,16 +24,19 @@ jobs:
 
       - name: Set Git config
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "adamselectro@gmail.com"
+          git config --global user.name "Adam Struth"
 
       - name: Generate static files
         run: npm run generate  # Ensure this generates files in 'dist'
 
       - name: Deploy to GitHub Pages
         run: |
+          git init
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git checkout -b gh-pages
           git add -A
           git commit -m "Deploy to GitHub Pages"
-          git push origin `gh-pages`  # Push to 'gh-pages' branch
+          git push --force origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
