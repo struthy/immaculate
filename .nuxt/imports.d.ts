@@ -30,5 +30,4 @@ export { useNavigation } from '../composables/useNavigation';
 export { useSettings } from '../composables/useSettings';
 export { useAllPrismicDocumentsByEveryTag, useAllPrismicDocumentsByIDs, useAllPrismicDocumentsBySomeTags, useAllPrismicDocumentsByTag, useAllPrismicDocumentsByType, useAllPrismicDocumentsByUIDs, useFirstPrismicDocument, usePrismic, usePrismicDocumentByID, usePrismicDocumentByUID, usePrismicDocuments, usePrismicDocumentsByEveryTag, usePrismicDocumentsByIDs, usePrismicDocumentsBySomeTags, usePrismicDocumentsByTag, usePrismicDocumentsByType, usePrismicDocumentsByUIDs, usePrismicImage, usePrismicLink, usePrismicRichText, usePrismicText, useSinglePrismicDocument, getSliceComponentProps, defineSliceZoneComponents } from '@prismicio/vue';
 export { usePrismicPreview } from '../node_modules/@nuxtjs/prismic/dist/runtime/usePrismicPreview';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
