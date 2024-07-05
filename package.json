@@ -15,7 +15,7 @@
     "slicemachine": "start-slicemachine",
     "lint": "eslint .",
     "predeploy": "npm run generate",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages --dotfiles -d .output/public"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.17",

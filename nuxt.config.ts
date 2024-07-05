@@ -6,6 +6,8 @@ export default defineNuxtConfig({
   devtools: true,
 
   app: {
+    baseURL: '/immaculate/', // Set the base URL to match your repository name
+    buildAssetsDir: 'assets', // Set the build assets directory
     head: {
       title: 'Prismic + Nuxt blog example',
       htmlAttrs: {
@@ -38,10 +40,6 @@ export default defineNuxtConfig({
     '@nuxtjs/prismic',
     '@nuxtjs/tailwindcss'
   ],
-
-  generate: {
-    dir: 'dist'
-  },
 
   prismic: {
     endpoint: apiEndpoint || repositoryName,
