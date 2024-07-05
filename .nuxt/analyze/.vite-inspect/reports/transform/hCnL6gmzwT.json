@@ -3,39 +3,39 @@
   "transforms": [
     {
       "name": "vite:vue",
-      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-16\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  setup(__props) {\n\nconst prismic = usePrismic()\nconst { data: articles } = useAsyncData('$articles', () =>\n  prismic.client.getAllByType(\"article\", {\n    orderings: [\n      { field: \"my.article.publishDate\", direction: \"desc\" },\n      { field: \"document.first_publication_date\", direction: \"desc\" },\n    ],\n  })\n)\nconst settings = useSettings()\n\ndefinePageMeta({\n  withHeaderProfile: true,\n  withHeaderDivider: false,\n  withFooterSignUpForm: true\n})\n\nuseHead({\n  title: computed(() => prismic.asText(settings.value?.data.name))\n})\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_ArticleListItem = _resolveComponent(\"ArticleListItem\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { size: \"widest\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"ul\", _hoisted_1, [\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_unref(articles), (article) => {\n          return (_openBlock(), _createBlock(_component_ArticleListItem, {\n            key: article.id,\n            article: article\n          }, null, 8, [\"article\"]))\n        }), 128))\n      ])\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
-      "start": 1720103995123,
-      "end": 1720103995123
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-16\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  setup(__props) {\n\r\nconst prismic = usePrismic()\r\nconst { data: articles } = useAsyncData('$articles', () =>\r\n  prismic.client.getAllByType(\"article\", {\r\n    orderings: [\r\n      { field: \"my.article.publishDate\", direction: \"desc\" },\r\n      { field: \"document.first_publication_date\", direction: \"desc\" },\r\n    ],\r\n  })\r\n)\r\nconst settings = useSettings()\r\n\r\ndefinePageMeta({\r\n  withHeaderProfile: true,\r\n  withHeaderDivider: false,\r\n  withFooterSignUpForm: true\r\n})\r\n\r\nuseHead({\r\n  title: computed(() => prismic.asText(settings.value?.data.name))\r\n})\r\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_ArticleListItem = _resolveComponent(\"ArticleListItem\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { size: \"widest\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"ul\", _hoisted_1, [\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_unref(articles), (article) => {\n          return (_openBlock(), _createBlock(_component_ArticleListItem, {\n            key: article.id,\n            article: article\n          }, null, 8, [\"article\"]))\n        }), 128))\n      ])\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720177711270,
+      "end": 1720177711270
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995123,
-      "end": 1720103995123,
+      "start": 1720177711270,
+      "end": 1720177711270,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995123,
-      "end": 1720103995123,
+      "start": 1720177711270,
+      "end": 1720177711270,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995123,
-      "end": 1720103995123,
+      "start": 1720177711270,
+      "end": 1720177711270,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995123,
-      "end": 1720103995123,
+      "start": 1720177711270,
+      "end": 1720177711270,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-16\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  setup(__props) {\n    const prismic = usePrismic();\n    const { data: articles } = useAsyncData(\n      \"$articles\",\n      () => prismic.client.getAllByType(\"article\", {\n        orderings: [\n          { field: \"my.article.publishDate\", direction: \"desc\" },\n          { field: \"document.first_publication_date\", direction: \"desc\" }\n        ]\n      })\n    );\n    const settings = useSettings();\n    definePageMeta({\n      withHeaderProfile: true,\n      withHeaderDivider: false,\n      withFooterSignUpForm: true\n    });\n    useHead({\n      title: computed(() => prismic.asText(settings.value?.data.name))\n    });\n    return (_ctx, _cache) => {\n      const _component_ArticleListItem = _resolveComponent(\"ArticleListItem\");\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, { size: \"widest\" }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"ul\", _hoisted_1, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_unref(articles), (article) => {\n              return _openBlock(), _createBlock(_component_ArticleListItem, {\n                key: article.id,\n                article\n              }, null, 8, [\"article\"]);\n            }), 128))\n          ])\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
-      "start": 1720103995123,
-      "end": 1720103995237,
+      "start": 1720177711270,
+      "end": 1720177711295,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,7 +43,7 @@
           "C:/webdev/Tutorials/nuxt-blog/pages/index.vue?vue&type=script&setup=true&lang.ts"
         ],
         "sourcesContent": [
-          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-16\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  setup(__props) {\n\nconst prismic = usePrismic()\nconst { data: articles } = useAsyncData('$articles', () =>\n  prismic.client.getAllByType(\"article\", {\n    orderings: [\n      { field: \"my.article.publishDate\", direction: \"desc\" },\n      { field: \"document.first_publication_date\", direction: \"desc\" },\n    ],\n  })\n)\nconst settings = useSettings()\n\ndefinePageMeta({\n  withHeaderProfile: true,\n  withHeaderDivider: false,\n  withFooterSignUpForm: true\n})\n\nuseHead({\n  title: computed(() => prismic.asText(settings.value?.data.name))\n})\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_ArticleListItem = _resolveComponent(\"ArticleListItem\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { size: \"widest\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"ul\", _hoisted_1, [\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_unref(articles), (article) => {\n          return (_openBlock(), _createBlock(_component_ArticleListItem, {\n            key: article.id,\n            article: article\n          }, null, 8, [\"article\"]))\n        }), 128))\n      ])\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-16\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  setup(__props) {\n\r\nconst prismic = usePrismic()\r\nconst { data: articles } = useAsyncData('$articles', () =>\r\n  prismic.client.getAllByType(\"article\", {\r\n    orderings: [\r\n      { field: \"my.article.publishDate\", direction: \"desc\" },\r\n      { field: \"document.first_publication_date\", direction: \"desc\" },\r\n    ],\r\n  })\r\n)\r\nconst settings = useSettings()\r\n\r\ndefinePageMeta({\r\n  withHeaderProfile: true,\r\n  withHeaderDivider: false,\r\n  withFooterSignUpForm: true\r\n})\r\n\r\nuseHead({\r\n  title: computed(() => prismic.asText(settings.value?.data.name))\r\n})\r\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_ArticleListItem = _resolveComponent(\"ArticleListItem\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { size: \"widest\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"ul\", _hoisted_1, [\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_unref(articles), (article) => {\n          return (_openBlock(), _createBlock(_component_ArticleListItem, {\n            key: article.id,\n            article: article\n          }, null, 8, [\"article\"]))\n        }), 128))\n      ])\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
         ],
         "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,SAAS,QAAQ,cAAc,aAAa,YAAY,WAAW,aAAa,YAAY,sBAAsB,qBAAqB,oBAAoB,mBAAmB,eAAe,cAAc,sBAAsB,qBAAqB,WAAW,gBAAgB;AAE1R,MAAM,aAAa,EAAE,OAAO,0BAA0B;AAGtD,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAEjB,UAAM,UAAU,WAAW;AAC3B,UAAM,EAAE,MAAM,SAAS,IAAI;AAAA,MAAa;AAAA,MAAa,MACnD,QAAQ,OAAO,aAAa,WAAW;AAAA,QACrC,WAAW;AAAA,UACT,EAAE,OAAO,0BAA0B,WAAW,OAAO;AAAA,UACrD,EAAE,OAAO,mCAAmC,WAAW,OAAO;AAAA,QAChE;AAAA,MACF,CAAC;AAAA,IACH;AACA,UAAM,WAAW,YAAY;AAE7B,mBAAe;AAAA,MACb,mBAAmB;AAAA,MACnB,mBAAmB;AAAA,MACnB,sBAAsB;AAAA,IACxB,CAAC;AAED,YAAQ;AAAA,MACN,OAAO,SAAS,MAAM,QAAQ,OAAO,SAAS,OAAO,KAAK,IAAI,CAAC;AAAA,IACjE,CAAC;AAED,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,6BAA6B,kBAAkB,iBAAiB;AACtE,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,aAAQ,WAAW,GAAG,aAAa,oBAAoB,EAAE,MAAM,SAAS,GAAG;AAAA,QACzE,SAAS,SAAS,MAAM;AAAA,UACtB,oBAAoB,MAAM,YAAY;AAAA,aACnC,WAAW,IAAI,GAAG,oBAAoB,WAAW,MAAM,YAAY,OAAO,QAAQ,GAAG,CAAC,YAAY;AACjG,qBAAQ,WAAW,GAAG,aAAa,4BAA4B;AAAA,gBAC7D,KAAK,QAAQ;AAAA,gBACb;AAAA,cACF,GAAG,MAAM,GAAG,CAAC,SAAS,CAAC;AAAA,YACzB,CAAC,GAAG,GAAG;AAAA,UACT,CAAC;AAAA,QACH,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
         "names": []
@@ -51,123 +51,123 @@
     },
     {
       "name": "vite:json",
-      "start": 1720103995237,
-      "end": 1720103995237,
+      "start": 1720177711295,
+      "end": 1720177711295,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995237,
-      "end": 1720103995237,
+      "start": 1720177711295,
+      "end": 1720177711295,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995237,
-      "end": 1720103995237,
+      "start": 1720177711295,
+      "end": 1720177711295,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995237,
-      "end": 1720103995237,
+      "start": 1720177711295,
+      "end": 1720177711295,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995237,
-      "end": 1720103995237,
+      "start": 1720177711295,
+      "end": 1720177711295,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995237,
-      "end": 1720103995237,
+      "start": 1720177711295,
+      "end": 1720177711295,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995237,
-      "end": 1720103995237,
+      "start": 1720177711295,
+      "end": 1720177711295,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995237,
-      "end": 1720103995237,
+      "start": 1720177711295,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995237,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995238,
-      "end": 1720103995238,
+      "start": 1720177711296,
+      "end": 1720177711296,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995238,
-      "end": 1720103995242,
+      "start": 1720177711296,
+      "end": 1720177711300,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { usePrismic } from '@prismicio/vue';\nimport { useAsyncData } from '#app/composables/asyncData';\nimport { useSettings } from 'C:/webdev/Tutorials/nuxt-blog/composables/useSettings.ts';\nimport { definePageMeta } from 'C:/webdev/Tutorials/nuxt-blog/node_modules/nuxt/dist/pages/runtime/composables';\nimport { useHead } from '@unhead/vue';\nimport { computed } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-16\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  setup(__props) {\n    const prismic = usePrismic();\n    const { data: articles } = useAsyncData(\n      \"$articles\",\n      () => prismic.client.getAllByType(\"article\", {\n        orderings: [\n          { field: \"my.article.publishDate\", direction: \"desc\" },\n          { field: \"document.first_publication_date\", direction: \"desc\" }\n        ]\n      })\n    );\n    const settings = useSettings();\n    definePageMeta({\n      withHeaderProfile: true,\n      withHeaderDivider: false,\n      withFooterSignUpForm: true\n    });\n    useHead({\n      title: computed(() => prismic.asText(settings.value?.data.name))\n    });\n    return (_ctx, _cache) => {\n      const _component_ArticleListItem = _resolveComponent(\"ArticleListItem\");\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, { size: \"widest\" }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"ul\", _hoisted_1, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_unref(articles), (article) => {\n              return _openBlock(), _createBlock(_component_ArticleListItem, {\n                key: article.id,\n                article\n              }, null, 8, [\"article\"]);\n            }), 128))\n          ])\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
-      "start": 1720103995243,
-      "end": 1720103995252,
+      "start": 1720177711300,
+      "end": 1720177711305,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -180,52 +180,52 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995253,
-      "end": 1720103995256,
+      "start": 1720177711309,
+      "end": 1720177711310,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995260,
-      "end": 1720103995263,
+      "start": 1720177711314,
+      "end": 1720177711314,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995265,
-      "end": 1720103995265,
+      "start": 1720177711316,
+      "end": 1720177711316,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995265,
-      "end": 1720103995265,
+      "start": 1720177711316,
+      "end": 1720177711316,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { default as __nuxt_component_0 } from \"C:/webdev/Tutorials/nuxt-blog/components/ArticleListItem.vue\";\nimport { default as __nuxt_component_1 } from \"C:/webdev/Tutorials/nuxt-blog/components/Bounded.vue\";\nimport { usePrismic } from '@prismicio/vue';\nimport { useAsyncData } from '#app/composables/asyncData';\nimport { useSettings } from 'C:/webdev/Tutorials/nuxt-blog/composables/useSettings.ts';\nimport { definePageMeta } from 'C:/webdev/Tutorials/nuxt-blog/node_modules/nuxt/dist/pages/runtime/composables';\nimport { useHead } from '@unhead/vue';\nimport { computed } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-16\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  setup(__props) {\n    const prismic = usePrismic();\n    const { data: articles } = useAsyncData(\n      \"$articles\",\n      () => prismic.client.getAllByType(\"article\", {\n        orderings: [\n          { field: \"my.article.publishDate\", direction: \"desc\" },\n          { field: \"document.first_publication_date\", direction: \"desc\" }\n        ]\n      })\n    );\n    const settings = useSettings();\n    definePageMeta({\n      withHeaderProfile: true,\n      withHeaderDivider: false,\n      withFooterSignUpForm: true\n    });\n    useHead({\n      title: computed(() => prismic.asText(settings.value?.data.name))\n    });\n    return (_ctx, _cache) => {\n      const _component_ArticleListItem = __nuxt_component_0;\n      const _component_Bounded = __nuxt_component_1;\n      return _openBlock(), _createBlock(_component_Bounded, { size: \"widest\" }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"ul\", _hoisted_1, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_unref(articles), (article) => {\n              return _openBlock(), _createBlock(_component_ArticleListItem, {\n                key: article.id,\n                article\n              }, null, 8, [\"article\"]);\n            }), 128))\n          ])\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
-      "start": 1720103995265,
-      "end": 1720103995265,
+      "start": 1720177711316,
+      "end": 1720177711316,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
       "result": "import { default as __nuxt_component_0 } from \"C:/webdev/Tutorials/nuxt-blog/components/ArticleListItem.vue\";\nimport { default as __nuxt_component_1 } from \"C:/webdev/Tutorials/nuxt-blog/components/Bounded.vue\";\nimport { usePrismic } from '@prismicio/vue';\nimport { useAsyncData } from '#app/composables/asyncData';\nimport { useSettings } from 'C:/webdev/Tutorials/nuxt-blog/composables/useSettings.ts';\nimport { definePageMeta } from 'C:/webdev/Tutorials/nuxt-blog/node_modules/nuxt/dist/pages/runtime/composables';\nimport { useHead } from '@unhead/vue';\nimport { computed } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-16\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  setup(__props) {\n    const prismic = usePrismic();\n    const { data: articles } = useAsyncData(\n      \"$articles\",\n      () => prismic.client.getAllByType(\"article\", {\n        orderings: [\n          { field: \"my.article.publishDate\", direction: \"desc\" },\n          { field: \"document.first_publication_date\", direction: \"desc\" }\n        ]\n      })\n    );\n    const settings = useSettings();\n     false && /*@__PURE__*/ definePageMeta({\n      withHeaderProfile: true,\n      withHeaderDivider: false,\n      withFooterSignUpForm: true\n    });\n    useHead({\n      title: computed(() => prismic.asText(settings.value?.data.name))\n    });\n    return (_ctx, _cache) => {\n      const _component_ArticleListItem = __nuxt_component_0;\n      const _component_Bounded = __nuxt_component_1;\n      return _openBlock(), _createBlock(_component_Bounded, { size: \"widest\" }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"ul\", _hoisted_1, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_unref(articles), (article) => {\n              return _openBlock(), _createBlock(_component_ArticleListItem, {\n                key: article.id,\n                article\n              }, null, 8, [\"article\"]);\n            }), 128))\n          ])\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
-      "start": 1720103995265,
-      "end": 1720103995266,
+      "start": 1720177711317,
+      "end": 1720177711317,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995266,
-      "end": 1720103995267,
+      "start": 1720177711318,
+      "end": 1720177711318,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995267,
-      "end": 1720103995267,
+      "start": 1720177711318,
+      "end": 1720177711318,
       "order": "normal"
     }
   ]

@@ -3,58 +3,58 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "export const useSettings = () => {\n  const prismic = usePrismic()\n  return useAsyncData('$settings', () => prismic.client.getSingle('settings')).data\n}",
-      "start": 1720103997864,
-      "end": 1720103997890,
+      "result": "export const useSettings = () => {\r\n  const prismic = usePrismic()\r\n  return useAsyncData('$settings', () => prismic.client.getSingle('settings')).data\r\n}",
+      "start": 1720177713570,
+      "end": 1720177713754,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103997890,
-      "end": 1720103997890,
+      "start": 1720177713754,
+      "end": 1720177713754,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103997890,
-      "end": 1720103997890,
+      "start": 1720177713754,
+      "end": 1720177713754,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103997890,
-      "end": 1720103997890,
+      "start": 1720177713754,
+      "end": 1720177713754,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103997890,
-      "end": 1720103997890,
+      "start": 1720177713754,
+      "end": 1720177713754,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103997890,
-      "end": 1720103997890,
+      "start": 1720177713754,
+      "end": 1720177713754,
       "order": "pre"
     },
     {
       "name": "server-only-component-transform",
-      "start": 1720103997890,
-      "end": 1720103997890,
+      "start": 1720177713754,
+      "end": 1720177713754,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103997890,
-      "end": 1720103997890,
+      "start": 1720177713754,
+      "end": 1720177713754,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "export const useSettings = () => {\n  const prismic = usePrismic();\n  return useAsyncData(\"$settings\", () => prismic.client.getSingle(\"settings\")).data;\n};\n",
-      "start": 1720103997890,
-      "end": 1720103997907,
+      "start": 1720177713754,
+      "end": 1720177713765,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -62,7 +62,7 @@
           "C:/webdev/Tutorials/nuxt-blog/composables/useSettings.ts"
         ],
         "sourcesContent": [
-          "export const useSettings = () => {\n  const prismic = usePrismic()\n  return useAsyncData('$settings', () => prismic.client.getSingle('settings')).data\n}"
+          "export const useSettings = () => {\r\n  const prismic = usePrismic()\r\n  return useAsyncData('$settings', () => prismic.client.getSingle('settings')).data\r\n}"
         ],
         "mappings": "AAAO,aAAM,cAAc,MAAM;AAC/B,QAAM,UAAU,WAAW;AAC3B,SAAO,aAAa,aAAa,MAAM,QAAQ,OAAO,UAAU,UAAU,CAAC,EAAE;AAC/E;",
         "names": []
@@ -70,135 +70,135 @@
     },
     {
       "name": "vite:json",
-      "start": 1720103997907,
-      "end": 1720103997907,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103997907,
-      "end": 1720103997907,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103997907,
-      "end": 1720103997907,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103997907,
-      "end": 1720103997907,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103997907,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103997907,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103997908,
-      "end": 1720103997908,
+      "start": 1720177713765,
+      "end": 1720177713765,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103997909,
-      "end": 1720103997909,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103997909,
-      "end": 1720103997909,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103997909,
-      "end": 1720103997909,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { usePrismic } from '@prismicio/vue';\nimport { useAsyncData } from '#app/composables/asyncData';\nexport const useSettings = () => {\n  const prismic = usePrismic();\n  return useAsyncData(\"$settings\", () => prismic.client.getSingle(\"settings\")).data;\n};\n",
-      "start": 1720103997909,
-      "end": 1720103997910,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -212,8 +212,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { usePrismic } from '@prismicio/vue';\nimport { useAsyncData } from '#app/composables/asyncData';\nexport const useSettings = () => {\n  const prismic = usePrismic();\n  return useAsyncData(\"$settings\", () => prismic.client.getSingle(\"settings\")).data;\n};\n",
-      "start": 1720103997909,
-      "end": 1720103997910,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -226,56 +226,56 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1720103997910,
-      "end": 1720103997910,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103997910,
-      "end": 1720103997910,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103997910,
-      "end": 1720103997910,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103997910,
-      "end": 1720103997910,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1720103997910,
-      "end": 1720103997910,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103997910,
-      "end": 1720103997910,
+      "start": 1720177713766,
+      "end": 1720177713766,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103997910,
-      "end": 1720103997910,
+      "start": 1720177713767,
+      "end": 1720177713767,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103997910,
-      "end": 1720103997910,
+      "start": 1720177713767,
+      "end": 1720177713767,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103997911,
-      "end": 1720103997911,
+      "start": 1720177713767,
+      "end": 1720177713767,
       "order": "normal"
     }
   ]

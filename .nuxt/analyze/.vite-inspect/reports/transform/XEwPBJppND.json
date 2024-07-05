@@ -3,39 +3,39 @@
   "transforms": [
     {
       "name": "vite:vue",
-      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx } from \"vue\"\n\nimport { type Content } from '@prismicio/client'\n\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\n// Consider it as a visual hint for you when templating your slice.\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.TextSlice>(\n  ['slice', 'index', 'slices', 'context']\n),\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { as: \"section\" }, {\n    default: _withCtx(() => [\n      (_ctx.$prismic.asText(_ctx.slice.primary.text))\n        ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n            key: 0,\n            class: \"font-serif leading-relaxed md:text-xl md:leading-relaxed\",\n            field: _ctx.slice.primary.text,\n            wrapper: \"div\"\n          }, null, 8, [\"field\"]))\n        : _createCommentVNode(\"\", true)\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
-      "start": 1720103995578,
-      "end": 1720103995578
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx } from \"vue\"\n\nimport { type Content } from '@prismicio/client'\r\n\r\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\r\n// Consider it as a visual hint for you when templating your slice.\r\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.TextSlice>(\r\n  ['slice', 'index', 'slices', 'context']\r\n),\n  setup(__props) {\n\r\n\r\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { as: \"section\" }, {\n    default: _withCtx(() => [\n      (_ctx.$prismic.asText(_ctx.slice.primary.text))\n        ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n            key: 0,\n            class: \"font-serif leading-relaxed md:text-xl md:leading-relaxed\",\n            field: _ctx.slice.primary.text,\n            wrapper: \"div\"\n          }, null, 8, [\"field\"]))\n        : _createCommentVNode(\"\", true)\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720177711455,
+      "end": 1720177711455
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995578,
-      "end": 1720103995578,
+      "start": 1720177711455,
+      "end": 1720177711455,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995578,
-      "end": 1720103995578,
+      "start": 1720177711455,
+      "end": 1720177711455,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995578,
-      "end": 1720103995578,
+      "start": 1720177711455,
+      "end": 1720177711455,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995578,
-      "end": 1720103995578,
+      "start": 1720177711455,
+      "end": 1720177711455,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\");\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, { as: \"section\" }, {\n        default: _withCtx(() => [\n          _ctx.$prismic.asText(_ctx.slice.primary.text) ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n            key: 0,\n            class: \"font-serif leading-relaxed md:text-xl md:leading-relaxed\",\n            field: _ctx.slice.primary.text,\n            wrapper: \"div\"\n          }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
-      "start": 1720103995578,
-      "end": 1720103995597,
+      "start": 1720177711455,
+      "end": 1720177711462,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,7 +43,7 @@
           "C:/webdev/Tutorials/nuxt-blog/slices/Text/index.vue?vue&type=script&setup=true&lang.ts"
         ],
         "sourcesContent": [
-          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx } from \"vue\"\n\nimport { type Content } from '@prismicio/client'\n\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\n// Consider it as a visual hint for you when templating your slice.\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.TextSlice>(\n  ['slice', 'index', 'slices', 'context']\n),\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { as: \"section\" }, {\n    default: _withCtx(() => [\n      (_ctx.$prismic.asText(_ctx.slice.primary.text))\n        ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n            key: 0,\n            class: \"font-serif leading-relaxed md:text-xl md:leading-relaxed\",\n            field: _ctx.slice.primary.text,\n            wrapper: \"div\"\n          }, null, 8, [\"field\"]))\n        : _createCommentVNode(\"\", true)\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx } from \"vue\"\n\nimport { type Content } from '@prismicio/client'\r\n\r\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\r\n// Consider it as a visual hint for you when templating your slice.\r\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.TextSlice>(\r\n  ['slice', 'index', 'slices', 'context']\r\n),\n  setup(__props) {\n\r\n\r\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, { as: \"section\" }, {\n    default: _withCtx(() => [\n      (_ctx.$prismic.asText(_ctx.slice.primary.text))\n        ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n            key: 0,\n            class: \"font-serif leading-relaxed md:text-xl md:leading-relaxed\",\n            field: _ctx.slice.primary.text,\n            wrapper: \"div\"\n          }, null, 8, [\"field\"]))\n        : _createCommentVNode(\"\", true)\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
         ],
         "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAAmB,aAAa,YAAY,eAAe,cAAc,sBAAsB,qBAAqB,WAAW,gBAAgB;AAO5K,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACP,CAAC,SAAS,SAAS,UAAU,SAAS;AAAA,EACxC;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,6BAA6B,kBAAkB,iBAAiB;AACtE,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,aAAQ,WAAW,GAAG,aAAa,oBAAoB,EAAE,IAAI,UAAU,GAAG;AAAA,QACxE,SAAS,SAAS,MAAM;AAAA,UACrB,KAAK,SAAS,OAAO,KAAK,MAAM,QAAQ,IAAI,KACxC,WAAW,GAAG,aAAa,4BAA4B;AAAA,YACtD,KAAK;AAAA,YACL,OAAO;AAAA,YACP,OAAO,KAAK,MAAM,QAAQ;AAAA,YAC1B,SAAS;AAAA,UACX,GAAG,MAAM,GAAG,CAAC,OAAO,CAAC,KACrB,oBAAoB,IAAI,IAAI;AAAA,QAClC,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
         "names": []
@@ -51,123 +51,123 @@
     },
     {
       "name": "vite:json",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711462,
+      "end": 1720177711462,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711462,
+      "end": 1720177711462,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711462,
+      "end": 1720177711462,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711462,
+      "end": 1720177711462,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995597,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { getSliceComponentProps } from '@prismicio/vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\");\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, { as: \"section\" }, {\n        default: _withCtx(() => [\n          _ctx.$prismic.asText(_ctx.slice.primary.text) ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n            key: 0,\n            class: \"font-serif leading-relaxed md:text-xl md:leading-relaxed\",\n            field: _ctx.slice.primary.text,\n            wrapper: \"div\"\n          }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
-      "start": 1720103995598,
-      "end": 1720103995600,
+      "start": 1720177711463,
+      "end": 1720177711464,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -180,51 +180,51 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995600,
-      "end": 1720103995600,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995600,
-      "end": 1720103995600,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995600,
-      "end": 1720103995600,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995600,
-      "end": 1720103995600,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { PrismicRichText as __nuxt_component_0 } from \"@prismicio/vue\";\nimport { default as __nuxt_component_1 } from \"C:/webdev/Tutorials/nuxt-blog/components/Bounded.vue\";\nimport { getSliceComponentProps } from '@prismicio/vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_PrismicRichText = __nuxt_component_0;\n      const _component_Bounded = __nuxt_component_1;\n      return _openBlock(), _createBlock(_component_Bounded, { as: \"section\" }, {\n        default: _withCtx(() => [\n          _ctx.$prismic.asText(_ctx.slice.primary.text) ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n            key: 0,\n            class: \"font-serif leading-relaxed md:text-xl md:leading-relaxed\",\n            field: _ctx.slice.primary.text,\n            wrapper: \"div\"\n          }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
-      "start": 1720103995601,
-      "end": 1720103995601,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995601,
-      "end": 1720103995601,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995601,
-      "end": 1720103995601,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995601,
-      "end": 1720103995601,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "normal"
     }
   ]

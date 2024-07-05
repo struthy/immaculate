@@ -3,40 +3,40 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "export const useNavigation = () => {\n  const prismic = usePrismic()\n  return useAsyncData('$navigation', () => prismic.client.getSingle('navigation')).data\n}",
-      "start": 1720103995547,
-      "end": 1720103995561,
+      "result": "export const useNavigation = () => {\r\n  const prismic = usePrismic()\r\n  return useAsyncData('$navigation', () => prismic.client.getSingle('navigation')).data\r\n}",
+      "start": 1720177711447,
+      "end": 1720177711455,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995561,
-      "end": 1720103995561,
+      "start": 1720177711455,
+      "end": 1720177711455,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995561,
-      "end": 1720103995561,
+      "start": 1720177711455,
+      "end": 1720177711455,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995561,
-      "end": 1720103995561,
+      "start": 1720177711455,
+      "end": 1720177711455,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995561,
-      "end": 1720103995561,
+      "start": 1720177711455,
+      "end": 1720177711455,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "export const useNavigation = () => {\n  const prismic = usePrismic();\n  return useAsyncData(\"$navigation\", () => prismic.client.getSingle(\"navigation\")).data;\n};\n",
-      "start": 1720103995561,
-      "end": 1720103995572,
+      "start": 1720177711455,
+      "end": 1720177711482,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -44,7 +44,7 @@
           "C:/webdev/Tutorials/nuxt-blog/composables/useNavigation.ts"
         ],
         "sourcesContent": [
-          "export const useNavigation = () => {\n  const prismic = usePrismic()\n  return useAsyncData('$navigation', () => prismic.client.getSingle('navigation')).data\n}"
+          "export const useNavigation = () => {\r\n  const prismic = usePrismic()\r\n  return useAsyncData('$navigation', () => prismic.client.getSingle('navigation')).data\r\n}"
         ],
         "mappings": "AAAO,aAAM,gBAAgB,MAAM;AACjC,QAAM,UAAU,WAAW;AAC3B,SAAO,aAAa,eAAe,MAAM,QAAQ,OAAO,UAAU,YAAY,CAAC,EAAE;AACnF;",
         "names": []
@@ -52,123 +52,123 @@
     },
     {
       "name": "vite:json",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711482,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995572,
-      "end": 1720103995572,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995573,
-      "end": 1720103995573,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995573,
-      "end": 1720103995573,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995573,
-      "end": 1720103995573,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995573,
-      "end": 1720103995573,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995573,
-      "end": 1720103995573,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995573,
-      "end": 1720103995573,
+      "start": 1720177711483,
+      "end": 1720177711484,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { usePrismic } from '@prismicio/vue';\nimport { useAsyncData } from '#app/composables/asyncData';\nexport const useNavigation = () => {\n  const prismic = usePrismic();\n  return useAsyncData(\"$navigation\", () => prismic.client.getSingle(\"navigation\")).data;\n};\n",
-      "start": 1720103995573,
-      "end": 1720103995574,
+      "start": 1720177711484,
+      "end": 1720177711486,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -181,50 +181,50 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995574,
-      "end": 1720103995574,
+      "start": 1720177711486,
+      "end": 1720177711486,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995574,
-      "end": 1720103995574,
+      "start": 1720177711486,
+      "end": 1720177711486,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995574,
-      "end": 1720103995574,
+      "start": 1720177711486,
+      "end": 1720177711486,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995574,
-      "end": 1720103995574,
+      "start": 1720177711486,
+      "end": 1720177711486,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995574,
-      "end": 1720103995574,
+      "start": 1720177711486,
+      "end": 1720177711487,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995574,
-      "end": 1720103995574,
+      "start": 1720177711487,
+      "end": 1720177711487,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995574,
-      "end": 1720103995574,
+      "start": 1720177711487,
+      "end": 1720177711487,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995574,
-      "end": 1720103995574,
+      "start": 1720177711487,
+      "end": 1720177711487,
       "order": "normal"
     }
   ]

@@ -3,68 +3,68 @@
   "transforms": [
     {
       "name": "vite:vue",
-      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { type RichTextField, type ImageField } from '@prismicio/client'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'HeaderProfile',\n  __ssrInlineRender: true,\n  props: {\n  name: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  description: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  profilePicture: {\n    type: Object as PropType<ImageField>,\n    default: undefined\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_Heading = _resolveComponent(\"Heading\")!\n  const _component_PrismicText = _resolveComponent(\"PrismicText\")!\n\n  _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"px-4\" }, _attrs))}><div class=\"grid max-w-lg grid-cols-1 justify-items-center gap-8\">`)\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/\",\n    \"tab-index\": \"-1\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\"${_scopeId}>`)\n        if (__props.profilePicture?.url) {\n          _push(_ssrRenderComponent(_component_PrismicImage, {\n            field: __props.profilePicture,\n            class: \"object-cover\"\n          }, null, _parent, _scopeId))\n        } else {\n          _push(`<!---->`)\n        }\n        _push(`</div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" }, [\n            (__props.profilePicture?.url)\n              ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"]))\n              : _createCommentVNode(\"\", true)\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  if (_ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description)) {\n    _push(`<div class=\"grid grid-cols-1 gap-2 text-center\">`)\n    if (_ctx.$prismic.asText(__props.name)) {\n      _push(_ssrRenderComponent(_component_Heading, null, {\n        default: _withCtx((_, _push, _parent, _scopeId) => {\n          if (_push) {\n            _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n              default: _withCtx((_, _push, _parent, _scopeId) => {\n                if (_push) {\n                  _push(`${_ssrInterpolate(_ctx.$prismic.asText(__props.name))}`)\n                } else {\n                  return [\n                    _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                  ]\n                }\n              }),\n              _: 1\n            }, _parent, _scopeId))\n          } else {\n            return [\n              _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                default: _withCtx(() => [\n                  _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                ]),\n                _: 1\n              })\n            ]\n          }\n        }),\n        _: 1\n      }, _parent))\n    } else {\n      _push(`<!---->`)\n    }\n    if (_ctx.$prismic.asText(__props.description)) {\n      _push(_ssrRenderComponent(_component_PrismicText, {\n        field: __props.description,\n        wrapper: \"p\",\n        class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n      }, null, _parent))\n    } else {\n      _push(`<!---->`)\n    }\n    _push(`</div>`)\n  } else {\n    _push(`<!---->`)\n  }\n  _push(`</div></div>`)\n}\n}\n\n})",
-      "start": 1720103998029,
-      "end": 1720103998029,
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { type RichTextField, type ImageField } from '@prismicio/client'\r\n\r\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'HeaderProfile',\n  __ssrInlineRender: true,\n  props: {\r\n  name: {\r\n    type: Object as PropType<RichTextField>,\r\n    default: undefined\r\n  },\r\n  description: {\r\n    type: Object as PropType<RichTextField>,\r\n    default: undefined\r\n  },\r\n  profilePicture: {\r\n    type: Object as PropType<ImageField>,\r\n    default: undefined\r\n  }\r\n},\n  setup(__props) {\n\r\n\r\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_Heading = _resolveComponent(\"Heading\")!\n  const _component_PrismicText = _resolveComponent(\"PrismicText\")!\n\n  _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"px-4\" }, _attrs))}><div class=\"grid max-w-lg grid-cols-1 justify-items-center gap-8\">`)\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/\",\n    \"tab-index\": \"-1\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\"${_scopeId}>`)\n        if (__props.profilePicture?.url) {\n          _push(_ssrRenderComponent(_component_PrismicImage, {\n            field: __props.profilePicture,\n            class: \"object-cover\"\n          }, null, _parent, _scopeId))\n        } else {\n          _push(`<!---->`)\n        }\n        _push(`</div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" }, [\n            (__props.profilePicture?.url)\n              ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"]))\n              : _createCommentVNode(\"\", true)\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  if (_ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description)) {\n    _push(`<div class=\"grid grid-cols-1 gap-2 text-center\">`)\n    if (_ctx.$prismic.asText(__props.name)) {\n      _push(_ssrRenderComponent(_component_Heading, null, {\n        default: _withCtx((_, _push, _parent, _scopeId) => {\n          if (_push) {\n            _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n              default: _withCtx((_, _push, _parent, _scopeId) => {\n                if (_push) {\n                  _push(`${_ssrInterpolate(_ctx.$prismic.asText(__props.name))}`)\n                } else {\n                  return [\n                    _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                  ]\n                }\n              }),\n              _: 1\n            }, _parent, _scopeId))\n          } else {\n            return [\n              _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                default: _withCtx(() => [\n                  _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                ]),\n                _: 1\n              })\n            ]\n          }\n        }),\n        _: 1\n      }, _parent))\n    } else {\n      _push(`<!---->`)\n    }\n    if (_ctx.$prismic.asText(__props.description)) {\n      _push(_ssrRenderComponent(_component_PrismicText, {\n        field: __props.description,\n        wrapper: \"p\",\n        class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n      }, null, _parent))\n    } else {\n      _push(`<!---->`)\n    }\n    _push(`</div>`)\n  } else {\n    _push(`<!---->`)\n  }\n  _push(`</div></div>`)\n}\n}\n\n})",
+      "start": 1720177713885,
+      "end": 1720177713885,
       "sourcemaps": {
         "version": 3,
         "sources": [
           "C:/webdev/Tutorials/nuxt-blog/components/HeaderProfile.vue"
         ],
         "sourcesContent": [
-          "<script setup lang=\"ts\">\nimport { type RichTextField, type ImageField } from '@prismicio/client'\n\ndefineProps({\n  name: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  description: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  profilePicture: {\n    type: Object as PropType<ImageField>,\n    default: undefined\n  }\n})\n</script>\n\n<template>\n  <div class=\"px-4\">\n    <div class=\"grid max-w-lg grid-cols-1 justify-items-center gap-8\">\n      <NuxtLink\n        to=\"/\"\n        tab-index=\"-1\"\n      >\n        <div class=\"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\">\n          <PrismicImage\n            v-if=\"profilePicture?.url\"\n            :field=\"profilePicture\"\n            class=\"object-cover\"\n          />\n        </div>\n      </NuxtLink>\n      <div\n        v-if=\"$prismic.asText(name) || $prismic.asText(description)\"\n        class=\"grid grid-cols-1 gap-2 text-center\"\n      >\n        <Heading v-if=\"$prismic.asText(name)\">\n          <NuxtLink to=\"/\">\n            {{ $prismic.asText(name) }}\n          </NuxtLink>\n        </Heading>\n        <PrismicText\n          v-if=\"$prismic.asText(description)\"\n          :field=\"description\"\n          wrapper=\"p\"\n          class=\"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n        />\n      </div>\n    </div>\n  </div>\n</template>\n"
+          "<script setup lang=\"ts\">\r\nimport { type RichTextField, type ImageField } from '@prismicio/client'\r\n\r\ndefineProps({\r\n  name: {\r\n    type: Object as PropType<RichTextField>,\r\n    default: undefined\r\n  },\r\n  description: {\r\n    type: Object as PropType<RichTextField>,\r\n    default: undefined\r\n  },\r\n  profilePicture: {\r\n    type: Object as PropType<ImageField>,\r\n    default: undefined\r\n  }\r\n})\r\n</script>\r\n\r\n<template>\r\n  <div class=\"px-4\">\r\n    <div class=\"grid max-w-lg grid-cols-1 justify-items-center gap-8\">\r\n      <NuxtLink\r\n        to=\"/\"\r\n        tab-index=\"-1\"\r\n      >\r\n        <div class=\"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\">\r\n          <PrismicImage\r\n            v-if=\"profilePicture?.url\"\r\n            :field=\"profilePicture\"\r\n            class=\"object-cover\"\r\n          />\r\n        </div>\r\n      </NuxtLink>\r\n      <div\r\n        v-if=\"$prismic.asText(name) || $prismic.asText(description)\"\r\n        class=\"grid grid-cols-1 gap-2 text-center\"\r\n      >\r\n        <Heading v-if=\"$prismic.asText(name)\">\r\n          <NuxtLink to=\"/\">\r\n            {{ $prismic.asText(name) }}\r\n          </NuxtLink>\r\n        </Heading>\r\n        <PrismicText\r\n          v-if=\"$prismic.asText(description)\"\r\n          :field=\"description\"\r\n          wrapper=\"p\"\r\n          class=\"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\r\n        />\r\n      </div>\r\n    </div>\r\n  </div>\r\n</template>\r\n"
         ],
         "names": [],
-        "mappings": ";;;;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE;;;;;;;;;;;;;;;;;;;;AAFwB;AAgBtB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+        "mappings": ";;;;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC;;;;;;;;;;;;;;;;;;;;AAFuB,CAAC;AAgBvB,CAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
       }
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103998029,
-      "end": 1720103998029,
+      "start": 1720177713885,
+      "end": 1720177713885,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103998029,
-      "end": 1720103998029,
+      "start": 1720177713885,
+      "end": 1720177713885,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103998029,
-      "end": 1720103998029,
+      "start": 1720177713885,
+      "end": 1720177713885,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103998029,
-      "end": 1720103998029,
+      "start": 1720177713885,
+      "end": 1720177713885,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103998029,
-      "end": 1720103998029,
+      "start": 1720177713885,
+      "end": 1720177713885,
       "order": "pre"
     },
     {
       "name": "server-only-component-transform",
-      "start": 1720103998029,
-      "end": 1720103998029,
+      "start": 1720177713885,
+      "end": 1720177713885,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103998029,
-      "end": 1720103998029,
+      "start": 1720177713885,
+      "end": 1720177713885,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"HeaderProfile\",\n  __ssrInlineRender: true,\n  props: {\n    name: {\n      type: Object,\n      default: void 0\n    },\n    description: {\n      type: Object,\n      default: void 0\n    },\n    profilePicture: {\n      type: Object,\n      default: void 0\n    }\n  },\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      const _component_PrismicImage = _resolveComponent(\"PrismicImage\");\n      const _component_Heading = _resolveComponent(\"Heading\");\n      const _component_PrismicText = _resolveComponent(\"PrismicText\");\n      _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"px-4\" }, _attrs))}><div class=\"grid max-w-lg grid-cols-1 justify-items-center gap-8\">`);\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/\",\n        \"tab-index\": \"-1\"\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`<div class=\"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\"${_scopeId}>`);\n            if (__props.profilePicture?.url) {\n              _push2(_ssrRenderComponent(_component_PrismicImage, {\n                field: __props.profilePicture,\n                class: \"object-cover\"\n              }, null, _parent2, _scopeId));\n            } else {\n              _push2(`<!---->`);\n            }\n            _push2(`</div>`);\n          } else {\n            return [\n              _createVNode(\"div\", { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" }, [\n                __props.profilePicture?.url ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n              ])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      if (_ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description)) {\n        _push(`<div class=\"grid grid-cols-1 gap-2 text-center\">`);\n        if (_ctx.$prismic.asText(__props.name)) {\n          _push(_ssrRenderComponent(_component_Heading, null, {\n            default: _withCtx((_, _push2, _parent2, _scopeId) => {\n              if (_push2) {\n                _push2(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n                  default: _withCtx((_2, _push3, _parent3, _scopeId2) => {\n                    if (_push3) {\n                      _push3(`${_ssrInterpolate(_ctx.$prismic.asText(__props.name))}`);\n                    } else {\n                      return [\n                        _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                      ];\n                    }\n                  }),\n                  _: 1\n                }, _parent2, _scopeId));\n              } else {\n                return [\n                  _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                    default: _withCtx(() => [\n                      _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                    ]),\n                    _: 1\n                  })\n                ];\n              }\n            }),\n            _: 1\n          }, _parent));\n        } else {\n          _push(`<!---->`);\n        }\n        if (_ctx.$prismic.asText(__props.description)) {\n          _push(_ssrRenderComponent(_component_PrismicText, {\n            field: __props.description,\n            wrapper: \"p\",\n            class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n          }, null, _parent));\n        } else {\n          _push(`<!---->`);\n        }\n        _push(`</div>`);\n      } else {\n        _push(`<!---->`);\n      }\n      _push(`</div></div>`);\n    };\n  }\n});\n",
-      "start": 1720103998029,
-      "end": 1720103998032,
+      "start": 1720177713885,
+      "end": 1720177713888,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -72,7 +72,7 @@
           "C:/webdev/Tutorials/nuxt-blog/components/HeaderProfile.vue?vue&type=script&setup=true&lang.ts"
         ],
         "sourcesContent": [
-          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { type RichTextField, type ImageField } from '@prismicio/client'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'HeaderProfile',\n  __ssrInlineRender: true,\n  props: {\n  name: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  description: {\n    type: Object as PropType<RichTextField>,\n    default: undefined\n  },\n  profilePicture: {\n    type: Object as PropType<ImageField>,\n    default: undefined\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_Heading = _resolveComponent(\"Heading\")!\n  const _component_PrismicText = _resolveComponent(\"PrismicText\")!\n\n  _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"px-4\" }, _attrs))}><div class=\"grid max-w-lg grid-cols-1 justify-items-center gap-8\">`)\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/\",\n    \"tab-index\": \"-1\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\"${_scopeId}>`)\n        if (__props.profilePicture?.url) {\n          _push(_ssrRenderComponent(_component_PrismicImage, {\n            field: __props.profilePicture,\n            class: \"object-cover\"\n          }, null, _parent, _scopeId))\n        } else {\n          _push(`<!---->`)\n        }\n        _push(`</div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" }, [\n            (__props.profilePicture?.url)\n              ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"]))\n              : _createCommentVNode(\"\", true)\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  if (_ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description)) {\n    _push(`<div class=\"grid grid-cols-1 gap-2 text-center\">`)\n    if (_ctx.$prismic.asText(__props.name)) {\n      _push(_ssrRenderComponent(_component_Heading, null, {\n        default: _withCtx((_, _push, _parent, _scopeId) => {\n          if (_push) {\n            _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n              default: _withCtx((_, _push, _parent, _scopeId) => {\n                if (_push) {\n                  _push(`${_ssrInterpolate(_ctx.$prismic.asText(__props.name))}`)\n                } else {\n                  return [\n                    _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                  ]\n                }\n              }),\n              _: 1\n            }, _parent, _scopeId))\n          } else {\n            return [\n              _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                default: _withCtx(() => [\n                  _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                ]),\n                _: 1\n              })\n            ]\n          }\n        }),\n        _: 1\n      }, _parent))\n    } else {\n      _push(`<!---->`)\n    }\n    if (_ctx.$prismic.asText(__props.description)) {\n      _push(_ssrRenderComponent(_component_PrismicText, {\n        field: __props.description,\n        wrapper: \"p\",\n        class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n      }, null, _parent))\n    } else {\n      _push(`<!---->`)\n    }\n    _push(`</div>`)\n  } else {\n    _push(`<!---->`)\n  }\n  _push(`</div></div>`)\n}\n}\n\n})"
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { type RichTextField, type ImageField } from '@prismicio/client'\r\n\r\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'HeaderProfile',\n  __ssrInlineRender: true,\n  props: {\r\n  name: {\r\n    type: Object as PropType<RichTextField>,\r\n    default: undefined\r\n  },\r\n  description: {\r\n    type: Object as PropType<RichTextField>,\r\n    default: undefined\r\n  },\r\n  profilePicture: {\r\n    type: Object as PropType<ImageField>,\r\n    default: undefined\r\n  }\r\n},\n  setup(__props) {\n\r\n\r\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_Heading = _resolveComponent(\"Heading\")!\n  const _component_PrismicText = _resolveComponent(\"PrismicText\")!\n\n  _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"px-4\" }, _attrs))}><div class=\"grid max-w-lg grid-cols-1 justify-items-center gap-8\">`)\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/\",\n    \"tab-index\": \"-1\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\"${_scopeId}>`)\n        if (__props.profilePicture?.url) {\n          _push(_ssrRenderComponent(_component_PrismicImage, {\n            field: __props.profilePicture,\n            class: \"object-cover\"\n          }, null, _parent, _scopeId))\n        } else {\n          _push(`<!---->`)\n        }\n        _push(`</div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" }, [\n            (__props.profilePicture?.url)\n              ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"]))\n              : _createCommentVNode(\"\", true)\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  if (_ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description)) {\n    _push(`<div class=\"grid grid-cols-1 gap-2 text-center\">`)\n    if (_ctx.$prismic.asText(__props.name)) {\n      _push(_ssrRenderComponent(_component_Heading, null, {\n        default: _withCtx((_, _push, _parent, _scopeId) => {\n          if (_push) {\n            _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n              default: _withCtx((_, _push, _parent, _scopeId) => {\n                if (_push) {\n                  _push(`${_ssrInterpolate(_ctx.$prismic.asText(__props.name))}`)\n                } else {\n                  return [\n                    _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                  ]\n                }\n              }),\n              _: 1\n            }, _parent, _scopeId))\n          } else {\n            return [\n              _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                default: _withCtx(() => [\n                  _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                ]),\n                _: 1\n              })\n            ]\n          }\n        }),\n        _: 1\n      }, _parent))\n    } else {\n      _push(`<!---->`)\n    }\n    if (_ctx.$prismic.asText(__props.description)) {\n      _push(_ssrRenderComponent(_component_PrismicText, {\n        field: __props.description,\n        wrapper: \"p\",\n        class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n      }, null, _parent))\n    } else {\n      _push(`<!---->`)\n    }\n    _push(`</div>`)\n  } else {\n    _push(`<!---->`)\n  }\n  _push(`</div></div>`)\n}\n}\n\n})"
         ],
         "mappings": "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",
         "names": [
@@ -85,177 +85,177 @@
     },
     {
       "name": "vite:json",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103998033,
-      "end": 1720103998033,
+      "start": 1720177713888,
+      "end": 1720177713888,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103998033,
-      "end": 1720103998034,
+      "start": 1720177713888,
+      "end": 1720177713889,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103998033,
-      "end": 1720103998034,
+      "start": 1720177713888,
+      "end": 1720177713889,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103998034,
-      "end": 1720103998034,
+      "start": 1720177713889,
+      "end": 1720177713889,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103998034,
-      "end": 1720103998034,
+      "start": 1720177713889,
+      "end": 1720177713889,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103998034,
-      "end": 1720103998034,
+      "start": 1720177713889,
+      "end": 1720177713889,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103998034,
-      "end": 1720103998034,
+      "start": 1720177713889,
+      "end": 1720177713889,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1720103998034,
-      "end": 1720103998035,
+      "start": 1720177713889,
+      "end": 1720177713889,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { default as __nuxt_component_0 } from \"C:/webdev/Tutorials/nuxt-blog/node_modules/nuxt/dist/app/components/nuxt-link\";\nimport { PrismicImage as __nuxt_component_1 } from \"@prismicio/vue\";\nimport { default as __nuxt_component_2 } from \"C:/webdev/Tutorials/nuxt-blog/components/Heading.vue\";\nimport { PrismicText as __nuxt_component_3 } from \"@prismicio/vue\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createVNode as _createVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"HeaderProfile\",\n  __ssrInlineRender: true,\n  props: {\n    name: {\n      type: Object,\n      default: void 0\n    },\n    description: {\n      type: Object,\n      default: void 0\n    },\n    profilePicture: {\n      type: Object,\n      default: void 0\n    }\n  },\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_NuxtLink = __nuxt_component_0;\n      const _component_PrismicImage = __nuxt_component_1;\n      const _component_Heading = __nuxt_component_2;\n      const _component_PrismicText = __nuxt_component_3;\n      _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"px-4\" }, _attrs))}><div class=\"grid max-w-lg grid-cols-1 justify-items-center gap-8\">`);\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/\",\n        \"tab-index\": \"-1\"\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`<div class=\"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\"${_scopeId}>`);\n            if (__props.profilePicture?.url) {\n              _push2(_ssrRenderComponent(_component_PrismicImage, {\n                field: __props.profilePicture,\n                class: \"object-cover\"\n              }, null, _parent2, _scopeId));\n            } else {\n              _push2(`<!---->`);\n            }\n            _push2(`</div>`);\n          } else {\n            return [\n              _createVNode(\"div\", { class: \"relative h-40 w-40 overflow-hidden rounded-full bg-slate-300\" }, [\n                __props.profilePicture?.url ? (_openBlock(), _createBlock(_component_PrismicImage, {\n                  key: 0,\n                  field: __props.profilePicture,\n                  class: \"object-cover\"\n                }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n              ])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      if (_ctx.$prismic.asText(__props.name) || _ctx.$prismic.asText(__props.description)) {\n        _push(`<div class=\"grid grid-cols-1 gap-2 text-center\">`);\n        if (_ctx.$prismic.asText(__props.name)) {\n          _push(_ssrRenderComponent(_component_Heading, null, {\n            default: _withCtx((_, _push2, _parent2, _scopeId) => {\n              if (_push2) {\n                _push2(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n                  default: _withCtx((_2, _push3, _parent3, _scopeId2) => {\n                    if (_push3) {\n                      _push3(`${_ssrInterpolate(_ctx.$prismic.asText(__props.name))}`);\n                    } else {\n                      return [\n                        _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                      ];\n                    }\n                  }),\n                  _: 1\n                }, _parent2, _scopeId));\n              } else {\n                return [\n                  _createVNode(_component_NuxtLink, { to: \"/\" }, {\n                    default: _withCtx(() => [\n                      _createTextVNode(_toDisplayString(_ctx.$prismic.asText(__props.name)), 1)\n                    ]),\n                    _: 1\n                  })\n                ];\n              }\n            }),\n            _: 1\n          }, _parent));\n        } else {\n          _push(`<!---->`);\n        }\n        if (_ctx.$prismic.asText(__props.description)) {\n          _push(_ssrRenderComponent(_component_PrismicText, {\n            field: __props.description,\n            wrapper: \"p\",\n            class: \"font-serif text-2xl italic leading-normal tracking-tight text-slate-500\"\n          }, null, _parent));\n        } else {\n          _push(`<!---->`);\n        }\n        _push(`</div>`);\n      } else {\n        _push(`<!---->`);\n      }\n      _push(`</div></div>`);\n    };\n  }\n});\n",
-      "start": 1720103998035,
-      "end": 1720103998035,
+      "start": 1720177713889,
+      "end": 1720177713890,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -268,20 +268,20 @@
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103998035,
-      "end": 1720103998035,
+      "start": 1720177713890,
+      "end": 1720177713890,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103998035,
-      "end": 1720103998035,
+      "start": 1720177713890,
+      "end": 1720177713890,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103998035,
-      "end": 1720103998035,
+      "start": 1720177713890,
+      "end": 1720177713890,
       "order": "normal"
     }
   ]

@@ -4,117 +4,117 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isRepositoryEndpoint, getRepositoryName } from \"@prismicio/client\";\nimport { createPrismic } from \"@prismicio/vue\";\nimport NuxtLink from \"#app/components/nuxt-link\";\nimport { defineNuxtPlugin, useCookie, useRequestEvent, onNuxtReady, refreshNuxtData, useHead, useRuntimeConfig, useRouter } from \"#imports\";\nimport client from \"#build/prismic/proxy/client\";\nimport linkResolver from \"#build/prismic/proxy/linkResolver\";\nimport richTextSerializer from \"#build/prismic/proxy/richTextSerializer\";\nexport default defineNuxtPlugin((nuxtApp) => {\n  const options = useRuntimeConfig().public.prismic;\n  const endpoint = options.environment || options.endpoint || client?.endpoint || \"\";\n  const prismicPlugin = createPrismic({\n    ...options,\n    endpoint,\n    client,\n    linkResolver,\n    richTextSerializer,\n    injectComponents: false,\n    // Handled at module level\n    components: {\n      linkInternalComponent: NuxtLink,\n      linkExternalComponent: NuxtLink,\n      ...options.components\n    }\n  });\n  nuxtApp.vueApp.use(prismicPlugin);\n  if (options.preview) {\n    const previewCookie = useCookie(\"io.prismic.preview\").value;\n    if (import.meta.server) {\n      const req = useRequestEvent()?.node.req;\n      if (req) {\n        prismicPlugin.client.enableAutoPreviewsFromReq(req);\n      }\n    }\n    if (previewCookie) {\n      try {\n        const session = typeof previewCookie === \"string\" ? JSON.parse(decodeURIComponent(previewCookie)) : previewCookie;\n        if (Object.keys(session).some((key) => key in session && typeof session[key] === \"object\" && session[key] !== null && \"preview\" in session[key] && session[key].preview)) {\n          let afterEachCalled = false;\n          onNuxtReady(() => {\n            if (!afterEachCalled) {\n              refreshNuxtData();\n            }\n          });\n          useRouter().afterEach(() => {\n            afterEachCalled = true;\n            refreshNuxtData();\n          });\n        }\n      } catch (error) {\n        console.warn(\"Failed to parse Prismic preview cookie\", error);\n      }\n    }\n  }\n  if (options.toolbar) {\n    const repositoryName = isRepositoryEndpoint(endpoint) ? getRepositoryName(endpoint) : endpoint;\n    useHead({\n      script: [{\n        key: \"prismic-preview\",\n        src: `https://static.cdn.prismic.io/prismic.min.js?repo=${repositoryName}&new=true`,\n        async: true,\n        defer: true,\n        crossorigin: \"anonymous\"\n      }]\n    });\n  } else {\n    useCookie(\"io.prismic.preview\").value = null;\n  }\n  return {\n    provide: { prismic: prismicPlugin }\n  };\n});\n",
-      "start": 1720103996754,
-      "end": 1720103996952,
+      "start": 1720177712705,
+      "end": 1720177712799,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712799,
+      "end": 1720177712799,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712799,
+      "end": 1720177712799,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712799,
+      "end": 1720177712799,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712799,
+      "end": 1720177712799,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712799,
+      "end": 1720177712799,
       "order": "pre"
     },
     {
       "name": "server-only-component-transform",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103996952,
-      "end": 1720103996952,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103996952,
-      "end": 1720103996953,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103996952,
-      "end": 1720103996953,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "replace",
       "result": "import { isRepositoryEndpoint, getRepositoryName } from \"@prismicio/client\";\nimport { createPrismic } from \"@prismicio/vue\";\nimport NuxtLink from \"#app/components/nuxt-link\";\nimport { defineNuxtPlugin, useCookie, useRequestEvent, onNuxtReady, refreshNuxtData, useHead, useRuntimeConfig, useRouter } from \"#imports\";\nimport client from \"#build/prismic/proxy/client\";\nimport linkResolver from \"#build/prismic/proxy/linkResolver\";\nimport richTextSerializer from \"#build/prismic/proxy/richTextSerializer\";\nexport default defineNuxtPlugin((nuxtApp) => {\n  const options = useRuntimeConfig().public.prismic;\n  const endpoint = options.environment || options.endpoint || client?.endpoint || \"\";\n  const prismicPlugin = createPrismic({\n    ...options,\n    endpoint,\n    client,\n    linkResolver,\n    richTextSerializer,\n    injectComponents: false,\n    // Handled at module level\n    components: {\n      linkInternalComponent: NuxtLink,\n      linkExternalComponent: NuxtLink,\n      ...options.components\n    }\n  });\n  nuxtApp.vueApp.use(prismicPlugin);\n  if (options.preview) {\n    const previewCookie = useCookie(\"io.prismic.preview\").value;\n    if (true) {\n      const req = useRequestEvent()?.node.req;\n      if (req) {\n        prismicPlugin.client.enableAutoPreviewsFromReq(req);\n      }\n    }\n    if (previewCookie) {\n      try {\n        const session = typeof previewCookie === \"string\" ? JSON.parse(decodeURIComponent(previewCookie)) : previewCookie;\n        if (Object.keys(session).some((key) => key in session && typeof session[key] === \"object\" && session[key] !== null && \"preview\" in session[key] && session[key].preview)) {\n          let afterEachCalled = false;\n          onNuxtReady(() => {\n            if (!afterEachCalled) {\n              refreshNuxtData();\n            }\n          });\n          useRouter().afterEach(() => {\n            afterEachCalled = true;\n            refreshNuxtData();\n          });\n        }\n      } catch (error) {\n        console.warn(\"Failed to parse Prismic preview cookie\", error);\n      }\n    }\n  }\n  if (options.toolbar) {\n    const repositoryName = isRepositoryEndpoint(endpoint) ? getRepositoryName(endpoint) : endpoint;\n    useHead({\n      script: [{\n        key: \"prismic-preview\",\n        src: `https://static.cdn.prismic.io/prismic.min.js?repo=${repositoryName}&new=true`,\n        async: true,\n        defer: true,\n        crossorigin: \"anonymous\"\n      }]\n    });\n  } else {\n    useCookie(\"io.prismic.preview\").value = null;\n  }\n  return {\n    provide: { prismic: prismicPlugin }\n  };\n});\n",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -127,75 +127,75 @@
     },
     {
       "name": "ssr-styles",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712800,
+      "end": 1720177712800,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103996953,
-      "end": 1720103996953,
+      "start": 1720177712801,
+      "end": 1720177712801,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { defineNuxtPlugin, useRuntimeConfig } from '#app/nuxt';\nimport { useCookie } from '#app/composables/cookie';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { onNuxtReady } from '#app/composables/ready';\nimport { refreshNuxtData } from '#app/composables/asyncData';\nimport { useHead } from '@unhead/vue';\nimport { useRouter } from '#app/composables/router';\nimport { isRepositoryEndpoint, getRepositoryName } from \"@prismicio/client\";\nimport { createPrismic } from \"@prismicio/vue\";\nimport NuxtLink from \"#app/components/nuxt-link\";\nimport client from \"#build/prismic/proxy/client\";\nimport linkResolver from \"#build/prismic/proxy/linkResolver\";\nimport richTextSerializer from \"#build/prismic/proxy/richTextSerializer\";\nexport default defineNuxtPlugin((nuxtApp) => {\n  const options = useRuntimeConfig().public.prismic;\n  const endpoint = options.environment || options.endpoint || client?.endpoint || \"\";\n  const prismicPlugin = createPrismic({\n    ...options,\n    endpoint,\n    client,\n    linkResolver,\n    richTextSerializer,\n    injectComponents: false,\n    // Handled at module level\n    components: {\n      linkInternalComponent: NuxtLink,\n      linkExternalComponent: NuxtLink,\n      ...options.components\n    }\n  });\n  nuxtApp.vueApp.use(prismicPlugin);\n  if (options.preview) {\n    const previewCookie = useCookie(\"io.prismic.preview\").value;\n    if (true) {\n      const req = useRequestEvent()?.node.req;\n      if (req) {\n        prismicPlugin.client.enableAutoPreviewsFromReq(req);\n      }\n    }\n    if (previewCookie) {\n      try {\n        const session = typeof previewCookie === \"string\" ? JSON.parse(decodeURIComponent(previewCookie)) : previewCookie;\n        if (Object.keys(session).some((key) => key in session && typeof session[key] === \"object\" && session[key] !== null && \"preview\" in session[key] && session[key].preview)) {\n          let afterEachCalled = false;\n          onNuxtReady(() => {\n            if (!afterEachCalled) {\n              refreshNuxtData();\n            }\n          });\n          useRouter().afterEach(() => {\n            afterEachCalled = true;\n            refreshNuxtData();\n          });\n        }\n      } catch (error) {\n        console.warn(\"Failed to parse Prismic preview cookie\", error);\n      }\n    }\n  }\n  if (options.toolbar) {\n    const repositoryName = isRepositoryEndpoint(endpoint) ? getRepositoryName(endpoint) : endpoint;\n    useHead({\n      script: [{\n        key: \"prismic-preview\",\n        src: `https://static.cdn.prismic.io/prismic.min.js?repo=${repositoryName}&new=true`,\n        async: true,\n        defer: true,\n        crossorigin: \"anonymous\"\n      }]\n    });\n  } else {\n    useCookie(\"io.prismic.preview\").value = null;\n  }\n  return {\n    provide: { prismic: prismicPlugin }\n  };\n});\n",
-      "start": 1720103996953,
-      "end": 1720103996954,
+      "start": 1720177712801,
+      "end": 1720177712802,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -209,8 +209,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { defineNuxtPlugin, useRuntimeConfig } from '#app/nuxt';\nimport { useCookie } from '#app/composables/cookie';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { onNuxtReady } from '#app/composables/ready';\nimport { refreshNuxtData } from '#app/composables/asyncData';\nimport { useHead } from '@unhead/vue';\nimport { useRouter } from '#app/composables/router';\nimport { isRepositoryEndpoint, getRepositoryName } from \"@prismicio/client\";\nimport { createPrismic } from \"@prismicio/vue\";\nimport NuxtLink from \"#app/components/nuxt-link\";\nimport client from \"#build/prismic/proxy/client\";\nimport linkResolver from \"#build/prismic/proxy/linkResolver\";\nimport richTextSerializer from \"#build/prismic/proxy/richTextSerializer\";\nexport default defineNuxtPlugin((nuxtApp) => {\n  const options = useRuntimeConfig().public.prismic;\n  const endpoint = options.environment || options.endpoint || client?.endpoint || \"\";\n  const prismicPlugin = createPrismic({\n    ...options,\n    endpoint,\n    client,\n    linkResolver,\n    richTextSerializer,\n    injectComponents: false,\n    // Handled at module level\n    components: {\n      linkInternalComponent: NuxtLink,\n      linkExternalComponent: NuxtLink,\n      ...options.components\n    }\n  });\n  nuxtApp.vueApp.use(prismicPlugin);\n  if (options.preview) {\n    const previewCookie = useCookie(\"io.prismic.preview\").value;\n    if (true) {\n      const req = useRequestEvent()?.node.req;\n      if (req) {\n        prismicPlugin.client.enableAutoPreviewsFromReq(req);\n      }\n    }\n    if (previewCookie) {\n      try {\n        const session = typeof previewCookie === \"string\" ? JSON.parse(decodeURIComponent(previewCookie)) : previewCookie;\n        if (Object.keys(session).some((key) => key in session && typeof session[key] === \"object\" && session[key] !== null && \"preview\" in session[key] && session[key].preview)) {\n          let afterEachCalled = false;\n          onNuxtReady(() => {\n            if (!afterEachCalled) {\n              refreshNuxtData();\n            }\n          });\n          useRouter().afterEach(() => {\n            afterEachCalled = true;\n            refreshNuxtData();\n          });\n        }\n      } catch (error) {\n        console.warn(\"Failed to parse Prismic preview cookie\", error);\n      }\n    }\n  }\n  if (options.toolbar) {\n    const repositoryName = isRepositoryEndpoint(endpoint) ? getRepositoryName(endpoint) : endpoint;\n    useHead({\n      script: [{\n        key: \"prismic-preview\",\n        src: `https://static.cdn.prismic.io/prismic.min.js?repo=${repositoryName}&new=true`,\n        async: true,\n        defer: true,\n        crossorigin: \"anonymous\"\n      }]\n    });\n  } else {\n    useCookie(\"io.prismic.preview\").value = null;\n  }\n  return {\n    provide: { prismic: prismicPlugin }\n  };\n});\n",
-      "start": 1720103996953,
-      "end": 1720103996954,
+      "start": 1720177712801,
+      "end": 1720177712802,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -223,56 +223,56 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1720103996954,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103996954,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103996955,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103996955,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1720103996955,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103996955,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103996955,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103996955,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103996955,
-      "end": 1720103996955,
+      "start": 1720177712802,
+      "end": 1720177712802,
       "order": "normal"
     }
   ]

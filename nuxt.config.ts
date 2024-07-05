@@ -27,6 +27,10 @@ export default defineNuxtConfig({
     }
   },
 
+  generate: {
+    dir: 'dist'
+  },
+
   css: [
     '~/styles/global.css',
     '@fontsource/inter/400.css',

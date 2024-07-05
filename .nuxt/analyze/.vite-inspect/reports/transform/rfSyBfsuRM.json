@@ -4,206 +4,206 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isFilled, asHTML } from \"@prismicio/client\";\nimport { computed, unref, defineComponent, ref, inject, watch, nextTick, onBeforeUnmount, h } from \"vue\";\nimport { routerKey } from \"vue-router\";\nimport { isInternalURL } from \"../lib/isInternalURL.js\";\nimport { simplyResolveComponent } from \"../lib/simplyResolveComponent.js\";\nimport { usePrismic } from \"../usePrismic.js\";\nconst defaultWrapper = \"div\";\nconst usePrismicRichText = (props) => {\n  const { options } = usePrismic();\n  const html = computed(() => {\n    const field = unref(props.field);\n    if (!isFilled.richText(field)) {\n      return unref(props.fallback) ?? \"\";\n    }\n    const linkResolver = unref(props.linkResolver) ?? options.linkResolver;\n    const serializer = unref(props.serializer) ?? unref(props.htmlSerializer) ?? options.richTextSerializer ?? options.htmlSerializer;\n    return asHTML(unref(field), linkResolver, serializer);\n  });\n  return {\n    html\n  };\n};\nconst PrismicRichTextImpl = /* @__PURE__ */ defineComponent({\n  name: \"PrismicRichText\",\n  props: {\n    field: {\n      type: Array,\n      default: void 0,\n      required: false\n    },\n    linkResolver: {\n      type: Function,\n      default: void 0,\n      required: false\n    },\n    serializer: {\n      type: [Function, Object],\n      default: void 0,\n      required: false\n    },\n    htmlSerializer: {\n      type: [Function, Object],\n      default: void 0,\n      required: false\n    },\n    wrapper: {\n      type: [String, Object, Function],\n      default: void 0,\n      required: false\n    },\n    fallback: {\n      type: String,\n      default: void 0,\n      required: false\n    }\n  },\n  setup(props) {\n    const { html } = usePrismicRichText(props);\n    const root = ref(null);\n    const maybeRouter = inject(routerKey, null);\n    if (maybeRouter) {\n      let links = [];\n      const navigate = function(event) {\n        event.preventDefault();\n        maybeRouter.push(this.href);\n      };\n      const addListeners = () => {\n        const node = root.value && \"$el\" in root.value ? root.value.$el : root.value;\n        if (node && \"querySelectorAll\" in node) {\n          links = Array.from(node.querySelectorAll(\"a\")).map((element) => {\n            const href = element.getAttribute(\"href\");\n            if (href && isInternalURL(href)) {\n              const listener = navigate.bind({ href });\n              element.addEventListener(\"click\", listener);\n              return { element, listener };\n            } else {\n              return false;\n            }\n          }).filter((link) => link);\n        }\n      };\n      const removeListeners = () => {\n        links.forEach(({ element, listener }) => element.removeEventListener(\"click\", listener));\n        links = [];\n      };\n      watch(html, () => {\n        removeListeners();\n        nextTick(addListeners);\n      }, { immediate: true });\n      onBeforeUnmount(() => {\n        removeListeners();\n      });\n    }\n    return () => {\n      return h(simplyResolveComponent(props.wrapper || defaultWrapper), {\n        innerHTML: html.value,\n        ref: root\n      });\n    };\n  }\n});\nconst PrismicRichText = PrismicRichTextImpl;\nexport {\n  PrismicRichText,\n  PrismicRichTextImpl,\n  usePrismicRichText\n};\n//# sourceMappingURL=PrismicRichText.js.map\n",
-      "start": 1720103994959,
-      "end": 1720103995032,
+      "start": 1720177711072,
+      "end": 1720177711209,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995032,
-      "end": 1720103995032,
+      "start": 1720177711209,
+      "end": 1720177711209,
       "order": "normal"
     }
   ]

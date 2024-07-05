@@ -3,39 +3,39 @@
   "transforms": [
     {
       "name": "vite:vue",
-      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { renderSlot as _renderSlot, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, resolveDynamicComponent as _resolveDynamicComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Bounded',\n  props: {\n  as: {\n    type: [String, Object],\n    default: 'div'\n  },\n  size: {\n    type: String,\n    default: 'base'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createBlock(_resolveDynamicComponent(__props.as), { class: \"px-4 py-8 md:py-10 md:px-6 lg:py-12\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"div\", {\n        class: _normalizeClass([\"mx-auto w-full\", {\n        'max-w-xl': __props.size === 'small',\n        'max-w-3xl': __props.size === 'base',\n        'max-w-4xl': __props.size === 'wide',\n        'max-w-6xl': __props.size === 'widest'\n      }])\n      }, [\n        _renderSlot(_ctx.$slots, \"default\")\n      ], 2)\n    ]),\n    _: 3\n  }))\n}\n}\n\n})",
-      "start": 1720103995520,
-      "end": 1720103995520
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { renderSlot as _renderSlot, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, resolveDynamicComponent as _resolveDynamicComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Bounded',\n  props: {\r\n  as: {\r\n    type: [String, Object],\r\n    default: 'div'\r\n  },\r\n  size: {\r\n    type: String,\r\n    default: 'base'\r\n  }\r\n},\n  setup(__props) {\n\r\n\r\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createBlock(_resolveDynamicComponent(__props.as), { class: \"px-4 py-8 md:py-10 md:px-6 lg:py-12\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"div\", {\n        class: _normalizeClass([\"mx-auto w-full\", {\r\n        'max-w-xl': __props.size === 'small',\r\n        'max-w-3xl': __props.size === 'base',\r\n        'max-w-4xl': __props.size === 'wide',\r\n        'max-w-6xl': __props.size === 'widest'\r\n      }])\n      }, [\n        _renderSlot(_ctx.$slots, \"default\")\n      ], 2)\n    ]),\n    _: 3\n  }))\n}\n}\n\n})",
+      "start": 1720177711419,
+      "end": 1720177711419
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995520,
-      "end": 1720103995520,
+      "start": 1720177711419,
+      "end": 1720177711419,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995520,
-      "end": 1720103995520,
+      "start": 1720177711419,
+      "end": 1720177711419,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995520,
-      "end": 1720103995520,
+      "start": 1720177711419,
+      "end": 1720177711419,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995520,
-      "end": 1720103995520,
+      "start": 1720177711419,
+      "end": 1720177711419,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { renderSlot as _renderSlot, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, resolveDynamicComponent as _resolveDynamicComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Bounded\",\n  props: {\n    as: {\n      type: [String, Object],\n      default: \"div\"\n    },\n    size: {\n      type: String,\n      default: \"base\"\n    }\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      return _openBlock(), _createBlock(_resolveDynamicComponent(__props.as), { class: \"px-4 py-8 md:py-10 md:px-6 lg:py-12\" }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"div\", {\n            class: _normalizeClass([\"mx-auto w-full\", {\n              \"max-w-xl\": __props.size === \"small\",\n              \"max-w-3xl\": __props.size === \"base\",\n              \"max-w-4xl\": __props.size === \"wide\",\n              \"max-w-6xl\": __props.size === \"widest\"\n            }])\n          }, [\n            _renderSlot(_ctx.$slots, \"default\")\n          ], 2)\n        ]),\n        _: 3\n      });\n    };\n  }\n});\n",
-      "start": 1720103995520,
-      "end": 1720103995529,
+      "start": 1720177711419,
+      "end": 1720177711423,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,7 +43,7 @@
           "C:/webdev/Tutorials/nuxt-blog/components/Bounded.vue?vue&type=script&setup=true&lang.ts"
         ],
         "sourcesContent": [
-          "import { defineComponent as _defineComponent } from 'vue'\nimport { renderSlot as _renderSlot, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, resolveDynamicComponent as _resolveDynamicComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Bounded',\n  props: {\n  as: {\n    type: [String, Object],\n    default: 'div'\n  },\n  size: {\n    type: String,\n    default: 'base'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createBlock(_resolveDynamicComponent(__props.as), { class: \"px-4 py-8 md:py-10 md:px-6 lg:py-12\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"div\", {\n        class: _normalizeClass([\"mx-auto w-full\", {\n        'max-w-xl': __props.size === 'small',\n        'max-w-3xl': __props.size === 'base',\n        'max-w-4xl': __props.size === 'wide',\n        'max-w-6xl': __props.size === 'widest'\n      }])\n      }, [\n        _renderSlot(_ctx.$slots, \"default\")\n      ], 2)\n    ]),\n    _: 3\n  }))\n}\n}\n\n})"
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { renderSlot as _renderSlot, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, resolveDynamicComponent as _resolveDynamicComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Bounded',\n  props: {\r\n  as: {\r\n    type: [String, Object],\r\n    default: 'div'\r\n  },\r\n  size: {\r\n    type: String,\r\n    default: 'base'\r\n  }\r\n},\n  setup(__props) {\n\r\n\r\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createBlock(_resolveDynamicComponent(__props.as), { class: \"px-4 py-8 md:py-10 md:px-6 lg:py-12\" }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"div\", {\n        class: _normalizeClass([\"mx-auto w-full\", {\r\n        'max-w-xl': __props.size === 'small',\r\n        'max-w-3xl': __props.size === 'base',\r\n        'max-w-4xl': __props.size === 'wide',\r\n        'max-w-6xl': __props.size === 'widest'\r\n      }])\n      }, [\n        _renderSlot(_ctx.$slots, \"default\")\n      ], 2)\n    ]),\n    _: 3\n  }))\n}\n}\n\n})"
         ],
         "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,cAAc,aAAa,kBAAkB,iBAAiB,sBAAsB,qBAAqB,2BAA2B,0BAA0B,WAAW,UAAU,aAAa,YAAY,eAAe,oBAAoB;AAGxP,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACP,IAAI;AAAA,MACF,MAAM,CAAC,QAAQ,MAAM;AAAA,MACrB,SAAS;AAAA,IACX;AAAA,IACA,MAAM;AAAA,MACJ,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,EACF;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,WAAW,GAAG,aAAa,yBAAyB,QAAQ,EAAE,GAAG,EAAE,OAAO,sCAAsC,GAAG;AAAA,QACzH,SAAS,SAAS,MAAM;AAAA,UACtB,oBAAoB,OAAO;AAAA,YACzB,OAAO,gBAAgB,CAAC,kBAAkB;AAAA,cAC1C,YAAY,QAAQ,SAAS;AAAA,cAC7B,aAAa,QAAQ,SAAS;AAAA,cAC9B,aAAa,QAAQ,SAAS;AAAA,cAC9B,aAAa,QAAQ,SAAS;AAAA,YAChC,CAAC,CAAC;AAAA,UACF,GAAG;AAAA,YACD,YAAY,KAAK,QAAQ,SAAS;AAAA,UACpC,GAAG,CAAC;AAAA,QACN,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
         "names": []
@@ -51,170 +51,170 @@
     },
     {
       "name": "vite:json",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711423,
+      "end": 1720177711423,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711423,
+      "end": 1720177711423,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711423,
+      "end": 1720177711423,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711423,
+      "end": 1720177711423,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711423,
+      "end": 1720177711423,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711424,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711424,
+      "end": 1720177711426,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711427,
+      "end": 1720177711427,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711427,
+      "end": 1720177711427,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711427,
+      "end": 1720177711427,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711427,
+      "end": 1720177711427,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711427,
+      "end": 1720177711427,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995529,
-      "end": 1720103995529,
+      "start": 1720177711428,
+      "end": 1720177711428,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995529,
-      "end": 1720103995530,
+      "start": 1720177711428,
+      "end": 1720177711428,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995530,
-      "end": 1720103995530,
+      "start": 1720177711428,
+      "end": 1720177711428,
       "order": "normal"
     }
   ]

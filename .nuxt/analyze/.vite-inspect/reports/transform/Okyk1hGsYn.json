@@ -4,206 +4,206 @@
     {
       "name": "vite:load-fallback",
       "result": "var __defProp = Object.defineProperty;\nvar __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;\nvar __publicField = (obj, key, value) => {\n  __defNormalProp(obj, typeof key !== \"symbol\" ? key + \"\" : key, value);\n  return value;\n};\nimport { PortNotSetError, TooManyConcurrentRequestsError, RequestTimeoutError, ResponseError } from \"./errors.js\";\nimport { createRequestMessage, validateMessage, isRequestMessage, createErrorResponseMessage, createSuccessResponseMessage, isSuccessResponseMessage } from \"./messages.js\";\nconst channelNetworkDefaultOptions = {\n  debug: false,\n  maximumRequestConcurrency: 20,\n  defaultTimeout: 5e3,\n  requestIDPrefix: \"channel-\"\n};\nclass ChannelNetwork {\n  constructor(requestHandlers, options) {\n    __publicField(this, \"requestHandlers\");\n    __publicField(this, \"options\");\n    __publicField(this, \"_port\", null);\n    // eslint-disable-next-line @typescript-eslint/no-explicit-any\n    __publicField(this, \"_pendingRequests\", /* @__PURE__ */ new Map());\n    this.requestHandlers = requestHandlers;\n    this.options = { ...channelNetworkDefaultOptions, ...options };\n  }\n  get port() {\n    if (!this._port) {\n      throw new PortNotSetError();\n    }\n    return this._port;\n  }\n  set port(port) {\n    if (this._port) {\n      this._port.onmessage = null;\n    }\n    this._port = port;\n    if (this._port) {\n      this._port.onmessage = this.onMessage.bind(this);\n    }\n  }\n  createRequestMessage(type, data) {\n    return createRequestMessage(type, data, this.options.requestIDPrefix);\n  }\n  async onMessage(event) {\n    if (this.options.debug) {\n      console.debug(event.data);\n    }\n    try {\n      const message = validateMessage(event.data);\n      if (isRequestMessage(message)) {\n        if (!this.requestHandlers[message.type]) {\n          this.postResponse(createErrorResponseMessage(message.requestID, void 0, 501));\n        } else {\n          try {\n            const response = await this.requestHandlers[message.type](message, {\n              success: createSuccessResponseMessage.bind(this, message.requestID),\n              error: createErrorResponseMessage.bind(this, message.requestID)\n            });\n            this.postResponse(response);\n          } catch (error) {\n            this.postResponse(createErrorResponseMessage(message.requestID, error, 500));\n          }\n        }\n      } else {\n        if (!this._pendingRequests.has(message.requestID)) {\n          console.error(`Unknown request ID received in response: ${JSON.stringify(message)}`);\n        } else {\n          this._pendingRequests.get(message.requestID)(message);\n          this._pendingRequests.delete(message.requestID);\n        }\n      }\n    } catch (error) {\n      if (error instanceof TypeError) {\n        console.warn(error.message);\n      } else {\n        throw error;\n      }\n    }\n  }\n  postRequest(request, postMessage = (request2) => this.port.postMessage(request2), options = {}) {\n    if (this.options.debug) {\n      console.debug(request);\n    }\n    if (this._pendingRequests.size >= this.options.maximumRequestConcurrency) {\n      throw new TooManyConcurrentRequestsError(request);\n    }\n    return new Promise((resolve, reject) => {\n      const requestTimeout = setTimeout(() => {\n        if (this._pendingRequests.has(request.requestID)) {\n          this._pendingRequests.delete(request.requestID);\n        }\n        reject(new RequestTimeoutError(request));\n      }, options.timeout || this.options.defaultTimeout);\n      this._pendingRequests.set(request.requestID, (response) => {\n        clearTimeout(requestTimeout);\n        isSuccessResponseMessage(response) ? resolve(response) : reject(new ResponseError(response));\n      });\n      postMessage(request);\n    });\n  }\n  postResponse(response, postMessage = (response2) => this.port.postMessage(response2)) {\n    if (this.options.debug) {\n      console.debug(response);\n    }\n    postMessage(response);\n    return response;\n  }\n}\nexport {\n  ChannelNetwork,\n  channelNetworkDefaultOptions\n};\n//# sourceMappingURL=ChannelNetwork.js.map\n",
-      "start": 1720103995632,
-      "end": 1720103995636,
+      "start": 1720177711522,
+      "end": 1720177711525,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995636,
-      "end": 1720103995636,
+      "start": 1720177711525,
+      "end": 1720177711525,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995636,
-      "end": 1720103995637,
+      "start": 1720177711525,
+      "end": 1720177711526,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995637,
-      "end": 1720103995637,
+      "start": 1720177711526,
+      "end": 1720177711526,
       "order": "normal"
     }
   ]

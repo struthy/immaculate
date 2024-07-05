@@ -3,58 +3,58 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "<script setup lang=\"ts\">\nimport { type Content } from '@prismicio/client'\n\nconst props = defineProps({\n  article: {\n    type: Object as PropType<Content.ArticleDocument>,\n    required: true\n  }\n})\n\nconst dateFormatter = new Intl.DateTimeFormat('en-US', {\n  month: 'short',\n  day: 'numeric',\n  year: 'numeric'\n})\nconst prismic = usePrismic()\n\nconst featuredImage = computed(() => {\n  if (props.article.data.featuredImage.url) {\n    return props.article.data.featuredImage\n  }\n\n  const imageSlice = props.article.data.slices.find(slice => slice.slice_type === 'image') as Content.ImageSlice\n  if (imageSlice && imageSlice.primary.image.url) {\n    return imageSlice.primary.image\n  }\n  return null\n})\n\nconst formattedDate = computed(() => {\n  const date = prismic.asDate(props.article.data.publishDate || props.article.first_publication_date)\n\n  return dateFormatter.format(date || undefined)\n})\n\nconst excerpt = computed(() => {\n  const text = props.article.data.slices\n    .filter(slice => slice.slice_type === 'text')\n    .map((slice) => prismic.asText((slice as Content.TextSlice).primary.text))\n    .join(' ')\n  const excerpt = text.substring(0, 300)\n  if (text.length > 300) {\n    return excerpt.substring(0, excerpt.lastIndexOf(' ')) + '…'\n  } else {\n    return excerpt\n  }\n})\n</script>\n\n<template>\n  <li\n    class=\"grid grid-cols-1 items-start gap-6 md:grid-cols-3 md:gap-8\"\n  >\n    <PrismicLink\n      :field=\"article\"\n      tab-index=\"-1\"\n    >\n      <div class=\"aspect-w-4 aspect-h-3 relative bg-gray-100\">\n        <PrismicImage\n          v-if=\"featuredImage?.url\"\n          :field=\"featuredImage\"\n          class=\"object-cover\"\n        />\n      </div>\n    </PrismicLink>\n    <div class=\"grid grid-cols-1 gap-3 md:col-span-2\">\n      <Heading as=\"h2\">\n        <PrismicLink :field=\"article\">\n          {{ $prismic.asText(article.data.title) }}\n        </PrismicLink>\n      </Heading>\n      <p class=\"font-serif italic tracking-tighter text-slate-500\">\n        {{ formattedDate }}\n      </p>\n      <p\n        v-if=\"excerpt\"\n        class=\"font-serif leading-relaxed md:text-lg md:leading-relaxed\"\n      >\n        {{ excerpt }}\n      </p>\n    </div>\n  </li>\n</template>\n\n",
-      "start": 1720103995358,
-      "end": 1720103995484,
+      "result": "<script setup lang=\"ts\">\r\nimport { type Content } from '@prismicio/client'\r\n\r\nconst props = defineProps({\r\n  article: {\r\n    type: Object as PropType<Content.ArticleDocument>,\r\n    required: true\r\n  }\r\n})\r\n\r\nconst dateFormatter = new Intl.DateTimeFormat('en-US', {\r\n  month: 'short',\r\n  day: 'numeric',\r\n  year: 'numeric'\r\n})\r\nconst prismic = usePrismic()\r\n\r\nconst featuredImage = computed(() => {\r\n  if (props.article.data.featuredImage.url) {\r\n    return props.article.data.featuredImage\r\n  }\r\n\r\n  const imageSlice = props.article.data.slices.find(slice => slice.slice_type === 'image') as Content.ImageSlice\r\n  if (imageSlice && imageSlice.primary.image.url) {\r\n    return imageSlice.primary.image\r\n  }\r\n  return null\r\n})\r\n\r\nconst formattedDate = computed(() => {\r\n  const date = prismic.asDate(props.article.data.publishDate || props.article.first_publication_date)\r\n\r\n  return dateFormatter.format(date || undefined)\r\n})\r\n\r\nconst excerpt = computed(() => {\r\n  const text = props.article.data.slices\r\n    .filter(slice => slice.slice_type === 'text')\r\n    .map((slice) => prismic.asText((slice as Content.TextSlice).primary.text))\r\n    .join(' ')\r\n  const excerpt = text.substring(0, 300)\r\n  if (text.length > 300) {\r\n    return excerpt.substring(0, excerpt.lastIndexOf(' ')) + '…'\r\n  } else {\r\n    return excerpt\r\n  }\r\n})\r\n</script>\r\n\r\n<template>\r\n  <li\r\n    class=\"grid grid-cols-1 items-start gap-6 md:grid-cols-3 md:gap-8\"\r\n  >\r\n    <PrismicLink\r\n      :field=\"article\"\r\n      tab-index=\"-1\"\r\n    >\r\n      <div class=\"aspect-w-4 aspect-h-3 relative bg-gray-100\">\r\n        <PrismicImage\r\n          v-if=\"featuredImage?.url\"\r\n          :field=\"featuredImage\"\r\n          class=\"object-cover\"\r\n        />\r\n      </div>\r\n    </PrismicLink>\r\n    <div class=\"grid grid-cols-1 gap-3 md:col-span-2\">\r\n      <Heading as=\"h2\">\r\n        <PrismicLink :field=\"article\">\r\n          {{ $prismic.asText(article.data.title) }}\r\n        </PrismicLink>\r\n      </Heading>\r\n      <p class=\"font-serif italic tracking-tighter text-slate-500\">\r\n        {{ formattedDate }}\r\n      </p>\r\n      <p\r\n        v-if=\"excerpt\"\r\n        class=\"font-serif leading-relaxed md:text-lg md:leading-relaxed\"\r\n      >\r\n        {{ excerpt }}\r\n      </p>\r\n    </div>\r\n  </li>\r\n</template>\r\n\r\n",
+      "start": 1720177711344,
+      "end": 1720177711376,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995484,
-      "end": 1720103995484,
+      "start": 1720177711376,
+      "end": 1720177711376,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995484,
-      "end": 1720103995484,
+      "start": 1720177711376,
+      "end": 1720177711376,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995484,
-      "end": 1720103995484,
+      "start": 1720177711376,
+      "end": 1720177711376,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995484,
-      "end": 1720103995484,
+      "start": 1720177711376,
+      "end": 1720177711376,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720103995484,
-      "end": 1720103995484,
+      "start": 1720177711376,
+      "end": 1720177711376,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720103995484,
-      "end": 1720103995484,
+      "start": 1720177711376,
+      "end": 1720177711376,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995484,
-      "end": 1720103995484,
+      "start": 1720177711376,
+      "end": 1720177711376,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import _sfc_main from \"C:/webdev/Tutorials/nuxt-blog/components/ArticleListItem.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"C:/webdev/Tutorials/nuxt-blog/components/ArticleListItem.vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
-      "start": 1720103995484,
-      "end": 1720103995511,
+      "start": 1720177711376,
+      "end": 1720177711411,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,152 +62,152 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995511,
-      "end": 1720103995511,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995511,
-      "end": 1720103995511,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995511,
-      "end": 1720103995511,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995511,
-      "end": 1720103995511,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995511,
-      "end": 1720103995511,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995512,
-      "end": 1720103995512,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103995512,
-      "end": 1720103995513,
+      "start": 1720177711412,
+      "end": 1720177711412,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995513,
-      "end": 1720103995513,
+      "start": 1720177711413,
+      "end": 1720177711413,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995513,
-      "end": 1720103995513,
+      "start": 1720177711413,
+      "end": 1720177711413,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995513,
-      "end": 1720103995513,
+      "start": 1720177711413,
+      "end": 1720177711413,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995513,
-      "end": 1720103995513,
+      "start": 1720177711413,
+      "end": 1720177711413,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995513,
-      "end": 1720103995513,
+      "start": 1720177711413,
+      "end": 1720177711413,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995513,
-      "end": 1720103995513,
+      "start": 1720177711413,
+      "end": 1720177711413,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995514,
-      "end": 1720103995514,
+      "start": 1720177711413,
+      "end": 1720177711413,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995514,
-      "end": 1720103995514,
+      "start": 1720177711413,
+      "end": 1720177711413,
       "order": "normal"
     }
   ]

@@ -4,206 +4,206 @@
     {
       "name": "vite:load-fallback",
       "result": "import { LinkType } from \"../types/value/link.js\";\nimport { asLink } from \"../helpers/asLink.js\";\nimport { escapeHTML } from \"./escapeHTML.js\";\nconst formatAttributes = (node, attributes) => {\n  const _attributes = { ...attributes };\n  if (\"data\" in node && \"label\" in node.data && node.data.label) {\n    _attributes.class = _attributes.class ? `${_attributes.class} ${node.data.label}` : node.data.label;\n  }\n  const result = [];\n  for (const key in _attributes) {\n    const value = _attributes[key];\n    if (value) {\n      if (typeof value === \"boolean\") {\n        result.push(key);\n      } else {\n        result.push(`${key}=\"${escapeHTML(value)}\"`);\n      }\n    }\n  }\n  if (result.length) {\n    result.unshift(\"\");\n  }\n  return result.join(\" \");\n};\nconst getGeneralAttributes = (serializerOrShorthand) => {\n  return serializerOrShorthand && typeof serializerOrShorthand !== \"function\" ? serializerOrShorthand : {};\n};\nconst serializeStandardTag = (tag, serializerOrShorthand) => {\n  const generalAttributes = getGeneralAttributes(serializerOrShorthand);\n  return ({ node, children }) => {\n    return `<${tag}${formatAttributes(node, generalAttributes)}>${children}</${tag}>`;\n  };\n};\nconst serializePreFormatted = (serializerOrShorthand) => {\n  const generalAttributes = getGeneralAttributes(serializerOrShorthand);\n  return ({ node }) => {\n    return `<pre${formatAttributes(node, generalAttributes)}>${escapeHTML(node.text)}</pre>`;\n  };\n};\nconst serializeImage = (linkResolver, serializerOrShorthand) => {\n  const generalAttributes = getGeneralAttributes(serializerOrShorthand);\n  return ({ node }) => {\n    const attributes = {\n      ...generalAttributes,\n      src: node.url,\n      alt: node.alt,\n      copyright: node.copyright\n    };\n    let imageTag = `<img${formatAttributes(node, attributes)} />`;\n    if (node.linkTo) {\n      imageTag = serializeHyperlink(linkResolver)({\n        type: \"hyperlink\",\n        node: {\n          type: \"hyperlink\",\n          data: node.linkTo,\n          start: 0,\n          end: 0\n        },\n        text: \"\",\n        children: imageTag,\n        key: \"\"\n      });\n    }\n    return `<p class=\"block-img\">${imageTag}</p>`;\n  };\n};\nconst serializeEmbed = (serializerOrShorthand) => {\n  const generalAttributes = getGeneralAttributes(serializerOrShorthand);\n  return ({ node }) => {\n    const attributes = {\n      ...generalAttributes,\n      [\"data-oembed\"]: node.oembed.embed_url,\n      [\"data-oembed-type\"]: node.oembed.type,\n      [\"data-oembed-provider\"]: node.oembed.provider_name\n    };\n    return `<div${formatAttributes(node, attributes)}>${node.oembed.html}</div>`;\n  };\n};\nconst serializeHyperlink = (linkResolver, serializerOrShorthand) => {\n  const generalAttributes = getGeneralAttributes(serializerOrShorthand);\n  return ({ node, children }) => {\n    const attributes = {\n      ...generalAttributes\n    };\n    if (node.data.link_type === LinkType.Web) {\n      attributes.href = node.data.url;\n      attributes.target = node.data.target;\n      attributes.rel = \"noopener noreferrer\";\n    } else if (node.data.link_type === LinkType.Document) {\n      attributes.href = asLink(node.data, { linkResolver });\n    } else if (node.data.link_type === LinkType.Media) {\n      attributes.href = node.data.url;\n    }\n    return `<a${formatAttributes(node, attributes)}>${children}</a>`;\n  };\n};\nconst serializeSpan = () => {\n  return ({ text }) => {\n    return text ? escapeHTML(text).replace(/\\n/g, \"<br />\") : \"\";\n  };\n};\nexport {\n  serializeEmbed,\n  serializeHyperlink,\n  serializeImage,\n  serializePreFormatted,\n  serializeSpan,\n  serializeStandardTag\n};\n//# sourceMappingURL=serializerHelpers.js.map\n",
-      "start": 1720103995076,
-      "end": 1720103995147,
+      "start": 1720177711210,
+      "end": 1720177711273,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995147,
-      "end": 1720103995147,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995148,
-      "end": 1720103995148,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995148,
-      "end": 1720103995148,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995148,
-      "end": 1720103995148,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995148,
-      "end": 1720103995148,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995148,
-      "end": 1720103995148,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995148,
-      "end": 1720103995148,
+      "start": 1720177711273,
+      "end": 1720177711273,
       "order": "normal"
     }
   ]

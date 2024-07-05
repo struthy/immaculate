@@ -3,39 +3,39 @@
   "transforms": [
     {
       "name": "vite:vue",
-      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-4\" }\nconst _hoisted_2 = {\n  key: 0,\n  class: \"bg-gray-100\"\n}\n\nimport { type Content } from '@prismicio/client'\n\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\n// Consider it as a visual hint for you when templating your slice.\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.ImageSlice>(\n  ['slice', 'index', 'slices', 'context']\n),\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, {\n    as: \"section\",\n    size: _ctx.slice.variation === 'wide' ? 'widest' : 'base'\n  }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"figure\", _hoisted_1, [\n        (_ctx.slice.primary.image.url)\n          ? (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n              _createVNode(_component_PrismicImage, {\n                field: _ctx.slice.primary.image,\n                width: _ctx.slice.primary.image.dimensions.width,\n                height: _ctx.slice.primary.image.dimensions.height\n              }, null, 8, [\"field\", \"width\", \"height\"])\n            ]))\n          : _createCommentVNode(\"\", true),\n        (_ctx.$prismic.asText(_ctx.slice.primary.caption))\n          ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n              key: 1,\n              field: _ctx.slice.primary.caption,\n              wrapper: \"figcaption\",\n              class: \"text-center font-serif italic tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"]))\n          : _createCommentVNode(\"\", true)\n      ])\n    ]),\n    _: 1\n  }, 8, [\"size\"]))\n}\n}\n\n})",
-      "start": 1720103995577,
-      "end": 1720103995577
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-4\" }\nconst _hoisted_2 = {\n  key: 0,\n  class: \"bg-gray-100\"\n}\n\nimport { type Content } from '@prismicio/client'\r\n\r\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\r\n// Consider it as a visual hint for you when templating your slice.\r\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.ImageSlice>(\r\n  ['slice', 'index', 'slices', 'context']\r\n),\n  setup(__props) {\n\r\n\r\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, {\n    as: \"section\",\n    size: _ctx.slice.variation === 'wide' ? 'widest' : 'base'\n  }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"figure\", _hoisted_1, [\n        (_ctx.slice.primary.image.url)\n          ? (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n              _createVNode(_component_PrismicImage, {\n                field: _ctx.slice.primary.image,\n                width: _ctx.slice.primary.image.dimensions.width,\n                height: _ctx.slice.primary.image.dimensions.height\n              }, null, 8, [\"field\", \"width\", \"height\"])\n            ]))\n          : _createCommentVNode(\"\", true),\n        (_ctx.$prismic.asText(_ctx.slice.primary.caption))\n          ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n              key: 1,\n              field: _ctx.slice.primary.caption,\n              wrapper: \"figcaption\",\n              class: \"text-center font-serif italic tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"]))\n          : _createCommentVNode(\"\", true)\n      ])\n    ]),\n    _: 1\n  }, 8, [\"size\"]))\n}\n}\n\n})",
+      "start": 1720177711465,
+      "end": 1720177711465
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995577,
-      "end": 1720103995577,
+      "start": 1720177711465,
+      "end": 1720177711465,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995577,
-      "end": 1720103995577,
+      "start": 1720177711465,
+      "end": 1720177711465,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995577,
-      "end": 1720103995577,
+      "start": 1720177711466,
+      "end": 1720177711466,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995577,
-      "end": 1720103995577,
+      "start": 1720177711466,
+      "end": 1720177711466,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-4\" };\nconst _hoisted_2 = {\n  key: 0,\n  class: \"bg-gray-100\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_PrismicImage = _resolveComponent(\"PrismicImage\");\n      const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\");\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, {\n        as: \"section\",\n        size: _ctx.slice.variation === \"wide\" ? \"widest\" : \"base\"\n      }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"figure\", _hoisted_1, [\n            _ctx.slice.primary.image.url ? (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n              _createVNode(_component_PrismicImage, {\n                field: _ctx.slice.primary.image,\n                width: _ctx.slice.primary.image.dimensions.width,\n                height: _ctx.slice.primary.image.dimensions.height\n              }, null, 8, [\"field\", \"width\", \"height\"])\n            ])) : _createCommentVNode(\"\", true),\n            _ctx.$prismic.asText(_ctx.slice.primary.caption) ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n              key: 1,\n              field: _ctx.slice.primary.caption,\n              wrapper: \"figcaption\",\n              class: \"text-center font-serif italic tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n          ])\n        ]),\n        _: 1\n      }, 8, [\"size\"]);\n    };\n  }\n});\n",
-      "start": 1720103995577,
-      "end": 1720103995597,
+      "start": 1720177711466,
+      "end": 1720177711482,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,7 +43,7 @@
           "C:/webdev/Tutorials/nuxt-blog/slices/Image/index.vue?vue&type=script&setup=true&lang.ts"
         ],
         "sourcesContent": [
-          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-4\" }\nconst _hoisted_2 = {\n  key: 0,\n  class: \"bg-gray-100\"\n}\n\nimport { type Content } from '@prismicio/client'\n\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\n// Consider it as a visual hint for you when templating your slice.\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.ImageSlice>(\n  ['slice', 'index', 'slices', 'context']\n),\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, {\n    as: \"section\",\n    size: _ctx.slice.variation === 'wide' ? 'widest' : 'base'\n  }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"figure\", _hoisted_1, [\n        (_ctx.slice.primary.image.url)\n          ? (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n              _createVNode(_component_PrismicImage, {\n                field: _ctx.slice.primary.image,\n                width: _ctx.slice.primary.image.dimensions.width,\n                height: _ctx.slice.primary.image.dimensions.height\n              }, null, 8, [\"field\", \"width\", \"height\"])\n            ]))\n          : _createCommentVNode(\"\", true),\n        (_ctx.$prismic.asText(_ctx.slice.primary.caption))\n          ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n              key: 1,\n              field: _ctx.slice.primary.caption,\n              wrapper: \"figcaption\",\n              class: \"text-center font-serif italic tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"]))\n          : _createCommentVNode(\"\", true)\n      ])\n    ]),\n    _: 1\n  }, 8, [\"size\"]))\n}\n}\n\n})"
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-4\" }\nconst _hoisted_2 = {\n  key: 0,\n  class: \"bg-gray-100\"\n}\n\nimport { type Content } from '@prismicio/client'\r\n\r\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\r\n// Consider it as a visual hint for you when templating your slice.\r\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  props: getSliceComponentProps<Content.ImageSlice>(\r\n  ['slice', 'index', 'slices', 'context']\r\n),\n  setup(__props) {\n\r\n\r\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_PrismicImage = _resolveComponent(\"PrismicImage\")!\n  const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\")!\n  const _component_Bounded = _resolveComponent(\"Bounded\")!\n\n  return (_openBlock(), _createBlock(_component_Bounded, {\n    as: \"section\",\n    size: _ctx.slice.variation === 'wide' ? 'widest' : 'base'\n  }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"figure\", _hoisted_1, [\n        (_ctx.slice.primary.image.url)\n          ? (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n              _createVNode(_component_PrismicImage, {\n                field: _ctx.slice.primary.image,\n                width: _ctx.slice.primary.image.dimensions.width,\n                height: _ctx.slice.primary.image.dimensions.height\n              }, null, 8, [\"field\", \"width\", \"height\"])\n            ]))\n          : _createCommentVNode(\"\", true),\n        (_ctx.$prismic.asText(_ctx.slice.primary.caption))\n          ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n              key: 1,\n              field: _ctx.slice.primary.caption,\n              wrapper: \"figcaption\",\n              class: \"text-center font-serif italic tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"]))\n          : _createCommentVNode(\"\", true)\n      ])\n    ]),\n    _: 1\n  }, 8, [\"size\"]))\n}\n}\n\n})"
         ],
         "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAAmB,eAAe,cAAc,aAAa,YAAY,sBAAsB,qBAAqB,sBAAsB,qBAAqB,eAAe,cAAc,sBAAsB,qBAAqB,WAAW,gBAAgB;AAE/R,MAAM,aAAa,EAAE,OAAO,yBAAyB;AACrD,MAAM,aAAa;AAAA,EACjB,KAAK;AAAA,EACL,OAAO;AACT;AAOA,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACP,CAAC,SAAS,SAAS,UAAU,SAAS;AAAA,EACxC;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,0BAA0B,kBAAkB,cAAc;AAChE,YAAM,6BAA6B,kBAAkB,iBAAiB;AACtE,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,aAAQ,WAAW,GAAG,aAAa,oBAAoB;AAAA,QACrD,IAAI;AAAA,QACJ,MAAM,KAAK,MAAM,cAAc,SAAS,WAAW;AAAA,MACrD,GAAG;AAAA,QACD,SAAS,SAAS,MAAM;AAAA,UACtB,oBAAoB,UAAU,YAAY;AAAA,YACvC,KAAK,MAAM,QAAQ,MAAM,OACrB,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,cACpD,aAAa,yBAAyB;AAAA,gBACpC,OAAO,KAAK,MAAM,QAAQ;AAAA,gBAC1B,OAAO,KAAK,MAAM,QAAQ,MAAM,WAAW;AAAA,gBAC3C,QAAQ,KAAK,MAAM,QAAQ,MAAM,WAAW;AAAA,cAC9C,GAAG,MAAM,GAAG,CAAC,SAAS,SAAS,QAAQ,CAAC;AAAA,YAC1C,CAAC,KACD,oBAAoB,IAAI,IAAI;AAAA,YAC/B,KAAK,SAAS,OAAO,KAAK,MAAM,QAAQ,OAAO,KAC3C,WAAW,GAAG,aAAa,4BAA4B;AAAA,cACtD,KAAK;AAAA,cACL,OAAO,KAAK,MAAM,QAAQ;AAAA,cAC1B,SAAS;AAAA,cACT,OAAO;AAAA,YACT,GAAG,MAAM,GAAG,CAAC,OAAO,CAAC,KACrB,oBAAoB,IAAI,IAAI;AAAA,UAClC,CAAC;AAAA,QACH,CAAC;AAAA,QACD,GAAG;AAAA,MACL,GAAG,GAAG,CAAC,MAAM,CAAC;AAAA,IAChB;AAAA,EACA;AAEA,CAAC;",
         "names": []
@@ -51,123 +51,123 @@
     },
     {
       "name": "vite:json",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995597,
-      "end": 1720103995597,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711482,
+      "end": 1720177711482,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711482,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711483,
+      "end": 1720177711483,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995598,
-      "end": 1720103995598,
+      "start": 1720177711484,
+      "end": 1720177711484,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { getSliceComponentProps } from '@prismicio/vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-4\" };\nconst _hoisted_2 = {\n  key: 0,\n  class: \"bg-gray-100\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_PrismicImage = _resolveComponent(\"PrismicImage\");\n      const _component_PrismicRichText = _resolveComponent(\"PrismicRichText\");\n      const _component_Bounded = _resolveComponent(\"Bounded\");\n      return _openBlock(), _createBlock(_component_Bounded, {\n        as: \"section\",\n        size: _ctx.slice.variation === \"wide\" ? \"widest\" : \"base\"\n      }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"figure\", _hoisted_1, [\n            _ctx.slice.primary.image.url ? (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n              _createVNode(_component_PrismicImage, {\n                field: _ctx.slice.primary.image,\n                width: _ctx.slice.primary.image.dimensions.width,\n                height: _ctx.slice.primary.image.dimensions.height\n              }, null, 8, [\"field\", \"width\", \"height\"])\n            ])) : _createCommentVNode(\"\", true),\n            _ctx.$prismic.asText(_ctx.slice.primary.caption) ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n              key: 1,\n              field: _ctx.slice.primary.caption,\n              wrapper: \"figcaption\",\n              class: \"text-center font-serif italic tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n          ])\n        ]),\n        _: 1\n      }, 8, [\"size\"]);\n    };\n  }\n});\n",
-      "start": 1720103995598,
-      "end": 1720103995600,
+      "start": 1720177711484,
+      "end": 1720177711486,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -180,51 +180,51 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995600,
-      "end": 1720103995600,
+      "start": 1720177711486,
+      "end": 1720177711486,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995600,
-      "end": 1720103995600,
+      "start": 1720177711486,
+      "end": 1720177711486,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995600,
-      "end": 1720103995600,
+      "start": 1720177711486,
+      "end": 1720177711486,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995600,
-      "end": 1720103995600,
+      "start": 1720177711486,
+      "end": 1720177711486,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { PrismicImage as __nuxt_component_0 } from \"@prismicio/vue\";\nimport { PrismicRichText as __nuxt_component_1 } from \"@prismicio/vue\";\nimport { default as __nuxt_component_2 } from \"C:/webdev/Tutorials/nuxt-blog/components/Bounded.vue\";\nimport { getSliceComponentProps } from '@prismicio/vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createBlock as _createBlock, createElementVNode as _createElementVNode, withCtx as _withCtx } from \"vue\";\nconst _hoisted_1 = { class: \"grid grid-cols-1 gap-4\" };\nconst _hoisted_2 = {\n  key: 0,\n  class: \"bg-gray-100\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  props: getSliceComponentProps(\n    [\"slice\", \"index\", \"slices\", \"context\"]\n  ),\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_PrismicImage = __nuxt_component_0;\n      const _component_PrismicRichText = __nuxt_component_1;\n      const _component_Bounded = __nuxt_component_2;\n      return _openBlock(), _createBlock(_component_Bounded, {\n        as: \"section\",\n        size: _ctx.slice.variation === \"wide\" ? \"widest\" : \"base\"\n      }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"figure\", _hoisted_1, [\n            _ctx.slice.primary.image.url ? (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n              _createVNode(_component_PrismicImage, {\n                field: _ctx.slice.primary.image,\n                width: _ctx.slice.primary.image.dimensions.width,\n                height: _ctx.slice.primary.image.dimensions.height\n              }, null, 8, [\"field\", \"width\", \"height\"])\n            ])) : _createCommentVNode(\"\", true),\n            _ctx.$prismic.asText(_ctx.slice.primary.caption) ? (_openBlock(), _createBlock(_component_PrismicRichText, {\n              key: 1,\n              field: _ctx.slice.primary.caption,\n              wrapper: \"figcaption\",\n              class: \"text-center font-serif italic tracking-tight text-slate-500\"\n            }, null, 8, [\"field\"])) : _createCommentVNode(\"\", true)\n          ])\n        ]),\n        _: 1\n      }, 8, [\"size\"]);\n    };\n  }\n});\n",
-      "start": 1720103995601,
-      "end": 1720103995601,
+      "start": 1720177711487,
+      "end": 1720177711487,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995601,
-      "end": 1720103995601,
+      "start": 1720177711487,
+      "end": 1720177711487,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995601,
-      "end": 1720103995601,
+      "start": 1720177711487,
+      "end": 1720177711487,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995601,
-      "end": 1720103995601,
+      "start": 1720177711487,
+      "end": 1720177711487,
       "order": "normal"
     }
   ]

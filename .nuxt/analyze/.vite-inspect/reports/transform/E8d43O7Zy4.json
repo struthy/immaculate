@@ -3,58 +3,58 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "<script setup lang=\"ts\">\ndefineProps({\n  label: {\n    type: String,\n    required: true\n  },\n  name: {\n    type: String,\n    required: true\n  },\n  placeholder: {\n    type: String,\n    default: null\n  },\n  required: {\n    type: Boolean,\n    default: true\n  }\n})\n</script>\n\n<template>\n  <Field :label=\"label\">\n    <textarea\n      :name=\"name\"\n      :required=\"required\"\n      :placeholder=\"placeholder\"\n      class=\"h-40 w-full rounded-none border-b border-slate-200 py-3 pr-7 pl-3 text-slate-800 placeholder-slate-400\"\n    />\n  </Field>\n</template>\n",
-      "start": 1720103995583,
-      "end": 1720103995609,
+      "result": "<script setup lang=\"ts\">\r\ndefineProps({\r\n  label: {\r\n    type: String,\r\n    required: true\r\n  },\r\n  name: {\r\n    type: String,\r\n    required: true\r\n  },\r\n  placeholder: {\r\n    type: String,\r\n    default: null\r\n  },\r\n  required: {\r\n    type: Boolean,\r\n    default: true\r\n  }\r\n})\r\n</script>\r\n\r\n<template>\r\n  <Field :label=\"label\">\r\n    <textarea\r\n      :name=\"name\"\r\n      :required=\"required\"\r\n      :placeholder=\"placeholder\"\r\n      class=\"h-40 w-full rounded-none border-b border-slate-200 py-3 pr-7 pl-3 text-slate-800 placeholder-slate-400\"\r\n    />\r\n  </Field>\r\n</template>\r\n",
+      "start": 1720177711491,
+      "end": 1720177711508,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995609,
-      "end": 1720103995609,
+      "start": 1720177711508,
+      "end": 1720177711508,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995609,
-      "end": 1720103995609,
+      "start": 1720177711508,
+      "end": 1720177711508,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995609,
-      "end": 1720103995609,
+      "start": 1720177711508,
+      "end": 1720177711508,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995609,
-      "end": 1720103995609,
+      "start": 1720177711508,
+      "end": 1720177711508,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720103995609,
-      "end": 1720103995609,
+      "start": 1720177711508,
+      "end": 1720177711508,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720103995609,
-      "end": 1720103995609,
+      "start": 1720177711508,
+      "end": 1720177711508,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995609,
-      "end": 1720103995609,
+      "start": 1720177711508,
+      "end": 1720177711508,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import _sfc_main from \"C:/webdev/Tutorials/nuxt-blog/components/TextareaField.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"C:/webdev/Tutorials/nuxt-blog/components/TextareaField.vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
-      "start": 1720103995609,
-      "end": 1720103995618,
+      "start": 1720177711508,
+      "end": 1720177711514,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,152 +62,152 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711514,
+      "end": 1720177711514,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711515,
+      "end": 1720177711515,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711515,
+      "end": 1720177711515,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711515,
+      "end": 1720177711515,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711515,
+      "end": 1720177711515,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711515,
+      "end": 1720177711515,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995618,
-      "end": 1720103995618,
+      "start": 1720177711515,
+      "end": 1720177711515,
       "order": "normal"
     }
   ]

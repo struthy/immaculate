@@ -3,58 +3,58 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "<script setup lang=\"ts\">\nimport { type Content } from '@prismicio/client'\n\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\n// Consider it as a visual hint for you when templating your slice.\ndefineProps(getSliceComponentProps<Content.ContactFormSlice>(\n  ['slice', 'index', 'slices', 'context']\n));\n</script>\n\n<template>\n  <Bounded>\n    <form\n      action=\"/api/contact\"\n      method=\"post\"\n      class=\"grid grid-cols-1 gap-6\"\n    >\n      <InputField\n        label=\"Name\"\n        name=\"name\"\n        placeholder=\"Jane Doe\"\n      />\n      <InputField\n        label=\"Email Address\"\n        name=\"email\"\n        type=\"email\"\n        placeholder=\"jane.doe@example.com\"\n      />\n      <TextareaField\n        label=\"Message\"\n        name=\"message\"\n        placeholder=\"Write your message here…\"\n      />\n      <button\n        type=\"submit\"\n        class=\"ml-auto inline-flex items-center gap-2\"\n      >\n        Send message <span\n          aria-hidden=\"true\"\n          class=\"text-xl\"\n        >\n          &rarr;\n        </span>\n      </button>\n    </form>\n  </Bounded>\n</template>",
-      "start": 1720103995526,
-      "end": 1720103995547,
+      "result": "<script setup lang=\"ts\">\r\nimport { type Content } from '@prismicio/client'\r\n\r\n// The array passed to \\`getSliceComponentProps\\` is purely optional.\r\n// Consider it as a visual hint for you when templating your slice.\r\ndefineProps(getSliceComponentProps<Content.ContactFormSlice>(\r\n  ['slice', 'index', 'slices', 'context']\r\n));\r\n</script>\r\n\r\n<template>\r\n  <Bounded>\r\n    <form\r\n      action=\"/api/contact\"\r\n      method=\"post\"\r\n      class=\"grid grid-cols-1 gap-6\"\r\n    >\r\n      <InputField\r\n        label=\"Name\"\r\n        name=\"name\"\r\n        placeholder=\"Jane Doe\"\r\n      />\r\n      <InputField\r\n        label=\"Email Address\"\r\n        name=\"email\"\r\n        type=\"email\"\r\n        placeholder=\"jane.doe@example.com\"\r\n      />\r\n      <TextareaField\r\n        label=\"Message\"\r\n        name=\"message\"\r\n        placeholder=\"Write your message here…\"\r\n      />\r\n      <button\r\n        type=\"submit\"\r\n        class=\"ml-auto inline-flex items-center gap-2\"\r\n      >\r\n        Send message <span\r\n          aria-hidden=\"true\"\r\n          class=\"text-xl\"\r\n        >\r\n          &rarr;\r\n        </span>\r\n      </button>\r\n    </form>\r\n  </Bounded>\r\n</template>",
+      "start": 1720177711401,
+      "end": 1720177711429,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995547,
-      "end": 1720103995547,
+      "start": 1720177711429,
+      "end": 1720177711429,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995547,
-      "end": 1720103995547,
+      "start": 1720177711429,
+      "end": 1720177711430,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995547,
-      "end": 1720103995547,
+      "start": 1720177711430,
+      "end": 1720177711430,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995547,
-      "end": 1720103995547,
+      "start": 1720177711430,
+      "end": 1720177711430,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720103995547,
-      "end": 1720103995547,
+      "start": 1720177711430,
+      "end": 1720177711430,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720103995547,
-      "end": 1720103995547,
+      "start": 1720177711430,
+      "end": 1720177711430,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995547,
-      "end": 1720103995547,
+      "start": 1720177711430,
+      "end": 1720177711430,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import _sfc_main from \"C:/webdev/Tutorials/nuxt-blog/slices/ContactForm/index.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"C:/webdev/Tutorials/nuxt-blog/slices/ContactForm/index.vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
-      "start": 1720103995547,
-      "end": 1720103995563,
+      "start": 1720177711430,
+      "end": 1720177711462,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,152 +62,152 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711462,
+      "end": 1720177711462,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711462,
+      "end": 1720177711462,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711462,
+      "end": 1720177711462,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711462,
+      "end": 1720177711462,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711463,
+      "end": 1720177711463,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995563,
-      "end": 1720103995563,
+      "start": 1720177711464,
+      "end": 1720177711464,
       "order": "normal"
     }
   ]

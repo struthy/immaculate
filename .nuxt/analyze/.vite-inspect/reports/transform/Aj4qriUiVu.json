@@ -4,206 +4,206 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isFilled, asImageWidthSrcSet, asImagePixelDensitySrcSet, asImageSrc } from \"@prismicio/client\";\nimport { computed, unref, defineComponent, h } from \"vue\";\nimport { __PRODUCTION__ } from \"../lib/__PRODUCTION__.js\";\nimport { simplyResolveComponent } from \"../lib/simplyResolveComponent.js\";\nimport { usePrismic } from \"../usePrismic.js\";\nconst defaultImageComponent = \"img\";\nconst usePrismicImage = (props) => {\n  const { options } = usePrismic();\n  const asImage = computed(() => {\n    var _a, _b;\n    const field = unref(props.field);\n    if (!isFilled.image(field)) {\n      return {\n        src: null,\n        srcset: null\n      };\n    }\n    const imgixParams = unref(props.imgixParams);\n    const widths = unref(props.widths);\n    const pixelDensities = unref(props.pixelDensities);\n    if (widths) {\n      if (!__PRODUCTION__ && pixelDensities) {\n        console.warn(\"[PrismicImage] Only one of `widths` or `pixelDensities` props can be provided. You can resolve this warning by removing either the `widths` or `pixelDensities` prop. `widths` will be used in this case.\", props);\n      }\n      return asImageWidthSrcSet(field, {\n        ...imgixParams,\n        widths: widths === \"defaults\" ? (_a = options.components) == null ? void 0 : _a.imageWidthSrcSetDefaults : widths\n      });\n    } else if (pixelDensities) {\n      return asImagePixelDensitySrcSet(field, {\n        ...imgixParams,\n        pixelDensities: pixelDensities === \"defaults\" ? (_b = options.components) == null ? void 0 : _b.imagePixelDensitySrcSetDefaults : pixelDensities\n      });\n    } else {\n      return {\n        src: asImageSrc(field, imgixParams),\n        srcset: null\n      };\n    }\n  });\n  const src = computed(() => {\n    return asImage.value.src;\n  });\n  const srcset = computed(() => {\n    return asImage.value.srcset;\n  });\n  const alt = computed(() => {\n    return unref(props.field).alt || \"\";\n  });\n  const copyright = computed(() => {\n    return unref(props.field).copyright || null;\n  });\n  return {\n    src,\n    srcset,\n    alt,\n    copyright\n  };\n};\nconst PrismicImageImpl = /* @__PURE__ */ defineComponent({\n  name: \"PrismicImage\",\n  props: {\n    field: {\n      type: Object,\n      required: true\n    },\n    imageComponent: {\n      type: [String, Object],\n      default: void 0,\n      required: false\n    },\n    imgixParams: {\n      type: Object,\n      default: void 0,\n      required: false\n    },\n    widths: {\n      type: [String, Object],\n      default: void 0,\n      required: false\n    },\n    pixelDensities: {\n      type: [String, Object],\n      default: void 0,\n      required: false\n    }\n  },\n  setup(props) {\n    if (!props.field) {\n      return () => null;\n    }\n    const { options } = usePrismic();\n    const type = computed(() => {\n      var _a;\n      return props.imageComponent || ((_a = options.components) == null ? void 0 : _a.imageComponent) || defaultImageComponent;\n    });\n    const { src, srcset, alt, copyright } = usePrismicImage(props);\n    return () => {\n      const attributes = {\n        src: src.value,\n        srcset: srcset.value,\n        alt: alt.value\n      };\n      switch (type.value) {\n        case \"img\":\n          return h(\"img\", attributes);\n        default:\n          return h(simplyResolveComponent(type.value), {\n            ...attributes,\n            copyright: copyright.value\n          });\n      }\n    };\n  }\n});\nconst PrismicImage = PrismicImageImpl;\nexport {\n  PrismicImage,\n  PrismicImageImpl,\n  usePrismicImage\n};\n//# sourceMappingURL=PrismicImage.js.map\n",
-      "start": 1720103994947,
-      "end": 1720103995028,
+      "start": 1720177711070,
+      "end": 1720177711206,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720103995028,
-      "end": 1720103995028,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720103995028,
-      "end": 1720103995029,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720103995029,
-      "end": 1720103995029,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720103995029,
-      "end": 1720103995029,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720103995029,
-      "end": 1720103995029,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720103995029,
-      "end": 1720103995029,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720103995029,
-      "end": 1720103995029,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720103995029,
-      "end": 1720103995029,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720103995029,
-      "end": 1720103995029,
+      "start": 1720177711206,
+      "end": 1720177711206,
       "order": "normal"
     }
   ]

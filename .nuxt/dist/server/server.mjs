@@ -595,7 +595,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: __nuxt_page_meta$4 == null ? void 0 : __nuxt_page_meta$4.redirect,
-    component: () => import("./_nuxt/PrismicPreview-C36EzxLX.js").then((m) => m.default || m)
+    component: () => import("./assets/PrismicPreview-Cuj3r_f9.js").then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$3 == null ? void 0 : __nuxt_page_meta$3.name) ?? "uid",
@@ -603,7 +603,7 @@ const _routes = [
     meta: __nuxt_page_meta$3 || {},
     alias: (__nuxt_page_meta$3 == null ? void 0 : __nuxt_page_meta$3.alias) || [],
     redirect: __nuxt_page_meta$3 == null ? void 0 : __nuxt_page_meta$3.redirect,
-    component: () => import("./_nuxt/_uid_-DXcfbyXl.js").then((m) => m.default || m)
+    component: () => import("./assets/_uid_-DXcfbyXl.js").then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.name) ?? "articles-uid",
@@ -611,7 +611,7 @@ const _routes = [
     meta: __nuxt_page_meta$2 || {},
     alias: (__nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.alias) || [],
     redirect: __nuxt_page_meta$2 == null ? void 0 : __nuxt_page_meta$2.redirect,
-    component: () => import("./_nuxt/_uid_-CddUfRlq.js").then((m) => m.default || m)
+    component: () => import("./assets/_uid_-CddUfRlq.js").then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.name) ?? "index",
@@ -619,7 +619,7 @@ const _routes = [
     meta: __nuxt_page_meta$1 || {},
     alias: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.alias) || [],
     redirect: __nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.redirect,
-    component: () => import("./_nuxt/index-6dhppHCN.js").then((m) => m.default || m)
+    component: () => import("./assets/index-6dhppHCN.js").then((m) => m.default || m)
   },
   {
     name: "slice-simulator",
@@ -627,7 +627,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: __nuxt_page_meta == null ? void 0 : __nuxt_page_meta.redirect,
-    component: () => import("./_nuxt/slice-simulator-DY3EVvjp.js").then((m) => m.default || m)
+    component: () => import("./assets/slice-simulator-DY3EVvjp.js").then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -2114,7 +2114,7 @@ const plugins = [
   plugin_PWMUhiA9tt
 ];
 const layouts = {
-  default: () => import("./_nuxt/default-Dh1wKSr-.js").then((m) => m.default || m)
+  default: () => import("./assets/default-Dh1wKSr-.js").then((m) => m.default || m)
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -2408,8 +2408,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import("./_nuxt/error-404-CJ-CJprX.js").then((r) => r.default || r));
-    const _Error = defineAsyncComponent(() => import("./_nuxt/error-500-DZZ20FxO.js").then((r) => r.default || r));
+    const _Error404 = defineAsyncComponent(() => import("./assets/error-404-DqBPahdq.js").then((r) => r.default || r));
+    const _Error = defineAsyncComponent(() => import("./assets/error-500-DDgvRzHO.js").then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));

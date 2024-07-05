@@ -124,7 +124,6 @@ declare global {
   const useNavigation: typeof import('../../composables/useNavigation')['useNavigation']
   const useNuxtApp: typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']
-  const useNuxtDevTools: typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const usePreviewMode: typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']
   const usePrismic: typeof import('../../node_modules/@prismicio/vue')['usePrismic']
   const usePrismicDocumentByID: typeof import('../../node_modules/@prismicio/vue')['usePrismicDocumentByID']
@@ -302,7 +301,6 @@ declare module 'vue' {
     readonly useNavigation: UnwrapRef<typeof import('../../composables/useNavigation')['useNavigation']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
-    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
     readonly usePrismic: UnwrapRef<typeof import('../../node_modules/@prismicio/vue')['usePrismic']>
     readonly usePrismicDocumentByID: UnwrapRef<typeof import('../../node_modules/@prismicio/vue')['usePrismicDocumentByID']>
@@ -473,7 +471,6 @@ declare module '@vue/runtime-core' {
     readonly useNavigation: UnwrapRef<typeof import('../../composables/useNavigation')['useNavigation']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
-    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
     readonly usePrismic: UnwrapRef<typeof import('../../node_modules/@prismicio/vue')['usePrismic']>
     readonly usePrismicDocumentByID: UnwrapRef<typeof import('../../node_modules/@prismicio/vue')['usePrismicDocumentByID']>
