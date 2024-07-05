@@ -34,7 +34,12 @@ jobs:
         run: ls -la
 
       - name: List files in 'dist' directory for debugging
-        run: ls -la dist
+        run: |
+          if [ -d dist ]; then
+            ls -la dist
+          else
+            echo "dist directory does not exist"
+          fi
 
       - name: Stash changes
         run: git stash --include-untracked
@@ -44,11 +49,16 @@ jobs:
           git fetch origin
           git checkout gh-pages || git checkout --orphan gh-pages
           git reset --hard origin/gh-pages
-          mkdir -p temp_dir && cp -r dist/* temp_dir/
-          cp -r temp_dir/* .
-          rm -rf temp_dir
-          git add -A
-          git commit -m "Deploy to GitHub Pages"
-          git push --force origin gh-pages
+          if [ -d dist ]; then
+            mkdir -p temp_dir && cp -r dist/* temp_dir/
+            cp -r temp_dir/* .
+            rm -rf temp_dir
+            git add -A
+            git commit -m "Deploy to GitHub Pages"
+            git push --force origin gh-pages
+          else
+            echo "dist directory does not exist. Deployment aborted."
+            exit 1
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
