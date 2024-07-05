@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Adjust to 'main' if your default branch is 'main'
+      - master
   workflow_dispatch:
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
           git config --global user.name "Adam Struth"
 
       - name: Generate static files
-        run: npm run generate  # Ensure this generates files in 'dist'
+        run: npm run generate
 
       - name: List project root files for debugging
         run: ls -la
@@ -36,14 +36,17 @@ jobs:
       - name: List files in 'dist' directory for debugging
         run: ls -la dist
 
+      - name: Stash changes
+        run: git stash --include-untracked
+
       - name: Deploy to GitHub Pages
         run: |
           git fetch origin
           git checkout gh-pages || git checkout --orphan gh-pages
           git reset --hard origin/gh-pages
-          mkdir -p temp_dir && cp -r dist/* temp_dir/  # Copy files to a temporary directory
-          cp -r temp_dir/* .  # Copy from the temporary directory to the root
-          rm -rf temp_dir  # Remove the temporary directory
+          mkdir -p temp_dir && cp -r dist/* temp_dir/
+          cp -r temp_dir/* .
+          rm -rf temp_dir
           git add -A
           git commit -m "Deploy to GitHub Pages"
           git push --force origin gh-pages
