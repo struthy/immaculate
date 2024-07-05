@@ -30,11 +30,19 @@ jobs:
       - name: Generate static files
         run: npm run generate  # Ensure this generates files in 'dist'
 
+      - name: List files for debugging
+        run: ls -la dist  # List the files in the 'dist' directory for debugging
+
       - name: Deploy to GitHub Pages
         run: |
           git fetch origin
           git checkout gh-pages || git checkout --orphan gh-pages
           git reset --hard origin/gh-pages
-          cp -r dist/* .
+          mkdir -p temp_dir && cp -r dist/* temp_dir/  # Copy files to a temporary directory
+          cp -r temp_dir/* .  # Copy from the temporary directory to the root
+          rm -rf temp_dir  # Remove the temporary directory
           git add -A
-          git
+          git commit -m "Deploy to GitHub Pages"
+          git push --force origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
