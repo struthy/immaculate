@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   workflow_dispatch:
   repository_dispatch:
+    types: [prismic-update]
   push:
     branches:
       - master
