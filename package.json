@@ -7,7 +7,7 @@
   "scripts": {
     "preinstall": "node -e \"const os = require('os'); if (os.platform() !== 'win32') { const { execSync } = require('child_process'); execSync('chmod -R +x node_modules/.bin'); }\"",
     "dev": "nuxt dev",
-    "build": "cross-env NITRO_PRESET=github_pages nuxt build",
+    "build": "NUXT_APP_BASE_URL=/immaculate/ npx nuxt build --preset github_pages",
     "generate": "nuxt generate",
     "predeploy": "npm run generate",
     "lint": "eslint .",
